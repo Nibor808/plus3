@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="visitor1.ttf">
+            <string>VisitorTT1BRK</string>
+            <string>VisitorTT1BRK</string>
+            <string>VisitorTT1BRK</string>
+            <string>VisitorTT1BRK</string>
+            <string>VisitorTT1BRK</string>
+            <string>VisitorTT1BRK</string>
+            <string>VisitorTT1BRK</string>
+            <string>VisitorTT1BRK</string>
+            <string>VisitorTT1BRK</string>
+            <string>VisitorTT1BRK</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--CalcVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalcVC" customModule="Calc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +31,1119 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NMi-Vj-a7i">
+                                <rect key="frame" x="143" y="28" width="314" height="570"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SPW-Zb-gQT">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXv-uE-qhc">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                                <state key="normal" title="Currency">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onCurrencyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwX-B6-ARc"/>
+                                                    <segue destination="H3d-et-MdE" kind="show" id="ADW-Vu-FMY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPa-RI-e47">
+                                                <rect key="frame" x="106" y="0.0" width="102" height="30"/>
+                                                <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                <state key="normal" title="Send as Email">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onExportPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlf-nt-SsS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwM-Hh-bD9">
+                                                <rect key="frame" x="213" y="0.0" width="101" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                                <state key="normal" title="Units">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onUnitsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t9e-hO-rre"/>
+                                                    <segue destination="8eA-8k-zp2" kind="show" id="rVI-jc-1N3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XiD-jc-dSQ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KVV-Et-4PF">
+                                        <rect key="frame" x="0.0" y="35" width="314" height="167"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="167" id="2Rc-zX-tva"/>
+                                            <constraint firstAttribute="width" constant="314" id="uZ3-vS-bLn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="35" width="334" height="225"/>
+                                        </variation>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="NEH-h9-KuQ" userLabel="MainCalcST">
+                                        <rect key="frame" x="0.0" y="207" width="314" height="293"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="D31-7U-SI0">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="57"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBp-l6-adh" customClass="TopRowButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="54"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KX-SI-vUB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-9s-em0" customClass="TopRowButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="79" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                                                        <state key="normal" title="+/-">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="84" y="0.0" width="82" height="54"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="onChangeSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ob0-YL-zX2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzD-It-HFh" customClass="TopRowButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                                                        <state key="normal" title="%">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="168" y="0.0" width="82" height="54"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="onPercentPresssed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ABl-n7-tsh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rET-lV-Q1T" customClass="OpButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <state key="normal" title="/">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="252" y="0.0" width="82" height="54"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="onDividePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thg-4Q-QiK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="57" id="LAQ-rn-WDI"/>
+                                                </constraints>
+                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="54"/>
+                                                </variation>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dDp-Gy-Nz1">
+                                                <rect key="frame" x="0.0" y="59" width="314" height="57"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8j-ir-LgJ" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Esj-OY-xNB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5a-63-MKe" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="79" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="84" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ULQ-SU-czz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueR-CV-HSx" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="168" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klj-3p-9kM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-aJ-zve" customClass="OpButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <state key="normal" title="x">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="252" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="onMultiplyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBO-rl-EWP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="57" id="rCl-Wg-3zm"/>
+                                                </constraints>
+                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="56" width="334" height="57"/>
+                                                </variation>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="072-sv-vsz">
+                                                <rect key="frame" x="0.0" y="118" width="314" height="57"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLF-gC-gLu" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aba-zV-QaD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkX-EV-1T8" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="79" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="84" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZ7-ZX-pw6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN8-2u-cOt" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="168" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U18-c2-qDp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AP8-MJ-pQ1" customClass="OpButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <state key="normal" title="-">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="252" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="onSubtractPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOv-HL-AXw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="57" id="SB2-px-f3V"/>
+                                                </constraints>
+                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="115" width="334" height="57"/>
+                                                </variation>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Eft-XM-GyJ">
+                                                <rect key="frame" x="0.0" y="177" width="314" height="57"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-GS-Fb1" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Soc-OO-m5A"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkI-Pj-LkQ" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="79" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="84" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6WL-nF-6GE"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ov-fG-9Ic" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="168" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6KY-Xg-Wp1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY4-IY-SGc" customClass="OpButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="252" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="onAddPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44o-6T-9Ff"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="57" id="lo7-Yc-bd9"/>
+                                                </constraints>
+                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="174" width="334" height="57"/>
+                                                </variation>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nxZ-nI-uwG">
+                                                <rect key="frame" x="0.0" y="236" width="314" height="57"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B20-DF-9bg" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="57"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="156" id="5vD-uC-RKf"/>
+                                                            <constraint firstAttribute="width" constant="250" id="Xtf-vR-hZj"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="5vD-uC-RKf"/>
+                                                                <exclude reference="Xtf-vR-hZj"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <include reference="5vD-uC-RKf"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <mask key="constraints">
+                                                                <include reference="Xtf-vR-hZj"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JyY-yi-oBO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSL-V8-0DV" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="102" y="0.0" width="103" height="57"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="103" id="9hA-Iz-3la"/>
+                                                            <constraint firstAttribute="width" constant="77" id="e2K-23-gNu"/>
+                                                            <constraint firstAttribute="width" constant="124" id="sCe-bf-86T"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="e2K-23-gNu"/>
+                                                                <exclude reference="sCe-bf-86T"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="168" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <exclude reference="9hA-Iz-3la"/>
+                                                                <include reference="e2K-23-gNu"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <mask key="constraints">
+                                                                <include reference="sCe-bf-86T"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="onDotPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nke-PH-vPb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHr-02-HGI" customClass="OpButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="207" y="0.0" width="107" height="57"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="124" id="bdO-qk-zbY"/>
+                                                            <constraint firstAttribute="width" constant="77" id="oWa-9M-sUe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="bdO-qk-zbY"/>
+                                                                <exclude reference="oWa-9M-sUe"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                            <rect key="frame" x="252" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <include reference="oWa-9M-sUe"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <mask key="constraints">
+                                                                <include reference="bdO-qk-zbY"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="onEqualsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JMy-Ne-CgH"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="57" id="krB-3f-IlG"/>
+                                                </constraints>
+                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="233" width="334" height="57"/>
+                                                </variation>
+                                            </stackView>
+                                        </subviews>
+                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="265" width="334" height="290"/>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9eN-OL-dwq">
+                                        <rect key="frame" x="0.0" y="505" width="314" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI7-Ud-aVn">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <state key="normal" title="Edit Line">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="editLineBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fT9-85-czx"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htj-GQ-BOC">
+                                                <rect key="frame" x="106" y="0.0" width="102" height="30"/>
+                                                <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <variation key="heightClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="113" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-FC-WVq">
+                                                <rect key="frame" x="213" y="0.0" width="101" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="226" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="onCancelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzB-4D-5Df"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XnX-vX-xgO"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="560" width="334" height="30"/>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FRS-V5-qhP">
+                                        <rect key="frame" x="0.0" y="540" width="314" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-k9-UeG">
+                                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-h8-mOw">
+                                                <rect key="frame" x="106" y="0.0" width="102" height="30"/>
+                                                <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <variation key="heightClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="113" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFV-qy-dn1">
+                                                <rect key="frame" x="213" y="0.0" width="101" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=regular" ambiguous="YES">
+                                                    <rect key="frame" x="226" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="addNoteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZo-aA-YMn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qtR-Sq-hiQ"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="595" width="334" height="30"/>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="570" id="aTY-pH-E4h"/>
+                                    <constraint firstAttribute="width" constant="314" id="cgj-Or-j5c"/>
+                                </constraints>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="133" y="30" width="334" height="625"/>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65111584111052623" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="NMi-Vj-a7i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="61I-k7-4ok"/>
+                            <constraint firstItem="NMi-Vj-a7i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YVi-l3-fLa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addBtn" destination="tFV-qy-dn1" id="Tmx-h4-jje"/>
+                        <outlet property="addNoteTxt" destination="lHL-h8-mOw" id="DUt-jr-xDD"/>
+                        <outlet property="calcStackView" destination="NEH-h9-KuQ" id="idt-Vx-bPr"/>
+                        <outlet property="cancelBtn" destination="qi9-FC-WVq" id="Y3V-zi-eVV"/>
+                        <outlet property="clearBtn" destination="EBp-l6-adh" id="7pv-Jp-BlY"/>
+                        <outlet property="currencyBtn" destination="gXv-uE-qhc" id="K3r-fS-vD8"/>
+                        <outlet property="editBtn" destination="tI7-Ud-aVn" id="X3C-mm-YqI"/>
+                        <outlet property="equalsBtn" destination="YHr-02-HGI" id="Ios-ZX-XPC"/>
+                        <outlet property="exportBtn" destination="dPa-RI-e47" id="Fb6-uS-a4S"/>
+                        <outlet property="noteLbl" destination="vdd-k9-UeG" id="UaL-Xt-ElR"/>
+                        <outlet property="outputTxt" destination="KVV-Et-4PF" id="zHf-zK-Sue"/>
+                        <outlet property="rowToSelectTxt" destination="htj-GQ-BOC" id="Roh-rP-WHO"/>
+                        <outlet property="unitsBtn" destination="rwM-Hh-bD9" id="F75-Ga-R5L"/>
+                        <outletCollection property="calcBtns" destination="xzD-It-HFh" collectionClass="NSMutableArray" id="jeJ-Bf-MMw"/>
+                        <outletCollection property="calcBtns" destination="gXD-9s-em0" collectionClass="NSMutableArray" id="gaq-fp-h2C"/>
+                        <outletCollection property="calcBtns" destination="ueR-CV-HSx" collectionClass="NSMutableArray" id="X3O-3p-A7b"/>
+                        <outletCollection property="calcBtns" destination="h5a-63-MKe" collectionClass="NSMutableArray" id="9DZ-aP-zEX"/>
+                        <outletCollection property="calcBtns" destination="J8j-ir-LgJ" collectionClass="NSMutableArray" id="0Ve-a3-SZ3"/>
+                        <outletCollection property="calcBtns" destination="SLF-gC-gLu" collectionClass="NSMutableArray" id="cIx-rn-wb2"/>
+                        <outletCollection property="calcBtns" destination="FkX-EV-1T8" collectionClass="NSMutableArray" id="hEl-Xq-5ch"/>
+                        <outletCollection property="calcBtns" destination="eN8-2u-cOt" collectionClass="NSMutableArray" id="gWA-69-kdz"/>
+                        <outletCollection property="calcBtns" destination="x2w-GS-Fb1" collectionClass="NSMutableArray" id="t0a-Gn-DY2"/>
+                        <outletCollection property="calcBtns" destination="zkI-Pj-LkQ" collectionClass="NSMutableArray" id="SaP-vY-GFX"/>
+                        <outletCollection property="calcBtns" destination="5Ov-fG-9Ic" collectionClass="NSMutableArray" id="84e-42-nCd"/>
+                        <outletCollection property="calcBtns" destination="B20-DF-9bg" collectionClass="NSMutableArray" id="2La-4J-G1i"/>
+                        <outletCollection property="calcBtns" destination="hSL-V8-0DV" collectionClass="NSMutableArray" id="v1I-nC-j5L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1371" y="316.5"/>
+        </scene>
+        <!--UnitsVC-->
+        <scene sceneID="Q5s-yh-tY1">
+            <objects>
+                <viewController id="8eA-8k-zp2" customClass="UnitsVC" customModule="Calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tow-wC-OEb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ngn-lz-mDr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8wM-7U-C9R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rM4-Bp-c8d">
+                                <rect key="frame" x="256" y="321" width="88" height="242"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXQ-wv-fdD">
+                                        <rect key="frame" x="37" y="0.0" width="15" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="ANJ-70-CYy"/>
+                                            <constraint firstAttribute="height" constant="30" id="hjr-fQ-Fnr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="0.0"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9M1-Sy-nSg">
+                                        <rect key="frame" x="0.0" y="40" width="88" height="202"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpp-dP-2KW" customClass="UnitButton" customModule="Calc" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="88" id="MOk-fM-VTt"/>
+                                                    <constraint firstAttribute="height" constant="30" id="OhO-jD-L5z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
+                                                <state key="normal" title="Convert">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onConvertPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="FSR-Wc-IWm"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="PGp-HF-Kom">
+                                                <rect key="frame" x="0.0" y="40" width="88" height="162"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfD-ku-Hyt" customClass="UnitButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                                        <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="88" id="isM-JC-T3S"/>
+                                                            <constraint firstAttribute="height" constant="30" id="yob-Yv-YUR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="Length">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onLengthPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="WMn-CA-uH7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dw9-ds-GMH" customClass="UnitButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="33" width="88" height="30"/>
+                                                        <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="7I0-VG-4d5"/>
+                                                            <constraint firstAttribute="width" constant="88" id="n9m-8n-Eg4"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="Area">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onAreaPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="KMM-DC-ask"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJd-EH-Kax" customClass="UnitButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="66" width="88" height="30"/>
+                                                        <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="AnN-cg-lv9"/>
+                                                            <constraint firstAttribute="width" constant="88" id="MFd-vu-5wD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="Volume">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onVolumePressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="sGl-iz-SvL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpQ-Io-tFC" customClass="UnitButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="99" width="88" height="30"/>
+                                                        <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Sgy-dh-4Sv"/>
+                                                            <constraint firstAttribute="width" constant="88" id="yIq-ae-FXr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="Mass">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onMassPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="0cJ-Hw-Zzf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtS-A4-4xf" customClass="UnitButton" customModule="Calc" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="132" width="88" height="30"/>
+                                                        <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="0gX-ER-lMT"/>
+                                                            <constraint firstAttribute="width" constant="88" id="wO5-2u-2Mt"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="Temperature">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="onTempPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="Uh6-z5-ubu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="Pmq-UX-zjE"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gu2-l0-g4t">
+                                <rect key="frame" x="143" y="28" width="314" height="323"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3R-q5-iFl">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                        <color key="backgroundColor" red="0.65098039215686276" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5G5-xb-yQG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                        <state key="normal" title="Calculator">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="iYq-i4-rpL"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Yd-Du-oeK">
+                                        <rect key="frame" x="0.0" y="40" width="314" height="283"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q44-xD-bSx">
+                                                <rect key="frame" x="0.0" y="0.0" width="152" height="283"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yX-IS-Qr6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="175"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="152" id="53t-nv-rUj"/>
+                                                            <constraint firstAttribute="height" constant="175" id="Ycp-Mi-pab"/>
+                                                        </constraints>
+                                                    </pickerView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93I-jn-Y60">
+                                                        <rect key="frame" x="0.0" y="183" width="152" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="9Kg-lg-zOx"/>
+                                                            <constraint firstAttribute="width" constant="152" id="ELs-EP-N45"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="VF9-Z6-Ozh">
+                                                        <rect key="frame" x="0.0" y="215" width="152" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="152" id="97t-PW-h5j"/>
+                                                            <constraint firstAttribute="height" constant="30" id="aSK-HU-lG6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLV-jO-oqp">
+                                                        <rect key="frame" x="26" y="253" width="100" height="30"/>
+                                                        <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="FH6-Si-st4"/>
+                                                            <constraint firstAttribute="height" constant="30" id="xiZ-wD-cOm"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="152" id="4Vc-CK-s9Q"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V3E-SM-UQJ">
+                                                <rect key="frame" x="162" y="0.0" width="152" height="283"/>
+                                                <subviews>
+                                                    <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="tAE-47-dVg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="175"/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="152" id="EOW-qd-z1e"/>
+                                                            <constraint firstAttribute="height" constant="175" id="dfy-tw-FFE"/>
+                                                        </constraints>
+                                                    </pickerView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkB-V7-vGf">
+                                                        <rect key="frame" x="0.0" y="183" width="152" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="Uky-WF-H8c"/>
+                                                            <constraint firstAttribute="width" constant="152" id="W94-fQ-m2m"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="1" height="1"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="MBO-9d-vMa">
+                                                        <rect key="frame" x="0.0" y="215" width="152" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="152" id="J08-2R-qX8"/>
+                                                            <constraint firstAttribute="height" constant="30" id="pCb-fQ-OSx"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKr-PY-l7d">
+                                                        <rect key="frame" x="26" y="253" width="100" height="30"/>
+                                                        <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="L51-eQ-DH1"/>
+                                                            <constraint firstAttribute="width" constant="100" id="fVT-Y0-ME7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="152" id="kc4-gu-Udd"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="3CS-4P-MYe"/>
+                                    <constraint firstAttribute="height" constant="323" id="J8Q-d1-Ye1"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gu2-l0-g4t" firstAttribute="top" secondItem="tow-wC-OEb" secondAttribute="bottom" constant="8" id="NZc-Oy-cOa"/>
+                            <constraint firstItem="Gu2-l0-g4t" firstAttribute="centerX" secondItem="8wM-7U-C9R" secondAttribute="centerX" id="PyW-Lf-dIb"/>
+                            <constraint firstItem="rM4-Bp-c8d" firstAttribute="centerX" secondItem="8wM-7U-C9R" secondAttribute="centerX" id="TJx-gE-eso"/>
+                            <constraint firstItem="rM4-Bp-c8d" firstAttribute="top" secondItem="8wM-7U-C9R" secondAttribute="topMargin" constant="321" id="VpO-D7-RMt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="areaBtn" destination="dw9-ds-GMH" id="XHh-S4-r3f"/>
+                        <outlet property="convertBtn" destination="Rpp-dP-2KW" id="aeZ-Y2-o3L"/>
+                        <outlet property="fromLbl" destination="VF9-Z6-Ozh" id="ETQ-Lx-zjx"/>
+                        <outlet property="fromPicker" destination="6yX-IS-Qr6" id="AKf-1h-9I9"/>
+                        <outlet property="fromTxt" destination="FLV-jO-oqp" id="rmT-sd-Dg4"/>
+                        <outlet property="lengthBtn" destination="KfD-ku-Hyt" id="Hme-25-1lB"/>
+                        <outlet property="massBtn" destination="JpQ-Io-tFC" id="aED-kY-TBd"/>
+                        <outlet property="tempBtn" destination="AtS-A4-4xf" id="Otx-0F-Aju"/>
+                        <outlet property="toLbl" destination="MBO-9d-vMa" id="vkn-zx-xHS"/>
+                        <outlet property="toPicker" destination="tAE-47-dVg" id="iT8-Oa-qMk"/>
+                        <outlet property="toTxt" destination="dKr-PY-l7d" id="yG5-iB-ZBI"/>
+                        <outlet property="volumeBtn" destination="kJd-EH-Kax" id="UrJ-mO-J21"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ol-Ny-e7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655.5" y="167.25"/>
+        </scene>
+        <!--CurrencyVC-->
+        <scene sceneID="Mhc-Ms-2Xc">
+            <objects>
+                <viewController id="H3d-et-MdE" customClass="CurrencyVC" customModule="Calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iCg-3l-4WE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rk0-Aq-oue"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aWA-5S-EFA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yhh-co-fRi">
+                                <rect key="frame" x="140" y="30" width="320" height="536"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OCu-SY-o9I">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJR-4J-gdc">
+                                                <rect key="frame" x="122" y="0.0" width="76" height="30"/>
+                                                <color key="backgroundColor" red="0.65098039220000004" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="500" id="ay8-5t-F7g"/>
+                                                    <constraint firstAttribute="height" constant="30" id="iWb-ud-wxm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                                <state key="normal" title="Calculator">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="ay8-5t-F7g"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="iWb-ud-wxm"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="ay8-5t-F7g"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="9bu-So-WZr"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1w9-dW-0X5">
+                                                <rect key="frame" x="90" y="50" width="140" height="30"/>
+                                                <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Fcu-SB-ya6"/>
+                                                    <constraint firstAttribute="height" constant="30" id="J17-RG-89T"/>
+                                                    <constraint firstAttribute="width" constant="140" id="dtb-VT-YGc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Fcu-SB-ya6"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Fcu-SB-ya6"/>
+                                                        <exclude reference="J17-RG-89T"/>
+                                                        <exclude reference="dtb-VT-YGc"/>
+                                                    </mask>
+                                                </variation>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="mJR-4J-gdc" firstAttribute="leading" secondItem="OCu-SY-o9I" secondAttribute="leading" id="A3E-tX-DgX"/>
+                                            <constraint firstItem="1w9-dW-0X5" firstAttribute="leading" secondItem="OCu-SY-o9I" secondAttribute="leading" constant="87" id="mi6-r1-tAw"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="mi6-r1-tAw"/>
+                                                <exclude reference="A3E-tX-DgX"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="mi6-r1-tAw"/>
+                                                <include reference="A3E-tX-DgX"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-du-2fu">
+                                        <rect key="frame" x="0.0" y="80" width="320" height="456"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US Dollar/s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66u-Dc-bgv">
+                                                <rect key="frame" x="97" y="0.0" width="127" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="LMn-E8-Wff"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpl-GV-9qA">
+                                                <rect key="frame" x="140" y="40" width="41" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="41" id="KrI-tT-D4E"/>
+                                                    <constraint firstAttribute="height" constant="30" id="RFR-cR-So3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnp-tJ-KFu">
+                                                <rect key="frame" x="0.0" y="80" width="320" height="216"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="320" id="7Xf-zL-TtN"/>
+                                                    <constraint firstAttribute="height" constant="200" id="Hfb-Zb-a0J"/>
+                                                    <constraint firstAttribute="height" constant="280" id="XDX-00-UZs"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7Xf-zL-TtN"/>
+                                                        <exclude reference="Hfb-Zb-a0J"/>
+                                                        <exclude reference="XDX-00-UZs"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Hfb-Zb-a0J"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="7Xf-zL-TtN"/>
+                                                        <include reference="XDX-00-UZs"/>
+                                                    </mask>
+                                                </variation>
+                                            </pickerView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zE-Bh-Kfg">
+                                                <rect key="frame" x="140" y="306" width="40" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="A4k-vU-7uj"/>
+                                                    <constraint firstAttribute="width" constant="40" id="mbN-Pf-j7H"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWX-zm-ZmT">
+                                                <rect key="frame" x="90" y="346" width="140" height="30"/>
+                                                <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="d4x-Jv-UfD"/>
+                                                    <constraint firstAttribute="height" constant="30" id="yF9-pO-1qW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r6-lI-DMJ">
+                                                <rect key="frame" x="61" y="386" width="199" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="fA0-Ye-LIi"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <exclude reference="fA0-Ye-LIi"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le0-r2-14g">
+                                                <rect key="frame" x="90" y="426" width="140" height="30"/>
+                                                <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="deO-Vg-vZn"/>
+                                                    <constraint firstAttribute="height" constant="30" id="lDT-6d-VGy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <state key="normal" title="Convert">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onConvertBtnPressed:" destination="H3d-et-MdE" eventType="touchUpInside" id="J3a-1k-cA4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Tnp-tJ-KFu" firstAttribute="leading" secondItem="fnb-du-2fu" secondAttribute="leading" constant="57" id="t8K-0F-u5g"/>
+                                            <constraint firstItem="5r6-lI-DMJ" firstAttribute="leading" secondItem="Tnp-tJ-KFu" secondAttribute="leading" id="tnG-Ck-jtF"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="t8K-0F-u5g"/>
+                                                <exclude reference="tnG-Ck-jtF"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="t8K-0F-u5g"/>
+                                                <include reference="tnG-Ck-jtF"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="520" id="2QD-1o-kl3"/>
+                                    <constraint firstAttribute="width" constant="500" id="8ei-8b-4qM"/>
+                                    <constraint firstAttribute="width" constant="314" id="D04-pN-0KR"/>
+                                    <constraint firstAttribute="height" constant="600" id="dZt-Ve-9K8"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2QD-1o-kl3"/>
+                                        <exclude reference="8ei-8b-4qM"/>
+                                        <exclude reference="D04-pN-0KR"/>
+                                        <exclude reference="dZt-Ve-9K8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2QD-1o-kl3"/>
+                                        <include reference="D04-pN-0KR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="8ei-8b-4qM"/>
+                                        <include reference="dZt-Ve-9K8"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yhh-co-fRi" firstAttribute="centerX" secondItem="aWA-5S-EFA" secondAttribute="centerX" id="Vac-Jh-VMP"/>
+                            <constraint firstItem="Yhh-co-fRi" firstAttribute="top" secondItem="iCg-3l-4WE" secondAttribute="bottom" constant="10" id="lgO-Ce-F1H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="convertBtn" destination="le0-r2-14g" id="DEd-Uy-XhJ"/>
+                        <outlet property="currencyPicker" destination="Tnp-tJ-KFu" id="Zcz-hp-3qc"/>
+                        <outlet property="toLbl" destination="5r6-lI-DMJ" id="zu2-an-uYS"/>
+                        <outlet property="toTxt" destination="bWX-zm-ZmT" id="j4t-a8-lw3"/>
+                        <outlet property="usdTxt" destination="1w9-dW-0X5" id="4uI-I7-2bN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BvC-bR-Hsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-795.75" y="987.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iYq-i4-rpL"/>
+    </inferredMetricsTieBreakers>
 </document>
