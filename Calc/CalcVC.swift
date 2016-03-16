@@ -346,7 +346,11 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
         
         scrollToBottom()
         
-        if leftValString != "" {
+        if runningNum == "" {
+            
+            return
+            
+        }else if leftValString != "" {
             
             clearAll()
             
@@ -677,8 +681,6 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
     
     
     func isNegative(op: Operation) {
-        
-        if currentOperation != Operation.Empty {
             
                 if runningNum != "" {
                     
@@ -688,7 +690,6 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
                 
             }
         }
-    }
     
     
     func processOperation(op: Operation) {

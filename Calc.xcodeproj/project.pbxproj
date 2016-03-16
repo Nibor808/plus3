@@ -39,7 +39,7 @@
 		7FA80D1A5A63F143DBBBDB6C /* Pods-Calc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calc/Pods-Calc.release.xcconfig"; sourceTree = "<group>"; };
 		D047961D1C7FC333006DE2A7 /* Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04796201C7FC333006DE2A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D04796221C7FC333006DE2A7 /* CalcVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcVC.swift; sourceTree = "<group>"; };
+		D04796221C7FC333006DE2A7 /* CalcVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcVC.swift; sourceTree = "<group>"; usesTabs = 0; };
 		D04796251C7FC333006DE2A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D04796281C7FC333006DE2A7 /* Calc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Calc.xcdatamodel; sourceTree = "<group>"; };
 		D047962A1C7FC333006DE2A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 				TargetAttributes = {
 					D047961C1C7FC333006DE2A7 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 2YU3EN97DX;
+						DevelopmentTeam = X975YC666W;
 					};
 				};
 			};
@@ -435,6 +435,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.Calc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -448,6 +449,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.Calc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

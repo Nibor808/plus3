@@ -431,11 +431,23 @@ class CurrencyVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         
+        let screenSize = UIScreen.mainScreen().bounds
         let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor.blackColor()
+        
+        pickerLabel.textColor = UIColor.darkGrayColor()
         pickerLabel.text = inputArr.objectAtIndex(row) as? String
-        pickerLabel.font = UIFont(name: "Helvetica Nue", size: 6)
+        
+        if screenSize.width <= 375.0 {
+            
+            pickerLabel.font = UIFont(name: "Helvetica Neue", size: 16.0)
+            
+        }else if screenSize.width > 375.0 {
+            
+            pickerLabel.font = UIFont(name: "Helvetica Neue", size: 24.0)
+        }
+
         pickerLabel.textAlignment = NSTextAlignment.Center
+        pickerLabel.backgroundColor = UIColor.whiteColor()
         return pickerLabel
 
         

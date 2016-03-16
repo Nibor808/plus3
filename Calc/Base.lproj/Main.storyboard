@@ -5,20 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="visitor1.ttf">
-            <string>VisitorTT1BRK</string>
-            <string>VisitorTT1BRK</string>
-            <string>VisitorTT1BRK</string>
-            <string>VisitorTT1BRK</string>
-            <string>VisitorTT1BRK</string>
-            <string>VisitorTT1BRK</string>
-            <string>VisitorTT1BRK</string>
-            <string>VisitorTT1BRK</string>
-            <string>VisitorTT1BRK</string>
-            <string>VisitorTT1BRK</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--CalcVC-->
         <scene sceneID="tne-QT-ifu">
@@ -41,10 +27,13 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXv-uE-qhc">
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                                 <state key="normal" title="Currency">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="onCurrencyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwX-B6-ARc"/>
                                                     <segue destination="H3d-et-MdE" kind="show" id="ADW-Vu-FMY"/>
@@ -53,10 +42,13 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPa-RI-e47">
                                                 <rect key="frame" x="106" y="0.0" width="102" height="30"/>
                                                 <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="13"/>
                                                 <state key="normal" title="Send as Email">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="onExportPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlf-nt-SsS"/>
                                                 </connections>
@@ -64,10 +56,13 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwM-Hh-bD9">
                                                 <rect key="frame" x="213" y="0.0" width="101" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                                 <state key="normal" title="Units">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                                </variation>
                                                 <connections>
                                                     <action selector="onUnitsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t9e-hO-rre"/>
                                                     <segue destination="8eA-8k-zp2" kind="show" id="rVI-jc-1N3"/>
@@ -75,20 +70,46 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5gC-PZ-JmI"/>
                                             <constraint firstAttribute="height" constant="30" id="XiD-jc-dSQ"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5gC-PZ-JmI"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="5gC-PZ-JmI"/>
+                                                <exclude reference="XiD-jc-dSQ"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KVV-Et-4PF">
                                         <rect key="frame" x="0.0" y="35" width="314" height="167"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="167" id="2Rc-zX-tva"/>
+                                            <constraint firstAttribute="height" constant="300" id="7IM-7m-3Nz"/>
                                             <constraint firstAttribute="width" constant="314" id="uZ3-vS-bLn"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="7IM-7m-3Nz"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="35" width="334" height="225"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                            <mask key="constraints">
+                                                <exclude reference="2Rc-zX-tva"/>
+                                                <include reference="7IM-7m-3Nz"/>
+                                                <exclude reference="uZ3-vS-bLn"/>
+                                            </mask>
                                         </variation>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="NEH-h9-KuQ" userLabel="MainCalcST">
@@ -99,7 +120,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBp-l6-adh" customClass="TopRowButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="35"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,18 +128,24 @@
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="0.0" y="0.0" width="82" height="54"/>
                                                         </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KX-SI-vUB"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-9s-em0" customClass="TopRowButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="79" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="+/-">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="84" y="0.0" width="82" height="54"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onChangeSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ob0-YL-zX2"/>
@@ -126,12 +153,15 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzD-It-HFh" customClass="TopRowButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="158" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="%">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="168" y="0.0" width="82" height="54"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onPercentPresssed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ABl-n7-tsh"/>
@@ -139,12 +169,15 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rET-lV-Q1T" customClass="OpButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="237" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="/">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="252" y="0.0" width="82" height="54"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onDividePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thg-4Q-QiK"/>
@@ -153,9 +186,21 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="57" id="LAQ-rn-WDI"/>
+                                                    <constraint firstAttribute="height" constant="70" id="U80-2k-oxx"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="U80-2k-oxx"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="54"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="LAQ-rn-WDI"/>
+                                                        <include reference="U80-2k-oxx"/>
+                                                    </mask>
                                                 </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dDp-Gy-Nz1">
@@ -163,12 +208,15 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8j-ir-LgJ" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="7">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="0.0" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Esj-OY-xNB"/>
@@ -176,12 +224,15 @@
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5a-63-MKe" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="79" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="8">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="84" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ULQ-SU-czz"/>
@@ -189,12 +240,15 @@
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueR-CV-HSx" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="158" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="9">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="168" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klj-3p-9kM"/>
@@ -202,12 +256,15 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-aJ-zve" customClass="OpButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="237" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="x">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="252" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onMultiplyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBO-rl-EWP"/>
@@ -215,10 +272,22 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="7VF-W8-tlL"/>
                                                     <constraint firstAttribute="height" constant="57" id="rCl-Wg-3zm"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7VF-W8-tlL"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="56" width="334" height="57"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="7VF-W8-tlL"/>
+                                                        <exclude reference="rCl-Wg-3zm"/>
+                                                    </mask>
                                                 </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="072-sv-vsz">
@@ -226,12 +295,15 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLF-gC-gLu" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="4">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="0.0" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aba-zV-QaD"/>
@@ -239,12 +311,15 @@
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkX-EV-1T8" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="79" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="5">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="84" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZ7-ZX-pw6"/>
@@ -252,12 +327,15 @@
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN8-2u-cOt" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="158" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="6">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="168" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U18-c2-qDp"/>
@@ -265,12 +343,15 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AP8-MJ-pQ1" customClass="OpButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="237" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="-">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="252" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onSubtractPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOv-HL-AXw"/>
@@ -279,9 +360,21 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="57" id="SB2-px-f3V"/>
+                                                    <constraint firstAttribute="height" constant="70" id="jmY-cS-CeG"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="jmY-cS-CeG"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="115" width="334" height="57"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="SB2-px-f3V"/>
+                                                        <include reference="jmY-cS-CeG"/>
+                                                    </mask>
                                                 </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Eft-XM-GyJ">
@@ -289,12 +382,15 @@
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-GS-Fb1" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="1">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="0.0" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Soc-OO-m5A"/>
@@ -302,12 +398,15 @@
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkI-Pj-LkQ" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="79" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="2">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="84" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6WL-nF-6GE"/>
@@ -315,12 +414,15 @@
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ov-fG-9Ic" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="158" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="3">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="168" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6KY-Xg-Wp1"/>
@@ -328,12 +430,15 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY4-IY-SGc" customClass="OpButton" customModule="Calc" customModuleProvider="target">
                                                         <rect key="frame" x="237" y="0.0" width="77" height="57"/>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="+">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="252" y="0.0" width="82" height="57"/>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onAddPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44o-6T-9Ff"/>
@@ -341,42 +446,43 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="A9K-qf-Np3"/>
                                                     <constraint firstAttribute="height" constant="57" id="lo7-Yc-bd9"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="A9K-qf-Np3"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="174" width="334" height="57"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="A9K-qf-Np3"/>
+                                                        <exclude reference="lo7-Yc-bd9"/>
+                                                    </mask>
                                                 </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nxZ-nI-uwG">
                                                 <rect key="frame" x="0.0" y="236" width="314" height="57"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B20-DF-9bg" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="57"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="156" height="57"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="156" id="5vD-uC-RKf"/>
-                                                            <constraint firstAttribute="width" constant="250" id="Xtf-vR-hZj"/>
+                                                            <constraint firstAttribute="width" constant="156" id="Pma-Fw-3TH"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="VisitorTT1BRK" family="Visitor TT1 BRK" pointSize="50"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="0">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="5vD-uC-RKf"/>
-                                                                <exclude reference="Xtf-vR-hZj"/>
-                                                            </mask>
-                                                        </variation>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="0.0" y="0.0" width="166" height="57"/>
                                                         </variation>
-                                                        <variation key="heightClass=regular-widthClass=compact">
-                                                            <mask key="constraints">
-                                                                <include reference="5vD-uC-RKf"/>
-                                                            </mask>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                             <mask key="constraints">
-                                                                <include reference="Xtf-vR-hZj"/>
+                                                                <exclude reference="Pma-Fw-3TH"/>
                                                             </mask>
                                                         </variation>
                                                         <connections>
@@ -384,33 +490,27 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSL-V8-0DV" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="102" y="0.0" width="103" height="57"/>
+                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="103" id="9hA-Iz-3la"/>
                                                             <constraint firstAttribute="width" constant="77" id="e2K-23-gNu"/>
                                                             <constraint firstAttribute="width" constant="124" id="sCe-bf-86T"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title=".">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="default">
                                                             <mask key="constraints">
-                                                                <exclude reference="e2K-23-gNu"/>
                                                                 <exclude reference="sCe-bf-86T"/>
                                                             </mask>
                                                         </variation>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="168" y="0.0" width="82" height="57"/>
                                                         </variation>
-                                                        <variation key="heightClass=regular-widthClass=compact">
-                                                            <mask key="constraints">
-                                                                <exclude reference="9hA-Iz-3la"/>
-                                                                <include reference="e2K-23-gNu"/>
-                                                            </mask>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                             <mask key="constraints">
+                                                                <exclude reference="e2K-23-gNu"/>
                                                                 <include reference="sCe-bf-86T"/>
                                                             </mask>
                                                         </variation>
@@ -419,32 +519,28 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHr-02-HGI" customClass="OpButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="207" y="0.0" width="107" height="57"/>
+                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="124" id="bdO-qk-zbY"/>
                                                             <constraint firstAttribute="width" constant="77" id="oWa-9M-sUe"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="35"/>
+                                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="=">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <variation key="default">
                                                             <mask key="constraints">
                                                                 <exclude reference="bdO-qk-zbY"/>
-                                                                <exclude reference="oWa-9M-sUe"/>
                                                             </mask>
                                                         </variation>
                                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                             <rect key="frame" x="252" y="0.0" width="82" height="57"/>
                                                         </variation>
-                                                        <variation key="heightClass=regular-widthClass=compact">
-                                                            <mask key="constraints">
-                                                                <include reference="oWa-9M-sUe"/>
-                                                            </mask>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                             <mask key="constraints">
                                                                 <include reference="bdO-qk-zbY"/>
+                                                                <exclude reference="oWa-9M-sUe"/>
                                                             </mask>
                                                         </variation>
                                                         <connections>
@@ -453,10 +549,22 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="eYY-VV-3dW"/>
                                                     <constraint firstAttribute="height" constant="57" id="krB-3f-IlG"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="eYY-VV-3dW"/>
+                                                    </mask>
+                                                </variation>
                                                 <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="233" width="334" height="57"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="eYY-VV-3dW"/>
+                                                        <exclude reference="krB-3f-IlG"/>
+                                                    </mask>
                                                 </variation>
                                             </stackView>
                                         </subviews>
@@ -470,12 +578,15 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI7-Ud-aVn">
                                                 <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                 <state key="normal" title="Edit Line">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="heightClass=regular" ambiguous="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="editLineBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fT9-85-czx"/>
@@ -484,21 +595,27 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htj-GQ-BOC">
                                                 <rect key="frame" x="106" y="0.0" width="102" height="30"/>
                                                 <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <variation key="heightClass=regular" ambiguous="YES">
                                                     <rect key="frame" x="113" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                 </variation>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-FC-WVq">
                                                 <rect key="frame" x="213" y="0.0" width="101" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="heightClass=regular" ambiguous="YES">
                                                     <rect key="frame" x="226" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="onCancelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzB-4D-5Df"/>
@@ -506,10 +623,22 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="XD8-Hw-l9A"/>
                                             <constraint firstAttribute="height" constant="30" id="XnX-vX-xgO"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="XD8-Hw-l9A"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="560" width="334" height="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="XD8-Hw-l9A"/>
+                                                <exclude reference="XnX-vX-xgO"/>
+                                            </mask>
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FRS-V5-qhP">
@@ -527,20 +656,27 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-h8-mOw">
                                                 <rect key="frame" x="106" y="0.0" width="102" height="30"/>
                                                 <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <variation key="heightClass=regular" ambiguous="YES">
                                                     <rect key="frame" x="113" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                 </variation>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFV-qy-dn1">
                                                 <rect key="frame" x="213" y="0.0" width="101" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                 <state key="normal" title="Done">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="heightClass=regular" ambiguous="YES">
                                                     <rect key="frame" x="226" y="0.0" width="108" height="30"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="addNoteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZo-aA-YMn"/>
@@ -548,19 +684,47 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nC0-KQ-n6l"/>
                                             <constraint firstAttribute="height" constant="30" id="qtR-Sq-hiQ"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="nC0-KQ-n6l"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="595" width="334" height="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="nC0-KQ-n6l"/>
+                                                <exclude reference="qtR-Sq-hiQ"/>
+                                            </mask>
                                         </variation>
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="502" id="Aud-cF-QEw"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="798" id="SA5-8a-dVX"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="570" id="aTY-pH-E4h"/>
                                     <constraint firstAttribute="width" constant="314" id="cgj-Or-j5c"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Aud-cF-QEw"/>
+                                        <exclude reference="SA5-8a-dVX"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="133" y="30" width="334" height="625"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Aud-cF-QEw"/>
+                                        <include reference="SA5-8a-dVX"/>
+                                        <exclude reference="aTY-pH-E4h"/>
+                                        <exclude reference="cgj-Or-j5c"/>
+                                    </mask>
                                 </variation>
                             </stackView>
                         </subviews>
@@ -601,7 +765,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1371" y="316.5"/>
+            <point key="canvasLocation" x="-1281.75" y="306"/>
         </scene>
         <!--UnitsVC-->
         <scene sceneID="Q5s-yh-tY1">
@@ -621,13 +785,29 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXQ-wv-fdD">
                                         <rect key="frame" x="37" y="0.0" width="15" height="30"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="9fZ-n2-6pp"/>
                                             <constraint firstAttribute="width" constant="15" id="ANJ-70-CYy"/>
+                                            <constraint firstAttribute="height" constant="40" id="d03-GB-ouS"/>
                                             <constraint firstAttribute="height" constant="30" id="hjr-fQ-Fnr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="1" height="0.0"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="9fZ-n2-6pp"/>
+                                                <exclude reference="d03-GB-ouS"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="9fZ-n2-6pp"/>
+                                                <exclude reference="ANJ-70-CYy"/>
+                                                <include reference="d03-GB-ouS"/>
+                                                <exclude reference="hjr-fQ-Fnr"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9M1-Sy-nSg">
                                         <rect key="frame" x="0.0" y="40" width="88" height="202"/>
@@ -636,14 +816,31 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="2QJ-6H-xQx"/>
                                                     <constraint firstAttribute="width" constant="88" id="MOk-fM-VTt"/>
                                                     <constraint firstAttribute="height" constant="30" id="OhO-jD-L5z"/>
+                                                    <constraint firstAttribute="width" constant="125" id="paU-wp-KKc"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="Convert">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="2QJ-6H-xQx"/>
+                                                        <exclude reference="paU-wp-KKc"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                    <mask key="constraints">
+                                                        <include reference="2QJ-6H-xQx"/>
+                                                        <exclude reference="MOk-fM-VTt"/>
+                                                        <exclude reference="OhO-jD-L5z"/>
+                                                        <include reference="paU-wp-KKc"/>
+                                                    </mask>
+                                                </variation>
                                                 <connections>
                                                     <action selector="onConvertPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="FSR-Wc-IWm"/>
                                                 </connections>
@@ -655,14 +852,31 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
                                                         <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="2cl-qX-RrE"/>
+                                                            <constraint firstAttribute="width" constant="125" id="i0A-XU-FZD"/>
                                                             <constraint firstAttribute="width" constant="88" id="isM-JC-T3S"/>
                                                             <constraint firstAttribute="height" constant="30" id="yob-Yv-YUR"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="Length">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="2cl-qX-RrE"/>
+                                                                <exclude reference="i0A-XU-FZD"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                            <mask key="constraints">
+                                                                <include reference="2cl-qX-RrE"/>
+                                                                <include reference="i0A-XU-FZD"/>
+                                                                <exclude reference="isM-JC-T3S"/>
+                                                                <exclude reference="yob-Yv-YUR"/>
+                                                            </mask>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="onLengthPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="WMn-CA-uH7"/>
                                                         </connections>
@@ -672,13 +886,30 @@
                                                         <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="7I0-VG-4d5"/>
+                                                            <constraint firstAttribute="width" constant="125" id="KsE-LH-dpH"/>
+                                                            <constraint firstAttribute="height" constant="40" id="kUc-Vh-DC7"/>
                                                             <constraint firstAttribute="width" constant="88" id="n9m-8n-Eg4"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="Area">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="KsE-LH-dpH"/>
+                                                                <exclude reference="kUc-Vh-DC7"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                            <mask key="constraints">
+                                                                <exclude reference="7I0-VG-4d5"/>
+                                                                <include reference="KsE-LH-dpH"/>
+                                                                <include reference="kUc-Vh-DC7"/>
+                                                                <exclude reference="n9m-8n-Eg4"/>
+                                                            </mask>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="onAreaPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="KMM-DC-ask"/>
                                                         </connections>
@@ -689,12 +920,29 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="AnN-cg-lv9"/>
                                                             <constraint firstAttribute="width" constant="88" id="MFd-vu-5wD"/>
+                                                            <constraint firstAttribute="width" constant="125" id="WVw-gt-t1a"/>
+                                                            <constraint firstAttribute="height" constant="40" id="zo4-Y6-Fbo"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="Volume">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="WVw-gt-t1a"/>
+                                                                <exclude reference="zo4-Y6-Fbo"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                            <mask key="constraints">
+                                                                <exclude reference="AnN-cg-lv9"/>
+                                                                <exclude reference="MFd-vu-5wD"/>
+                                                                <include reference="WVw-gt-t1a"/>
+                                                                <include reference="zo4-Y6-Fbo"/>
+                                                            </mask>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="onVolumePressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="sGl-iz-SvL"/>
                                                         </connections>
@@ -703,14 +951,31 @@
                                                         <rect key="frame" x="0.0" y="99" width="88" height="30"/>
                                                         <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" constant="125" id="SW2-u7-Ifx"/>
                                                             <constraint firstAttribute="height" constant="30" id="Sgy-dh-4Sv"/>
+                                                            <constraint firstAttribute="height" constant="40" id="lb9-2H-R1X"/>
                                                             <constraint firstAttribute="width" constant="88" id="yIq-ae-FXr"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="Mass">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="SW2-u7-Ifx"/>
+                                                                <exclude reference="lb9-2H-R1X"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                            <mask key="constraints">
+                                                                <include reference="SW2-u7-Ifx"/>
+                                                                <exclude reference="Sgy-dh-4Sv"/>
+                                                                <include reference="lb9-2H-R1X"/>
+                                                                <exclude reference="yIq-ae-FXr"/>
+                                                            </mask>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="onMassPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="0cJ-Hw-Zzf"/>
                                                         </connections>
@@ -720,12 +985,30 @@
                                                         <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="0gX-ER-lMT"/>
+                                                            <constraint firstAttribute="width" constant="125" id="bnm-FV-8SE"/>
+                                                            <constraint firstAttribute="height" constant="40" id="v3z-ZD-jRH"/>
                                                             <constraint firstAttribute="width" constant="88" id="wO5-2u-2Mt"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="13"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <state key="normal" title="Temperature">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="bnm-FV-8SE"/>
+                                                                <exclude reference="v3z-ZD-jRH"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="19"/>
+                                                            <mask key="constraints">
+                                                                <exclude reference="0gX-ER-lMT"/>
+                                                                <include reference="bnm-FV-8SE"/>
+                                                                <include reference="v3z-ZD-jRH"/>
+                                                                <exclude reference="wO5-2u-2Mt"/>
+                                                            </mask>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="onTempPressed:" destination="8eA-8k-zp2" eventType="touchUpInside" id="Uh6-z5-ubu"/>
                                                         </connections>
@@ -733,13 +1016,54 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="125" id="zWd-Ac-Vl3"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="zWd-Ac-Vl3"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="zWd-Ac-Vl3"/>
+                                                    </mask>
+                                                </variation>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="g1O-KO-fFc"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="g1O-KO-fFc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="g1O-KO-fFc"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="Pmq-UX-zjE"/>
+                                    <constraint firstAttribute="height" constant="312" id="Qjs-9e-oeT"/>
+                                    <constraint firstAttribute="width" constant="125" id="rOj-iI-Zv0"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Qjs-9e-oeT"/>
+                                        <exclude reference="rOj-iI-Zv0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="Pmq-UX-zjE"/>
+                                        <include reference="Qjs-9e-oeT"/>
+                                        <include reference="rOj-iI-Zv0"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gu2-l0-g4t">
                                 <rect key="frame" x="143" y="28" width="314" height="323"/>
@@ -749,11 +1073,29 @@
                                         <color key="backgroundColor" red="0.65098039215686276" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5G5-xb-yQG"/>
+                                            <constraint firstAttribute="width" constant="500" id="KYV-GE-DoX"/>
+                                            <constraint firstAttribute="width" constant="314" id="bib-Ls-fTH"/>
+                                            <constraint firstAttribute="height" constant="40" id="zSM-7c-GRH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                         <state key="normal" title="Calculator">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="KYV-GE-DoX"/>
+                                                <exclude reference="zSM-7c-GRH"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                                            <mask key="constraints">
+                                                <exclude reference="5G5-xb-yQG"/>
+                                                <include reference="KYV-GE-DoX"/>
+                                                <exclude reference="bib-Ls-fTH"/>
+                                                <include reference="zSM-7c-GRH"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="iYq-i4-rpL"/>
                                         </connections>
@@ -766,101 +1108,284 @@
                                                 <subviews>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yX-IS-Qr6">
                                                         <rect key="frame" x="0.0" y="0.0" width="152" height="175"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="152" id="53t-nv-rUj"/>
-                                                            <constraint firstAttribute="height" constant="175" id="Ycp-Mi-pab"/>
+                                                            <constraint firstAttribute="width" constant="245" id="7rQ-LY-mmB"/>
+                                                            <constraint firstAttribute="height" constant="322" id="xZh-jz-ZzG"/>
                                                         </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="7rQ-LY-mmB"/>
+                                                                <exclude reference="xZh-jz-ZzG"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <mask key="constraints">
+                                                                <exclude reference="53t-nv-rUj"/>
+                                                                <include reference="7rQ-LY-mmB"/>
+                                                                <include reference="xZh-jz-ZzG"/>
+                                                            </mask>
+                                                        </variation>
                                                     </pickerView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93I-jn-Y60">
                                                         <rect key="frame" x="0.0" y="183" width="152" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="9Kg-lg-zOx"/>
                                                             <constraint firstAttribute="width" constant="152" id="ELs-EP-N45"/>
+                                                            <constraint firstAttribute="width" constant="245" id="gjK-Ip-RTC"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="gjK-Ip-RTC"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                                                            <mask key="constraints">
+                                                                <include reference="9Kg-lg-zOx"/>
+                                                                <exclude reference="ELs-EP-N45"/>
+                                                                <include reference="gjK-Ip-RTC"/>
+                                                            </mask>
+                                                        </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="VF9-Z6-Ozh">
                                                         <rect key="frame" x="0.0" y="215" width="152" height="30"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" constant="245" id="2dW-tR-VjI"/>
                                                             <constraint firstAttribute="width" constant="152" id="97t-PW-h5j"/>
                                                             <constraint firstAttribute="height" constant="30" id="aSK-HU-lG6"/>
+                                                            <constraint firstAttribute="height" constant="40" id="wat-YE-YYU"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="2dW-tR-VjI"/>
+                                                                <exclude reference="wat-YE-YYU"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            <mask key="constraints">
+                                                                <include reference="2dW-tR-VjI"/>
+                                                                <exclude reference="97t-PW-h5j"/>
+                                                                <exclude reference="aSK-HU-lG6"/>
+                                                                <include reference="wat-YE-YYU"/>
+                                                            </mask>
+                                                        </variation>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLV-jO-oqp">
-                                                        <rect key="frame" x="26" y="253" width="100" height="30"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLV-jO-oqp">
+                                                        <rect key="frame" x="14" y="253" width="125" height="30"/>
                                                         <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="100" id="FH6-Si-st4"/>
+                                                            <constraint firstAttribute="width" constant="125" id="FH6-Si-st4"/>
+                                                            <constraint firstAttribute="width" constant="150" id="IHy-X4-a3L"/>
+                                                            <constraint firstAttribute="height" constant="40" id="eoE-3l-ATE"/>
                                                             <constraint firstAttribute="height" constant="30" id="xiZ-wD-cOm"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="IHy-X4-a3L"/>
+                                                                <exclude reference="eoE-3l-ATE"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                            <mask key="constraints">
+                                                                <exclude reference="FH6-Si-st4"/>
+                                                                <include reference="IHy-X4-a3L"/>
+                                                                <include reference="eoE-3l-ATE"/>
+                                                                <exclude reference="xiZ-wD-cOm"/>
+                                                            </mask>
+                                                        </variation>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="152" id="4Vc-CK-s9Q"/>
+                                                    <constraint firstAttribute="height" constant="450" id="REl-dD-He4"/>
+                                                    <constraint firstAttribute="width" constant="245" id="TOH-iG-jf9"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="REl-dD-He4"/>
+                                                        <exclude reference="TOH-iG-jf9"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <exclude reference="4Vc-CK-s9Q"/>
+                                                        <include reference="REl-dD-He4"/>
+                                                        <include reference="TOH-iG-jf9"/>
+                                                    </mask>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V3E-SM-UQJ">
                                                 <rect key="frame" x="162" y="0.0" width="152" height="283"/>
                                                 <subviews>
                                                     <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="tAE-47-dVg">
                                                         <rect key="frame" x="0.0" y="0.0" width="152" height="175"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="152" id="EOW-qd-z1e"/>
-                                                            <constraint firstAttribute="height" constant="175" id="dfy-tw-FFE"/>
+                                                            <constraint firstAttribute="height" constant="322" id="UyG-zb-DKO"/>
+                                                            <constraint firstAttribute="width" constant="245" id="dNf-c1-W5K"/>
                                                         </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="UyG-zb-DKO"/>
+                                                                <exclude reference="dNf-c1-W5K"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <mask key="constraints">
+                                                                <exclude reference="EOW-qd-z1e"/>
+                                                                <include reference="UyG-zb-DKO"/>
+                                                                <include reference="dNf-c1-W5K"/>
+                                                            </mask>
+                                                        </variation>
                                                     </pickerView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkB-V7-vGf">
                                                         <rect key="frame" x="0.0" y="183" width="152" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="Uky-WF-H8c"/>
                                                             <constraint firstAttribute="width" constant="152" id="W94-fQ-m2m"/>
+                                                            <constraint firstAttribute="width" constant="245" id="c8z-wZ-rvY"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                         <nil key="highlightedColor"/>
                                                         <size key="shadowOffset" width="1" height="1"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="c8z-wZ-rvY"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                                                            <mask key="constraints">
+                                                                <include reference="Uky-WF-H8c"/>
+                                                                <exclude reference="W94-fQ-m2m"/>
+                                                                <include reference="c8z-wZ-rvY"/>
+                                                            </mask>
+                                                        </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="MBO-9d-vMa">
                                                         <rect key="frame" x="0.0" y="215" width="152" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="152" id="J08-2R-qX8"/>
+                                                            <constraint firstAttribute="height" constant="40" id="nA5-Uf-tcx"/>
                                                             <constraint firstAttribute="height" constant="30" id="pCb-fQ-OSx"/>
+                                                            <constraint firstAttribute="width" constant="245" id="zn9-sQ-gKD"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="nA5-Uf-tcx"/>
+                                                                <exclude reference="zn9-sQ-gKD"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                            <mask key="constraints">
+                                                                <exclude reference="J08-2R-qX8"/>
+                                                                <include reference="nA5-Uf-tcx"/>
+                                                                <exclude reference="pCb-fQ-OSx"/>
+                                                                <include reference="zn9-sQ-gKD"/>
+                                                            </mask>
+                                                        </variation>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKr-PY-l7d">
-                                                        <rect key="frame" x="26" y="253" width="100" height="30"/>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKr-PY-l7d">
+                                                        <rect key="frame" x="14" y="253" width="125" height="30"/>
                                                         <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="L51-eQ-DH1"/>
-                                                            <constraint firstAttribute="width" constant="100" id="fVT-Y0-ME7"/>
+                                                            <constraint firstAttribute="height" constant="40" id="Q0R-u5-lFJ"/>
+                                                            <constraint firstAttribute="width" constant="125" id="fVT-Y0-ME7"/>
+                                                            <constraint firstAttribute="width" constant="150" id="n8a-nS-pzd"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="Q0R-u5-lFJ"/>
+                                                                <exclude reference="n8a-nS-pzd"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                            <mask key="constraints">
+                                                                <exclude reference="L51-eQ-DH1"/>
+                                                                <include reference="Q0R-u5-lFJ"/>
+                                                                <exclude reference="fVT-Y0-ME7"/>
+                                                                <include reference="n8a-nS-pzd"/>
+                                                            </mask>
+                                                        </variation>
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="245" id="hFD-LP-foc"/>
                                                     <constraint firstAttribute="width" constant="152" id="kc4-gu-Udd"/>
                                                 </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="hFD-LP-foc"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="hFD-LP-foc"/>
+                                                        <exclude reference="kc4-gu-Udd"/>
+                                                    </mask>
+                                                </variation>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="500" id="CvB-oD-S6Z"/>
+                                            <constraint firstAttribute="height" constant="450" id="UW9-H9-gDP"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="CvB-oD-S6Z"/>
+                                                <exclude reference="UW9-H9-gDP"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="CvB-oD-S6Z"/>
+                                                <include reference="UW9-H9-gDP"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="2zh-5G-zyU"/>
                                     <constraint firstAttribute="width" constant="314" id="3CS-4P-MYe"/>
+                                    <constraint firstAttribute="height" constant="500" id="6UE-Io-WbV"/>
                                     <constraint firstAttribute="height" constant="323" id="J8Q-d1-Ye1"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2zh-5G-zyU"/>
+                                        <exclude reference="6UE-Io-WbV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="2zh-5G-zyU"/>
+                                        <exclude reference="3CS-4P-MYe"/>
+                                        <include reference="6UE-Io-WbV"/>
+                                        <exclude reference="J8Q-d1-Ye1"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -869,7 +1394,19 @@
                             <constraint firstItem="Gu2-l0-g4t" firstAttribute="centerX" secondItem="8wM-7U-C9R" secondAttribute="centerX" id="PyW-Lf-dIb"/>
                             <constraint firstItem="rM4-Bp-c8d" firstAttribute="centerX" secondItem="8wM-7U-C9R" secondAttribute="centerX" id="TJx-gE-eso"/>
                             <constraint firstItem="rM4-Bp-c8d" firstAttribute="top" secondItem="8wM-7U-C9R" secondAttribute="topMargin" constant="321" id="VpO-D7-RMt"/>
+                            <constraint firstItem="rM4-Bp-c8d" firstAttribute="top" secondItem="8wM-7U-C9R" secondAttribute="topMargin" constant="488" id="uIt-kC-8rz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uIt-kC-8rz"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="VpO-D7-RMt"/>
+                                <include reference="uIt-kC-8rz"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="areaBtn" destination="dw9-ds-GMH" id="XHh-S4-r3f"/>
@@ -902,97 +1439,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yhh-co-fRi">
-                                <rect key="frame" x="140" y="30" width="320" height="536"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yhh-co-fRi">
+                                <rect key="frame" x="143" y="30" width="314" height="533"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OCu-SY-o9I">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OCu-SY-o9I">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="76"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJR-4J-gdc">
-                                                <rect key="frame" x="122" y="0.0" width="76" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
                                                 <color key="backgroundColor" red="0.65098039220000004" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="500" id="ay8-5t-F7g"/>
-                                                    <constraint firstAttribute="height" constant="30" id="iWb-ud-wxm"/>
+                                                    <constraint firstAttribute="width" constant="314" id="dMX-hs-w01"/>
+                                                    <constraint firstAttribute="height" constant="30" id="ozM-V6-sb4"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                                 <state key="normal" title="Calculator">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="ay8-5t-F7g"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <mask key="constraints">
-                                                        <exclude reference="iWb-ud-wxm"/>
-                                                    </mask>
-                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
                                                     <mask key="constraints">
-                                                        <include reference="ay8-5t-F7g"/>
+                                                        <exclude reference="dMX-hs-w01"/>
+                                                        <exclude reference="ozM-V6-sb4"/>
                                                     </mask>
                                                 </variation>
                                                 <connections>
                                                     <segue destination="BYZ-38-t0r" kind="show" id="9bu-So-WZr"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1w9-dW-0X5">
-                                                <rect key="frame" x="90" y="50" width="140" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1w9-dW-0X5">
+                                                <rect key="frame" x="87" y="46" width="140" height="30"/>
                                                 <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Fcu-SB-ya6"/>
                                                     <constraint firstAttribute="height" constant="30" id="J17-RG-89T"/>
                                                     <constraint firstAttribute="width" constant="140" id="dtb-VT-YGc"/>
+                                                    <constraint firstAttribute="height" constant="40" id="jvU-Nr-eh3"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="Fcu-SB-ya6"/>
+                                                        <exclude reference="jvU-Nr-eh3"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=compact">
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                     <mask key="constraints">
-                                                        <include reference="Fcu-SB-ya6"/>
                                                         <exclude reference="J17-RG-89T"/>
-                                                        <exclude reference="dtb-VT-YGc"/>
+                                                        <include reference="jvU-Nr-eh3"/>
                                                     </mask>
                                                 </variation>
                                             </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="mJR-4J-gdc" firstAttribute="leading" secondItem="OCu-SY-o9I" secondAttribute="leading" id="A3E-tX-DgX"/>
-                                            <constraint firstItem="1w9-dW-0X5" firstAttribute="leading" secondItem="OCu-SY-o9I" secondAttribute="leading" constant="87" id="mi6-r1-tAw"/>
+                                            <constraint firstAttribute="width" constant="314" id="DSB-kF-YD1"/>
+                                            <constraint firstAttribute="height" constant="100" id="NzA-WX-N06"/>
+                                            <constraint firstAttribute="width" constant="500" id="VHG-hM-szg"/>
+                                            <constraint firstItem="mJR-4J-gdc" firstAttribute="leading" secondItem="OCu-SY-o9I" secondAttribute="leading" id="o4m-UH-nYB"/>
+                                            <constraint firstItem="mJR-4J-gdc" firstAttribute="leading" secondItem="OCu-SY-o9I" secondAttribute="leading" id="o7g-KX-UeW"/>
+                                            <constraint firstAttribute="height" constant="76" id="ow9-4k-fo7"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="mi6-r1-tAw"/>
-                                                <exclude reference="A3E-tX-DgX"/>
+                                                <exclude reference="NzA-WX-N06"/>
+                                                <exclude reference="VHG-hM-szg"/>
+                                                <exclude reference="o7g-KX-UeW"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=regular" spacing="20">
                                             <mask key="constraints">
-                                                <include reference="mi6-r1-tAw"/>
-                                                <include reference="A3E-tX-DgX"/>
+                                                <exclude reference="DSB-kF-YD1"/>
+                                                <include reference="NzA-WX-N06"/>
+                                                <include reference="VHG-hM-szg"/>
+                                                <exclude reference="ow9-4k-fo7"/>
+                                                <exclude reference="o4m-UH-nYB"/>
+                                                <include reference="o7g-KX-UeW"/>
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-du-2fu">
-                                        <rect key="frame" x="0.0" y="80" width="320" height="456"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-du-2fu">
+                                        <rect key="frame" x="0.0" y="80" width="314" height="453"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US Dollar/s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66u-Dc-bgv">
-                                                <rect key="frame" x="97" y="0.0" width="127" height="30"/>
+                                                <rect key="frame" x="94" y="0.0" width="127" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="LMn-E8-Wff"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpl-GV-9qA">
-                                                <rect key="frame" x="140" y="40" width="41" height="30"/>
+                                                <rect key="frame" x="137" y="44" width="41" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="41" id="KrI-tT-D4E"/>
                                                     <constraint firstAttribute="height" constant="30" id="RFR-cR-So3"/>
@@ -1000,36 +1541,36 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                                                </variation>
                                             </label>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnp-tJ-KFu">
-                                                <rect key="frame" x="0.0" y="80" width="320" height="216"/>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="frame" x="57" y="88" width="200" height="189"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="320" id="7Xf-zL-TtN"/>
-                                                    <constraint firstAttribute="height" constant="200" id="Hfb-Zb-a0J"/>
-                                                    <constraint firstAttribute="height" constant="280" id="XDX-00-UZs"/>
+                                                    <constraint firstAttribute="height" constant="216" id="5eU-n9-ELt"/>
+                                                    <constraint firstAttribute="width" constant="320" id="PAa-Ca-DoW"/>
+                                                    <constraint firstAttribute="height" constant="189" id="TTt-MY-g1N"/>
+                                                    <constraint firstAttribute="width" constant="200" id="cYa-i5-B8J"/>
                                                 </constraints>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="7Xf-zL-TtN"/>
-                                                        <exclude reference="Hfb-Zb-a0J"/>
-                                                        <exclude reference="XDX-00-UZs"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=compact">
-                                                    <mask key="constraints">
-                                                        <include reference="Hfb-Zb-a0J"/>
+                                                        <exclude reference="5eU-n9-ELt"/>
+                                                        <exclude reference="PAa-Ca-DoW"/>
                                                     </mask>
                                                 </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <mask key="constraints">
-                                                        <include reference="7Xf-zL-TtN"/>
-                                                        <include reference="XDX-00-UZs"/>
+                                                        <include reference="5eU-n9-ELt"/>
+                                                        <include reference="PAa-Ca-DoW"/>
+                                                        <exclude reference="TTt-MY-g1N"/>
+                                                        <exclude reference="cYa-i5-B8J"/>
                                                     </mask>
                                                 </variation>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="=" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zE-Bh-Kfg">
-                                                <rect key="frame" x="140" y="306" width="40" height="30"/>
+                                                <rect key="frame" x="137" y="291" width="40" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="A4k-vU-7uj"/>
                                                     <constraint firstAttribute="width" constant="40" id="mbN-Pf-j7H"/>
@@ -1037,89 +1578,124 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                                </variation>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWX-zm-ZmT">
-                                                <rect key="frame" x="90" y="346" width="140" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWX-zm-ZmT">
+                                                <rect key="frame" x="87" y="335" width="140" height="30"/>
                                                 <color key="backgroundColor" red="0.87058823529999996" green="0.87058823529999996" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Cvm-Q2-zDD"/>
                                                     <constraint firstAttribute="width" constant="140" id="d4x-Jv-UfD"/>
                                                     <constraint firstAttribute="height" constant="30" id="yF9-pO-1qW"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Cvm-Q2-zDD"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                    <mask key="constraints">
+                                                        <include reference="Cvm-Q2-zDD"/>
+                                                        <exclude reference="yF9-pO-1qW"/>
+                                                    </mask>
+                                                </variation>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r6-lI-DMJ">
-                                                <rect key="frame" x="61" y="386" width="199" height="30"/>
+                                                <rect key="frame" x="58" y="379" width="199" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="fA0-Ye-LIi"/>
+                                                    <constraint firstAttribute="height" constant="30" id="621-zp-EsJ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="fA0-Ye-LIi"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=compact">
+                                                <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="fA0-Ye-LIi"/>
                                                     </mask>
                                                 </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <mask key="constraints">
+                                                        <exclude reference="621-zp-EsJ"/>
+                                                        <include reference="fA0-Ye-LIi"/>
+                                                    </mask>
+                                                </variation>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="le0-r2-14g">
-                                                <rect key="frame" x="90" y="426" width="140" height="30"/>
+                                                <rect key="frame" x="87" y="423" width="140" height="30"/>
                                                 <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="140" id="deO-Vg-vZn"/>
                                                     <constraint firstAttribute="height" constant="30" id="lDT-6d-VGy"/>
+                                                    <constraint firstAttribute="height" constant="40" id="lk7-yl-w5M"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                                 <state key="normal" title="Convert">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="lk7-yl-w5M"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                    <mask key="constraints">
+                                                        <exclude reference="lDT-6d-VGy"/>
+                                                        <include reference="lk7-yl-w5M"/>
+                                                    </mask>
+                                                </variation>
                                                 <connections>
                                                     <action selector="onConvertBtnPressed:" destination="H3d-et-MdE" eventType="touchUpInside" id="J3a-1k-cA4"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Tnp-tJ-KFu" firstAttribute="leading" secondItem="fnb-du-2fu" secondAttribute="leading" constant="57" id="t8K-0F-u5g"/>
-                                            <constraint firstItem="5r6-lI-DMJ" firstAttribute="leading" secondItem="Tnp-tJ-KFu" secondAttribute="leading" id="tnG-Ck-jtF"/>
+                                            <constraint firstAttribute="width" constant="314" id="Ite-bx-erY"/>
+                                            <constraint firstAttribute="height" constant="520" id="UQI-1L-ZXZ"/>
+                                            <constraint firstAttribute="height" constant="453" id="j9F-L8-rT4"/>
+                                            <constraint firstAttribute="width" constant="500" id="sV3-Vp-U3V"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="t8K-0F-u5g"/>
-                                                <exclude reference="tnG-Ck-jtF"/>
+                                                <exclude reference="UQI-1L-ZXZ"/>
+                                                <exclude reference="sV3-Vp-U3V"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
-                                                <include reference="t8K-0F-u5g"/>
-                                                <include reference="tnG-Ck-jtF"/>
+                                                <exclude reference="Ite-bx-erY"/>
+                                                <include reference="UQI-1L-ZXZ"/>
+                                                <exclude reference="j9F-L8-rT4"/>
+                                                <include reference="sV3-Vp-U3V"/>
                                             </mask>
                                         </variation>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="520" id="2QD-1o-kl3"/>
                                     <constraint firstAttribute="width" constant="500" id="8ei-8b-4qM"/>
-                                    <constraint firstAttribute="width" constant="314" id="D04-pN-0KR"/>
-                                    <constraint firstAttribute="height" constant="600" id="dZt-Ve-9K8"/>
+                                    <constraint firstAttribute="height" constant="533" id="Agq-Pp-Meb"/>
+                                    <constraint firstAttribute="width" constant="314" id="Qfi-0f-wov"/>
+                                    <constraint firstAttribute="height" constant="624" id="QqQ-u4-ZRf"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="2QD-1o-kl3"/>
                                         <exclude reference="8ei-8b-4qM"/>
-                                        <exclude reference="D04-pN-0KR"/>
-                                        <exclude reference="dZt-Ve-9K8"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="2QD-1o-kl3"/>
-                                        <include reference="D04-pN-0KR"/>
+                                        <exclude reference="QqQ-u4-ZRf"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="8ei-8b-4qM"/>
-                                        <include reference="dZt-Ve-9K8"/>
+                                        <exclude reference="Agq-Pp-Meb"/>
+                                        <exclude reference="Qfi-0f-wov"/>
+                                        <include reference="QqQ-u4-ZRf"/>
                                     </mask>
                                 </variation>
                             </stackView>
@@ -1140,10 +1716,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvC-bR-Hsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-795.75" y="987.75"/>
+            <point key="canvasLocation" x="-719" y="994"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iYq-i4-rpL"/>
+        <segue reference="9bu-So-WZr"/>
     </inferredMetricsTieBreakers>
 </document>

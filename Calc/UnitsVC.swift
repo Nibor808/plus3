@@ -1465,11 +1465,23 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         
+        let screenSize = UIScreen.mainScreen().bounds
         let pickerLabel = UILabel()
-        pickerLabel.textColor = UIColor.blackColor()
+        
+        pickerLabel.textColor = UIColor.darkGrayColor()
         pickerLabel.text = inputArr.objectAtIndex(row) as? String
-        pickerLabel.font = UIFont(name: "Helvetica Nue", size: 6)
+        
+        if screenSize.width <= 375.0 {
+            
+            pickerLabel.font = UIFont(name: "Helvetica Neue", size: 13.0)
+            
+        }else if screenSize.width > 375.0 {
+            
+            pickerLabel.font = UIFont(name: "Helvetica Neue", size: 21.0)
+        }
+        
         pickerLabel.textAlignment = NSTextAlignment.Center
+        pickerLabel.backgroundColor = UIColor.whiteColor()
         return pickerLabel
     }
     
@@ -1506,7 +1518,7 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         toTxt.delegate = self
         
         convertBtn.layer.borderWidth = 0.5
-    
+        
     }
 
 }
