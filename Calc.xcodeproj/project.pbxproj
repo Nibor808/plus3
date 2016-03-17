@@ -17,7 +17,6 @@
 		D047963C1C7FD0BA006DE2A7 /* CalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047963B1C7FD0BA006DE2A7 /* CalcButton.swift */; };
 		D047963E1C7FD250006DE2A7 /* OpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047963D1C7FD250006DE2A7 /* OpButton.swift */; };
 		D04796401C7FD49B006DE2A7 /* TopRowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047963F1C7FD49B006DE2A7 /* TopRowButton.swift */; };
-		D04796421C7FD813006DE2A7 /* visitor1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D04796411C7FD813006DE2A7 /* visitor1.ttf */; };
 		D047964B1C810F4C006DE2A7 /* CurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047964A1C810F4C006DE2A7 /* CurrencyVC.swift */; };
 		D047964D1C810F69006DE2A7 /* UnitsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047964C1C810F69006DE2A7 /* UnitsVC.swift */; };
 		D047966F1C85E91D006DE2A7 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D047966E1C85E91D006DE2A7 /* Temperature.swift */; };
@@ -48,7 +47,6 @@
 		D047963B1C7FD0BA006DE2A7 /* CalcButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcButton.swift; sourceTree = "<group>"; };
 		D047963D1C7FD250006DE2A7 /* OpButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpButton.swift; sourceTree = "<group>"; };
 		D047963F1C7FD49B006DE2A7 /* TopRowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRowButton.swift; sourceTree = "<group>"; };
-		D04796411C7FD813006DE2A7 /* visitor1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = visitor1.ttf; sourceTree = "<group>"; };
 		D047964A1C810F4C006DE2A7 /* CurrencyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyVC.swift; sourceTree = "<group>"; };
 		D047964C1C810F69006DE2A7 /* UnitsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsVC.swift; sourceTree = "<group>"; };
 		D047966E1C85E91D006DE2A7 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 		D04796381C7FC35D006DE2A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D04796411C7FD813006DE2A7 /* visitor1.ttf */,
 				D04796CD1C91BF14006DE2A7 /* Constants.swift */,
 			);
 			name = Resources;
@@ -237,7 +234,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D047962E1C7FC333006DE2A7 /* LaunchScreen.storyboard in Resources */,
-				D04796421C7FD813006DE2A7 /* visitor1.ttf in Resources */,
 				D047962B1C7FC333006DE2A7 /* Assets.xcassets in Resources */,
 				D04796261C7FC333006DE2A7 /* Main.storyboard in Resources */,
 			);
@@ -430,11 +426,13 @@
 			baseConfigurationReference = 0690268595275443F6E37E81 /* Pods-Calc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Robin Erickson (3PV5A24KHJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Robin Erickson (3PV5A24KHJ)";
 				INFOPLIST_FILE = Calc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.Calc;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.CalcNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -444,11 +442,13 @@
 			baseConfigurationReference = 7FA80D1A5A63F143DBBBDB6C /* Pods-Calc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Robin Erickson (3PV5A24KHJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Robin Erickson (3PV5A24KHJ)";
 				INFOPLIST_FILE = Calc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.Calc;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.CalcNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -18,21 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NMi-Vj-a7i">
-                                <rect key="frame" x="143" y="28" width="314" height="570"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NMi-Vj-a7i">
+                                <rect key="frame" x="20" y="28" width="560" height="564"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SPW-Zb-gQT">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXv-uE-qhc">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                                 <state key="normal" title="Currency">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="onCurrencyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwX-B6-ARc"/>
@@ -40,9 +40,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPa-RI-e47">
-                                                <rect key="frame" x="106" y="0.0" width="102" height="30"/>
+                                                <rect key="frame" x="188" y="0.0" width="184" height="30"/>
                                                 <color key="backgroundColor" red="0.95196101639999997" green="0.51650815269999995" blue="0.1642196887" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="13"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="12"/>
                                                 <state key="normal" title="Send as Email">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -54,14 +54,14 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwM-Hh-bD9">
-                                                <rect key="frame" x="213" y="0.0" width="101" height="30"/>
+                                                <rect key="frame" x="377" y="0.0" width="183" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                                 <state key="normal" title="Units">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="onUnitsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t9e-hO-rre"/>
@@ -70,64 +70,56 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="5gC-PZ-JmI"/>
-                                            <constraint firstAttribute="height" constant="30" id="XiD-jc-dSQ"/>
+                                            <constraint firstAttribute="height" constant="30" id="pAj-fW-2gY"/>
+                                            <constraint firstAttribute="height" constant="40" id="uRL-cp-gvt"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="5gC-PZ-JmI"/>
+                                                <exclude reference="uRL-cp-gvt"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
-                                                <include reference="5gC-PZ-JmI"/>
-                                                <exclude reference="XiD-jc-dSQ"/>
+                                                <exclude reference="pAj-fW-2gY"/>
+                                                <include reference="uRL-cp-gvt"/>
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KVV-Et-4PF">
-                                        <rect key="frame" x="0.0" y="35" width="314" height="167"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KVV-Et-4PF">
+                                        <rect key="frame" x="0.0" y="35" width="560" height="175"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="167" id="2Rc-zX-tva"/>
-                                            <constraint firstAttribute="height" constant="300" id="7IM-7m-3Nz"/>
-                                            <constraint firstAttribute="width" constant="314" id="uZ3-vS-bLn"/>
+                                            <constraint firstAttribute="height" constant="175" id="Lpx-7c-s8k"/>
+                                            <constraint firstAttribute="height" constant="350" id="RVw-wK-czz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="7IM-7m-3Nz"/>
+                                                <exclude reference="RVw-wK-czz"/>
                                             </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="35" width="334" height="225"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                             <mask key="constraints">
-                                                <exclude reference="2Rc-zX-tva"/>
-                                                <include reference="7IM-7m-3Nz"/>
-                                                <exclude reference="uZ3-vS-bLn"/>
+                                                <exclude reference="Lpx-7c-s8k"/>
+                                                <include reference="RVw-wK-czz"/>
                                             </mask>
                                         </variation>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="NEH-h9-KuQ" userLabel="MainCalcST">
-                                        <rect key="frame" x="0.0" y="207" width="314" height="293"/>
+                                        <rect key="frame" x="0.0" y="215" width="560" height="279"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="D31-7U-SI0">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="57"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBp-l6-adh" customClass="TopRowButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="35"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="54"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
@@ -136,14 +128,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXD-9s-em0" customClass="TopRowButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="141" y="0.0" width="138" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="+/-">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="84" y="0.0" width="82" height="54"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
@@ -152,14 +141,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzD-It-HFh" customClass="TopRowButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="281" y="0.0" width="139" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="%">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="168" y="0.0" width="82" height="54"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
@@ -168,14 +154,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rET-lV-Q1T" customClass="OpButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="422" y="0.0" width="138" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="/">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="252" y="0.0" width="82" height="54"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
@@ -184,37 +167,16 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="57" id="LAQ-rn-WDI"/>
-                                                    <constraint firstAttribute="height" constant="70" id="U80-2k-oxx"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="U80-2k-oxx"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="54"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <mask key="constraints">
-                                                        <exclude reference="LAQ-rn-WDI"/>
-                                                        <include reference="U80-2k-oxx"/>
-                                                    </mask>
-                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dDp-Gy-Nz1">
-                                                <rect key="frame" x="0.0" y="59" width="314" height="57"/>
+                                                <rect key="frame" x="0.0" y="56" width="560" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8j-ir-LgJ" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="7">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
@@ -223,14 +185,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5a-63-MKe" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="141" y="0.0" width="138" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="8">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="84" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
@@ -239,14 +198,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueR-CV-HSx" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="281" y="0.0" width="139" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="9">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="168" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
@@ -255,14 +211,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-aJ-zve" customClass="OpButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="422" y="0.0" width="138" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="x">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="252" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
@@ -271,37 +224,16 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="70" id="7VF-W8-tlL"/>
-                                                    <constraint firstAttribute="height" constant="57" id="rCl-Wg-3zm"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="7VF-W8-tlL"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="56" width="334" height="57"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <mask key="constraints">
-                                                        <include reference="7VF-W8-tlL"/>
-                                                        <exclude reference="rCl-Wg-3zm"/>
-                                                    </mask>
-                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="072-sv-vsz">
-                                                <rect key="frame" x="0.0" y="118" width="314" height="57"/>
+                                                <rect key="frame" x="0.0" y="112" width="560" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLF-gC-gLu" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="55"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="4">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
@@ -310,14 +242,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FkX-EV-1T8" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="141" y="0.0" width="138" height="55"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="5">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="84" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
@@ -326,14 +255,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN8-2u-cOt" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="281" y="0.0" width="139" height="55"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="6">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="168" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
@@ -342,14 +268,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AP8-MJ-pQ1" customClass="OpButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="422" y="0.0" width="138" height="55"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="-">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="252" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
@@ -358,37 +281,16 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="57" id="SB2-px-f3V"/>
-                                                    <constraint firstAttribute="height" constant="70" id="jmY-cS-CeG"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="jmY-cS-CeG"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="115" width="334" height="57"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <mask key="constraints">
-                                                        <exclude reference="SB2-px-f3V"/>
-                                                        <include reference="jmY-cS-CeG"/>
-                                                    </mask>
-                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Eft-XM-GyJ">
-                                                <rect key="frame" x="0.0" y="177" width="314" height="57"/>
+                                                <rect key="frame" x="0.0" y="169" width="560" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-GS-Fb1" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="1">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="0.0" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
@@ -397,14 +299,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkI-Pj-LkQ" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="79" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="141" y="0.0" width="138" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="2">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="84" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
@@ -413,14 +312,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ov-fG-9Ic" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="281" y="0.0" width="139" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="3">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="168" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
                                                         </variation>
@@ -429,14 +325,11 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fY4-IY-SGc" customClass="OpButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
+                                                        <rect key="frame" x="422" y="0.0" width="138" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="+">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="252" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
                                                         </variation>
@@ -445,177 +338,96 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="70" id="A9K-qf-Np3"/>
-                                                    <constraint firstAttribute="height" constant="57" id="lo7-Yc-bd9"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="A9K-qf-Np3"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="174" width="334" height="57"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <mask key="constraints">
-                                                        <include reference="A9K-qf-Np3"/>
-                                                        <exclude reference="lo7-Yc-bd9"/>
-                                                    </mask>
-                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nxZ-nI-uwG">
-                                                <rect key="frame" x="0.0" y="236" width="314" height="57"/>
+                                                <rect key="frame" x="0.0" y="225" width="560" height="54"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B20-DF-9bg" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="156" height="57"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="156" id="Pma-Fw-3TH"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="0.0" width="279" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
                                                         <state key="normal" title="0">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="0.0" y="0.0" width="166" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
-                                                            <mask key="constraints">
-                                                                <exclude reference="Pma-Fw-3TH"/>
-                                                            </mask>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JyY-yi-oBO"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSL-V8-0DV" customClass="CalcButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="158" y="0.0" width="77" height="57"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="77" id="e2K-23-gNu"/>
-                                                            <constraint firstAttribute="width" constant="124" id="sCe-bf-86T"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="281" y="0.0" width="139" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title=".">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="sCe-bf-86T"/>
-                                                            </mask>
-                                                        </variation>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="168" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
-                                                            <mask key="constraints">
-                                                                <exclude reference="e2K-23-gNu"/>
-                                                                <include reference="sCe-bf-86T"/>
-                                                            </mask>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onDotPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nke-PH-vPb"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHr-02-HGI" customClass="OpButton" customModule="Calc" customModuleProvider="target">
-                                                        <rect key="frame" x="237" y="0.0" width="77" height="57"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="124" id="bdO-qk-zbY"/>
-                                                            <constraint firstAttribute="width" constant="77" id="oWa-9M-sUe"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="422" y="0.0" width="138" height="54"/>
                                                         <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="40"/>
                                                         <state key="normal" title="=">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="default">
-                                                            <mask key="constraints">
-                                                                <exclude reference="bdO-qk-zbY"/>
-                                                            </mask>
-                                                        </variation>
-                                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                            <rect key="frame" x="252" y="0.0" width="82" height="57"/>
-                                                        </variation>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
-                                                            <mask key="constraints">
-                                                                <include reference="bdO-qk-zbY"/>
-                                                                <exclude reference="oWa-9M-sUe"/>
-                                                            </mask>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onEqualsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JMy-Ne-CgH"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="70" id="eYY-VV-3dW"/>
-                                                    <constraint firstAttribute="height" constant="57" id="krB-3f-IlG"/>
-                                                </constraints>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="eYY-VV-3dW"/>
-                                                    </mask>
-                                                </variation>
-                                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="0.0" y="233" width="334" height="57"/>
-                                                </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <mask key="constraints">
-                                                        <include reference="eYY-VV-3dW"/>
-                                                        <exclude reference="krB-3f-IlG"/>
-                                                    </mask>
-                                                </variation>
                                             </stackView>
                                         </subviews>
-                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="265" width="334" height="290"/>
-                                        </variation>
+                                        <constraints>
+                                            <constraint firstItem="fY4-IY-SGc" firstAttribute="width" secondItem="YHr-02-HGI" secondAttribute="width" id="DxD-5B-8Du"/>
+                                            <constraint firstItem="dDp-Gy-Nz1" firstAttribute="height" secondItem="D31-7U-SI0" secondAttribute="height" id="Lcq-hI-Kt6"/>
+                                            <constraint firstItem="5Ov-fG-9Ic" firstAttribute="width" secondItem="hSL-V8-0DV" secondAttribute="width" id="TZ2-c6-sgo"/>
+                                            <constraint firstItem="nxZ-nI-uwG" firstAttribute="height" secondItem="D31-7U-SI0" secondAttribute="height" id="p0U-13-05E"/>
+                                            <constraint firstItem="072-sv-vsz" firstAttribute="height" secondItem="D31-7U-SI0" secondAttribute="height" constant="1" id="qXP-oM-xFD"/>
+                                            <constraint firstItem="Eft-XM-GyJ" firstAttribute="height" secondItem="D31-7U-SI0" secondAttribute="height" id="w9d-Wk-gLe"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9eN-OL-dwq">
-                                        <rect key="frame" x="0.0" y="505" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="499" width="560" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI7-Ud-aVn">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                 <state key="normal" title="Edit Line">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
-                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="editLineBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fT9-85-czx"/>
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htj-GQ-BOC">
-                                                <rect key="frame" x="106" y="0.0" width="102" height="30"/>
+                                                <rect key="frame" x="188" y="0.0" width="184" height="30"/>
                                                 <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                <variation key="heightClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="113" y="0.0" width="108" height="30"/>
-                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                 </variation>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-FC-WVq">
-                                                <rect key="frame" x="213" y="0.0" width="101" height="30"/>
+                                                <rect key="frame" x="377" y="0.0" width="183" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="226" y="0.0" width="108" height="30"/>
-                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="onCancelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzB-4D-5Df"/>
@@ -623,60 +435,48 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="XD8-Hw-l9A"/>
-                                            <constraint firstAttribute="height" constant="30" id="XnX-vX-xgO"/>
+                                            <constraint firstAttribute="height" constant="40" id="PGb-Co-hnA"/>
+                                            <constraint firstAttribute="height" constant="30" id="fec-cJ-gl0"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="XD8-Hw-l9A"/>
+                                                <exclude reference="PGb-Co-hnA"/>
                                             </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="560" width="334" height="30"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
-                                                <include reference="XD8-Hw-l9A"/>
-                                                <exclude reference="XnX-vX-xgO"/>
+                                                <include reference="PGb-Co-hnA"/>
+                                                <exclude reference="fec-cJ-gl0"/>
                                             </mask>
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FRS-V5-qhP">
-                                        <rect key="frame" x="0.0" y="540" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="534" width="560" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-k9-UeG">
-                                                <rect key="frame" x="0.0" y="0.0" width="101" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
-                                                </variation>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHL-h8-mOw">
-                                                <rect key="frame" x="106" y="0.0" width="102" height="30"/>
+                                                <rect key="frame" x="188" y="0.0" width="184" height="30"/>
                                                 <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <variation key="heightClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="113" y="0.0" width="108" height="30"/>
-                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                 </variation>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFV-qy-dn1">
-                                                <rect key="frame" x="213" y="0.0" width="101" height="30"/>
+                                                <rect key="frame" x="377" y="0.0" width="183" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="16"/>
                                                 <state key="normal" title="Done">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular" ambiguous="YES">
-                                                    <rect key="frame" x="226" y="0.0" width="108" height="30"/>
-                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="addNoteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZo-aA-YMn"/>
@@ -684,54 +484,30 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="nC0-KQ-n6l"/>
-                                            <constraint firstAttribute="height" constant="30" id="qtR-Sq-hiQ"/>
+                                            <constraint firstAttribute="height" constant="30" id="RgI-Aq-koo"/>
+                                            <constraint firstAttribute="height" constant="40" id="pAL-dc-61C"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="nC0-KQ-n6l"/>
+                                                <exclude reference="pAL-dc-61C"/>
                                             </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="595" width="334" height="30"/>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
                                             <mask key="constraints">
-                                                <include reference="nC0-KQ-n6l"/>
-                                                <exclude reference="qtR-Sq-hiQ"/>
+                                                <exclude reference="RgI-Aq-koo"/>
+                                                <include reference="pAL-dc-61C"/>
                                             </mask>
                                         </variation>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="502" id="Aud-cF-QEw"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="798" id="SA5-8a-dVX"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="570" id="aTY-pH-E4h"/>
-                                    <constraint firstAttribute="width" constant="314" id="cgj-Or-j5c"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Aud-cF-QEw"/>
-                                        <exclude reference="SA5-8a-dVX"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="133" y="30" width="334" height="625"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="Aud-cF-QEw"/>
-                                        <include reference="SA5-8a-dVX"/>
-                                        <exclude reference="aTY-pH-E4h"/>
-                                        <exclude reference="cgj-Or-j5c"/>
-                                    </mask>
-                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.65111584111052623" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="NMi-Vj-a7i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="61I-k7-4ok"/>
-                            <constraint firstItem="NMi-Vj-a7i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YVi-l3-fLa"/>
+                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="NMi-Vj-a7i" secondAttribute="bottom" constant="8" id="FVe-Np-bLE"/>
+                            <constraint firstItem="NMi-Vj-a7i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Nl3-H5-LqZ"/>
+                            <constraint firstItem="NMi-Vj-a7i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="USd-gN-vLc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NMi-Vj-a7i" secondAttribute="trailing" id="UwC-EW-Hy3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -765,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1281.75" y="306"/>
+            <point key="canvasLocation" x="-1744.5" y="185.25"/>
         </scene>
         <!--UnitsVC-->
         <scene sceneID="Q5s-yh-tY1">

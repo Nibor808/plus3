@@ -1459,7 +1459,7 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         
         toLbl.text = inputArr[y] as? String
         
-        
+        toTxt.text = ""
         
     }
     

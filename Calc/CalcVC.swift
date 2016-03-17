@@ -447,7 +447,12 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction) -> Void in
                 
-                self.dismissViewControllerAnimated(true, completion: nil)
+                for i in self.calcBtns {
+                    
+                    i.enabled = false
+                }
+                
+                return
                 
             }))
             

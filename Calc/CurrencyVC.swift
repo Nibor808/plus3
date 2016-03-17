@@ -427,6 +427,8 @@ class CurrencyVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let x = currencyPicker.selectedRowInComponent(0)
         
         toLbl.text = inputArr[x] as? String
+        
+        toTxt.text = ""
     }
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
