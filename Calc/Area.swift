@@ -302,7 +302,7 @@ class Area {
         
         let conversionTemp = Double(area)! * 0.00000015942
         
-        let conversion = Double(round(1000000*conversionTemp)/1000000)
+        let conversion = Double(round(1000000000*conversionTemp)/1000000000)
         
         return "\(conversion)"
         

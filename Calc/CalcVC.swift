@@ -10,56 +10,24 @@ import MessageUI
 import CoreData
 import SwiftString
 
-////MATH FUNCTIONS
-//func add(leftVal:Double, rightVal: Double) -> Double {
-//    
-//    let result = leftVal + rightVal
-//    
-//    return result
-//}
-//
-//func sub(leftVal:Double, rightVal: Double) -> Double {
-//    
-//    let result = leftVal - rightVal
-//    
-//    return result
-//}
-//
-//func mul(leftVal:Double, rightVal: Double) -> Double {
-//    
-//    let result = leftVal * rightVal
-//    
-//    return result
-//}
-//
-//func div(leftVal:Double, rightVal: Double) -> Double {
-//    
-//    let result = leftVal / rightVal
-//    
-//    return result
-//}
-//
-//typealias Op = (Double, Double) -> Double
-//let ops: [String: Op] = ["+": add, "-": sub, "*": mul, "/": div]
-
-
-
-class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
+class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailComposeViewControllerDelegate {
     
     //IBOUTLETS
     @IBOutlet weak var rowToSelectTxt: UITextField!
    
+    @IBOutlet weak var noteStack: UIStackView!
     @IBOutlet weak var outputTxt: UITextView!
     
-    
+    @IBOutlet weak var outputTxtHeight: NSLayoutConstraint!
     @IBOutlet var calcBtns: [UIButton]!
    
+    @IBOutlet weak var bottomPinHeight: NSLayoutConstraint!
     @IBOutlet weak var clearBtn: TopRowButton!
     @IBOutlet weak var addNoteTxt: UITextField!
     @IBOutlet weak var noteLbl: UILabel!
     @IBOutlet weak var exportBtn: UIButton!
-    @IBOutlet weak var addBtn: UIButton!
-    @IBOutlet weak var editBtn: UIButton!
+    @IBOutlet weak var doneBtn: UIButton!
+    @IBOutlet weak var addNoteBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var calcStackView: UIStackView!
     @IBOutlet weak var currencyBtn: UIButton!
@@ -144,7 +112,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
     }
     
     
-    @IBAction func editLineBtn(sender: UIButton) {
+    @IBAction func addNoteBtn(sender: UIButton) {
         
         row = rowToSelectTxt.text!
         
@@ -152,11 +120,10 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
         currencyBtn.hidden = true
         unitsBtn.hidden = true
         
-        
         rowToSelectTxt.enabled = true
         rowToSelectTxt.highlighted = true
         calcStackView.hidden = true
-        editBtn.setTitle("Confirm", forState: .Normal)
+        addNoteBtn.setTitle("Confirm", forState: .Normal)
         
         rowToSelectTxt.becomeFirstResponder()
         
@@ -166,14 +133,10 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
         
         if rowToSelectTxt.text != "" {
             
-            if result.count != 0 && result.count - 1 >= Int(row) {
+            if result.count != 0 && result.count - 1 >= Int(row) && rowToSelectTxt.text?.isNumeric() == true {
                 
-                noteLbl.hidden = false
                 noteLbl.text = "Note For Line: " + row
-                addNoteTxt.hidden = false
-                editBtn.enabled = false
-                addBtn.hidden = false
-                addBtn.enabled = true
+                noteStack.hidden = false
                 
                 editNote()
                 
@@ -199,13 +162,10 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
         }
     }
     
-    @IBAction func addNoteBtn(sender: UIButton) {
+    @IBAction func doneBtn(sender: UIButton) {
         
-        editBtn.enabled = true
-        addBtn.enabled = false
-        addBtn.hidden = true
-        noteLbl.hidden = true
-        addNoteTxt.hidden = true
+        addNoteBtn.enabled = true
+        noteStack.hidden = true
         rowToSelectTxt.enabled = false
         calcStackView.hidden = false
         cancelBtn.enabled = false
@@ -213,7 +173,9 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
         currencyBtn.hidden = false
         unitsBtn.hidden = false
         
-        editBtn.setTitle("Edit Line", forState: .Normal)
+        addNoteBtn.setTitle("Add Note", forState: .Normal)
+        
+        rowToSelectTxt.attributedPlaceholder = NSAttributedString(string: "")
         
         self.view.endEditing(true)
         
@@ -224,27 +186,24 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
     
     @IBAction func onCancelPressed(sender: AnyObject) {
        
-            editBtn.enabled = true
-            addBtn.enabled = false
-            addBtn.hidden = true
-            noteLbl.hidden = true
-            addNoteTxt.hidden = true
-            rowToSelectTxt.text = ""
-            rowToSelectTxt.enabled = false
-            addNoteTxt.text = ""
-            calcStackView.hidden = false
-            cancelBtn.enabled = false
-            exportBtn.hidden = false
-            currencyBtn.hidden = false
-            unitsBtn.hidden = false
+        addNoteBtn.enabled = true
+        noteStack.hidden = true
+        rowToSelectTxt.text = ""
+        rowToSelectTxt.enabled = false
+        addNoteTxt.text = ""
+        calcStackView.hidden = false
+        cancelBtn.enabled = false
+        exportBtn.hidden = false
+        currencyBtn.hidden = false
+        unitsBtn.hidden = false
             
             
             
-            rowToSelectTxt.attributedPlaceholder = NSAttributedString(string: "Line #")
-            
-            editBtn.setTitle("Edit Line", forState: .Normal)
-            
-            self.view.endEditing(true)
+        rowToSelectTxt.attributedPlaceholder = NSAttributedString(string: "")
+        
+        addNoteBtn.setTitle("Add Note", forState: .Normal)
+        
+        self.view.endEditing(true)
 
         
     }
@@ -493,7 +452,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
             
             for var i = 0; i < result.count; i++ {
                 
-                if i == Int(row) {
+                if i == Int(row) && row.isNumeric() == true {
                     
                     let num = result[i]
                     
@@ -501,17 +460,24 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
                     
                     let addNoteTrim = addNoteTxt.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
                     
-                    //if there is already a note
-                    if isEditingNote == true {
+                    if addNoteTrim != "" {
                         
-                        result.insert(addNoteTrim, atIndex: i)
+                        //if there is already a note
+                        if isEditingNote == true {
+                            
+                            result.insert(addNoteTrim, atIndex: i)
+                            
+                            //if there is not already a note
+                        }else if isEditingNote == false {
+                            
+                            result.insert(num + " " + "{" + addNoteTrim + "}", atIndex: i)
+                        }
+
                         
-                        //if there is not already a note
-                    }else if isEditingNote == false {
+                    }else {
                         
-                        result.insert(num + " " + "{" + addNoteTrim + "}", atIndex: i)
+                        result.insert(num, atIndex: i)
                     }
-                    
                 }
             }
             
@@ -523,7 +489,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
             
             updateArray()
             
-            editBtn.enabled = true
+            addNoteBtn.enabled = true
             
         
     }
@@ -547,7 +513,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
                         
                         isEditingNote = true
                         
-                        addNoteTxt.text = result[i]
+                        addNoteTxt.text = resultReturn
                     
                     }else {
                         
@@ -938,28 +904,51 @@ class CalcVC: UIViewController, UITextFieldDelegate, MFMailComposeViewController
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        
+        
+    }
     
-    override func viewDidLoad() {
+    
+      override func viewDidLoad() {
         super.viewDidLoad()
         
         clearBtn.selected = true
         clearBtn.setTitle("C", forState: .Normal)
         clearBtn.setTitle("A/C", forState: .Selected)
         clearBtn.setTitleColor(UIColor.whiteColor(), forState: .Selected)
-        addBtn.hidden = true
-        addNoteTxt.hidden = true
-        noteLbl.hidden = true
-        addBtn.enabled = false
         cancelBtn.enabled = false
-        addBtn.setTitleColor(UIColor.darkGrayColor(), forState: .Disabled)
         cancelBtn.setTitleColor(UIColor.darkGrayColor(), forState: .Disabled)
         rowToSelectTxt.enabled = false
         
         self.addNoteTxt.delegate = self
         self.rowToSelectTxt.delegate = self
+        self.outputTxt.delegate = self
         
-        outputTxt.font = outputTxt.font?.fontWithSize(18)
+        let screenSize = UIScreen.mainScreen().bounds
         
+        if screenSize.height == 480 {
+            
+            outputTxtHeight.constant = 125
+            
+        }else if screenSize.height == 568 {
+            
+            outputTxtHeight.constant = 175
+            
+        }else if screenSize.height == 667 {
+            
+            outputTxtHeight.constant = 225
+            
+        }else if screenSize.height == 736 {
+            
+            outputTxtHeight.constant = 294
+            
+        }else {
+            
+            outputTxtHeight.constant = 450
+        }
+
+
         fetchArr()
         
         equalsBtn.enabled = false

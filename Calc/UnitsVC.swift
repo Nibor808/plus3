@@ -49,6 +49,8 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
+        fromTxt.text = ""
+        toTxt.text = ""
         inputArr = lengthPickData
         fromPicker.reloadAllComponents()
         toPicker.reloadAllComponents()
@@ -64,6 +66,8 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
+        fromTxt.text = ""
+        toTxt.text = ""
         inputArr = areaPickData
         fromPicker.reloadAllComponents()
         toPicker.reloadAllComponents()
@@ -80,6 +84,8 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
+        fromTxt.text = ""
+        toTxt.text = ""
         inputArr = volumePickData
         fromPicker.reloadAllComponents()
         toPicker.reloadAllComponents()
@@ -96,6 +102,8 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
+        fromTxt.text = ""
+        toTxt.text = ""
         inputArr = massPickData
         fromPicker.reloadAllComponents()
         toPicker.reloadAllComponents()
@@ -112,6 +120,8 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
+        fromTxt.text = ""
+        toTxt.text = ""
         inputArr = tempPickData
         fromPicker.reloadAllComponents()
         toPicker.reloadAllComponents()
@@ -119,32 +129,45 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
     }
     
     @IBAction func onConvertPressed(sender: AnyObject) {
-        
-        if inputArr == tempPickData {
+      
+        if toLbl.text != "Select a Unit" && fromTxt.text?.isNumeric() == true {
             
-            tempConvert()
+            if inputArr == tempPickData {
+                
+                tempConvert()
+                
+            }else if inputArr == lengthPickData {
+                
+                lengthConvert()
+                
+            }else if inputArr == areaPickData {
+                
+                areaConvert()
+                
+            }else if inputArr == volumePickData {
+                
+                volumeConvert()
+                
+            }else if inputArr == massPickData {
+                
+                massConvert()
+                
+            }else {
+                
+                return
+            }
             
-        }else if inputArr == lengthPickData {
-            
-            lengthConvert()
-            
-        }else if inputArr == areaPickData {
-            
-            areaConvert()
-            
-        }else if inputArr == volumePickData {
-            
-            volumeConvert()
-            
-        }else if inputArr == massPickData {
-            
-            massConvert()
-            
+            fromTxt.attributedPlaceholder = NSAttributedString(string: "")
+
         }else {
+            
+            toTxt.text = ""
+            fromTxt.text = ""
+            fromTxt.attributedPlaceholder = NSAttributedString(string: "Error")
             
             return
         }
-
+        
             
     }
         
@@ -1473,12 +1496,17 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         
         if screenSize.width <= 375.0 {
             
-            pickerLabel.font = UIFont(name: "Helvetica Neue", size: 13.0)
+            pickerLabel.font = UIFont(name: "Helvetica Neue", size: 12.0)
             
-        }else if screenSize.width > 375.0 {
+        }else if screenSize.width == 414.0 {
+            
+            pickerLabel.font = UIFont(name: "Helvetica Neue", size: 15.0)
+            
+        }else if screenSize.width > 414.0 {
             
             pickerLabel.font = UIFont(name: "Helvetica Neue", size: 21.0)
         }
+
         
         pickerLabel.textAlignment = NSTextAlignment.Center
         pickerLabel.backgroundColor = UIColor.whiteColor()
@@ -1509,8 +1537,8 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         toPicker.dataSource = self
         toPicker.delegate = self
         
-        inputArr = tempPickData
-        tempBtn.selected = true
+        inputArr = areaPickData
+        areaBtn.selected = true
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
@@ -1518,7 +1546,7 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         toTxt.delegate = self
         
         convertBtn.layer.borderWidth = 0.5
-        
+       
     }
 
 }

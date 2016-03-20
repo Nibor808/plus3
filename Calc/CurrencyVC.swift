@@ -22,7 +22,17 @@ class CurrencyVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     @IBAction func onConvertBtnPressed(sender: AnyObject) {
         
-        self.updateUI()
+        if usdTxt.text?.isNumeric() == true {
+            
+             updateUI()
+            
+        }else {
+            
+            usdTxt.text = ""
+            
+            usdTxt.attributedPlaceholder = NSAttributedString(string: "Error")
+        }
+       
 
         
     }
@@ -35,16 +45,17 @@ class CurrencyVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         currencyPicker.delegate = self
         currency = Currency()
         
+        usdTxt.attributedPlaceholder = NSAttributedString(string: "$")
+        
         currency.dowloadCurrency { () -> () in
             
         }
-
-        
     }
+    
     
     func updateUI() {
         
-        if usdTxt.text != "" {
+        if usdTxt.text != "" && usdTxt.text?.isNumeric() == true {
             
             if self.toLbl.text != "" {
                 
@@ -399,6 +410,8 @@ class CurrencyVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                 
                 return
             }
+            
+            usdTxt.attributedPlaceholder = NSAttributedString(string: "$")
             
         }else {
             
