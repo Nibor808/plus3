@@ -904,11 +904,6 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
-        
-    }
-    
     
       override func viewDidLoad() {
         super.viewDidLoad()
@@ -945,9 +940,8 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             
         }else {
             
-            outputTxtHeight.constant = 450
+            outputTxtHeight.constant = 375
         }
-
 
         fetchArr()
         

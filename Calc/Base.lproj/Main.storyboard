@@ -31,8 +31,9 @@
                                                 <state key="normal" title="Email">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="onExportPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dlf-nt-SsS"/>
@@ -45,8 +46,9 @@
                                                 <state key="normal" title="Currency">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                                                    <rect key="frame" x="255" y="0.0" width="250" height="40"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="onCurrencyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwX-B6-ARc"/>
@@ -60,8 +62,9 @@
                                                 <state key="normal" title="Units">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                                                    <rect key="frame" x="510" y="0.0" width="250" height="40"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="onUnitsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t9e-hO-rre"/>
@@ -78,7 +81,8 @@
                                                 <exclude reference="uRL-cp-gvt"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="760" height="40"/>
                                             <mask key="constraints">
                                                 <exclude reference="pAj-fW-2gY"/>
                                                 <include reference="uRL-cp-gvt"/>
@@ -93,8 +97,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=regular-widthClass=regular">
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                            <rect key="frame" x="0.0" y="45" width="760" height="50"/>
                                         </variation>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="NEH-h9-KuQ" userLabel="MainCalcST">
@@ -110,8 +115,9 @@
                                                         <state key="normal">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="189" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KX-SI-vUB"/>
@@ -123,8 +129,9 @@
                                                         <state key="normal" title="+/-">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                            <rect key="frame" x="191" y="0.0" width="188" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onChangeSignPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ob0-YL-zX2"/>
@@ -136,8 +143,9 @@
                                                         <state key="normal" title="%">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                            <rect key="frame" x="381" y="0.0" width="189" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onPercentPresssed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ABl-n7-tsh"/>
@@ -149,14 +157,18 @@
                                                         <state key="normal" title="/">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                            <rect key="frame" x="572" y="0.0" width="188" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onDividePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thg-4Q-QiK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="760" height="84"/>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dDp-Gy-Nz1">
                                                 <rect key="frame" x="0.0" y="68" width="560" height="66"/>
@@ -167,8 +179,9 @@
                                                         <state key="normal" title="7">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="189" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Esj-OY-xNB"/>
@@ -180,8 +193,9 @@
                                                         <state key="normal" title="8">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="191" y="0.0" width="188" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ULQ-SU-czz"/>
@@ -193,8 +207,9 @@
                                                         <state key="normal" title="9">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="381" y="0.0" width="189" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klj-3p-9kM"/>
@@ -206,14 +221,18 @@
                                                         <state key="normal" title="x">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                            <rect key="frame" x="572" y="0.0" width="188" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onMultiplyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBO-rl-EWP"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="86" width="760" height="84"/>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="072-sv-vsz">
                                                 <rect key="frame" x="0.0" y="136" width="560" height="67"/>
@@ -224,8 +243,9 @@
                                                         <state key="normal" title="4">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="189" height="85"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aba-zV-QaD"/>
@@ -237,8 +257,9 @@
                                                         <state key="normal" title="5">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="191" y="0.0" width="188" height="85"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZ7-ZX-pw6"/>
@@ -250,8 +271,9 @@
                                                         <state key="normal" title="6">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="381" y="0.0" width="189" height="85"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U18-c2-qDp"/>
@@ -263,14 +285,18 @@
                                                         <state key="normal" title="-">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                            <rect key="frame" x="572" y="0.0" width="188" height="85"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onSubtractPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOv-HL-AXw"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="172" width="760" height="85"/>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Eft-XM-GyJ">
                                                 <rect key="frame" x="0.0" y="205" width="560" height="66"/>
@@ -281,8 +307,9 @@
                                                         <state key="normal" title="1">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="189" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Soc-OO-m5A"/>
@@ -294,8 +321,9 @@
                                                         <state key="normal" title="2">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="191" y="0.0" width="188" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6WL-nF-6GE"/>
@@ -307,8 +335,9 @@
                                                         <state key="normal" title="3">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="381" y="0.0" width="189" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6KY-Xg-Wp1"/>
@@ -320,14 +349,18 @@
                                                         <state key="normal" title="+">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                            <rect key="frame" x="572" y="0.0" width="188" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onAddPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="44o-6T-9Ff"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="259" width="760" height="84"/>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nxZ-nI-uwG">
                                                 <rect key="frame" x="0.0" y="273" width="560" height="66"/>
@@ -338,8 +371,9 @@
                                                         <state key="normal" title="0">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="60"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="379" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="numPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JyY-yi-oBO"/>
@@ -351,8 +385,9 @@
                                                         <state key="normal" title=".">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                            <rect key="frame" x="381" y="0.0" width="189" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onDotPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nke-PH-vPb"/>
@@ -364,14 +399,18 @@
                                                         <state key="normal" title="=">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
-                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                             <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="50"/>
+                                                            <rect key="frame" x="572" y="0.0" width="188" height="84"/>
                                                         </variation>
                                                         <connections>
                                                             <action selector="onEqualsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JMy-Ne-CgH"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="345" width="760" height="84"/>
+                                                </variation>
                                             </stackView>
                                         </subviews>
                                         <constraints>
@@ -382,6 +421,9 @@
                                             <constraint firstItem="072-sv-vsz" firstAttribute="height" secondItem="D31-7U-SI0" secondAttribute="height" constant="1" id="qXP-oM-xFD"/>
                                             <constraint firstItem="Eft-XM-GyJ" firstAttribute="height" secondItem="D31-7U-SI0" secondAttribute="height" id="w9d-Wk-gLe"/>
                                         </constraints>
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="100" width="760" height="429"/>
+                                        </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9eN-OL-dwq">
                                         <rect key="frame" x="0.0" y="434" width="560" height="30"/>
@@ -393,8 +435,9 @@
                                                 <state key="normal" title="Add Note">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="addNoteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29u-2V-wQv"/>
@@ -405,8 +448,9 @@
                                                 <color key="backgroundColor" red="0.87201891450000002" green="0.87119654609999997" blue="0.86890933390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                    <rect key="frame" x="255" y="0.0" width="250" height="40"/>
                                                 </variation>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-FC-WVq">
@@ -416,8 +460,9 @@
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                                    <rect key="frame" x="510" y="0.0" width="250" height="40"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="onCancelPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzB-4D-5Df"/>
@@ -433,7 +478,8 @@
                                                 <exclude reference="PGb-Co-hnA"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="534" width="760" height="40"/>
                                             <mask key="constraints">
                                                 <include reference="PGb-Co-hnA"/>
                                                 <exclude reference="fec-cJ-gl0"/>
@@ -485,7 +531,8 @@
                                                 <exclude reference="pAL-dc-61C"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="574" width="760" height="0.0"/>
                                             <mask key="constraints">
                                                 <exclude reference="RgI-Aq-koo"/>
                                                 <include reference="pAL-dc-61C"/>
@@ -493,6 +540,9 @@
                                         </variation>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="28" width="760" height="574"/>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.65111584111052623" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -982,8 +1032,9 @@
                                                 <exclude reference="7Ka-wh-DbY"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                             <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="760" height="40"/>
                                             <mask key="constraints">
                                                 <include reference="7Ka-wh-DbY"/>
                                                 <exclude reference="7vv-XH-iKl"/>
@@ -1013,8 +1064,9 @@
                                                         <exclude reference="z0j-Cj-d4E"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                    <rect key="frame" x="290" y="0.0" width="180" height="40"/>
                                                     <mask key="constraints">
                                                         <exclude reference="0An-OY-MXE"/>
                                                         <exclude reference="MOR-e0-0WI"/>
@@ -1037,8 +1089,9 @@
                                                         <exclude reference="prp-YM-sUL"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <rect key="frame" x="304" y="65" width="153" height="50"/>
                                                     <mask key="constraints">
                                                         <exclude reference="aDb-q8-xI4"/>
                                                         <include reference="prp-YM-sUL"/>
@@ -1062,8 +1115,9 @@
                                                         <exclude reference="PSi-Qf-OhH"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                                                    <rect key="frame" x="360" y="140" width="40" height="40"/>
                                                     <mask key="constraints">
                                                         <include reference="B26-iN-tNN"/>
                                                         <include reference="PSi-Qf-OhH"/>
@@ -1075,6 +1129,9 @@
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tnp-tJ-KFu">
                                                 <rect key="frame" x="120" y="126" width="320" height="193"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                                    <rect key="frame" x="220" y="205" width="320" height="200"/>
+                                                </variation>
                                             </pickerView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r6-lI-DMJ">
                                                 <rect key="frame" x="181" y="331" width="199" height="30"/>
@@ -1084,8 +1141,9 @@
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <rect key="frame" x="261" y="430" width="239" height="50"/>
                                                     <mask key="constraints">
                                                         <exclude reference="e2C-Zx-bSL"/>
                                                     </mask>
@@ -1106,8 +1164,9 @@
                                                         <exclude reference="PI8-OV-Kcx"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                                    <rect key="frame" x="290" y="505" width="180" height="40"/>
                                                     <mask key="constraints">
                                                         <include reference="PI8-OV-Kcx"/>
                                                         <exclude reference="jM1-L8-omU"/>
@@ -1132,8 +1191,9 @@
                                                         <exclude reference="IDe-q4-8H8"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="heightClass=regular-widthClass=regular">
+                                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                                    <rect key="frame" x="290" y="570" width="180" height="40"/>
                                                     <mask key="constraints">
                                                         <exclude reference="Atx-Gf-hsZ"/>
                                                         <include reference="IDe-q4-8H8"/>
@@ -1157,7 +1217,8 @@
                                                 <exclude reference="1Tb-A0-QCn"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=regular" spacing="25">
+                                        <variation key="heightClass=regular-widthClass=regular" misplaced="YES" spacing="25">
+                                            <rect key="frame" x="0.0" y="85" width="760" height="610"/>
                                             <mask key="constraints">
                                                 <include reference="OgP-iZ-MCE"/>
                                                 <include reference="2Af-r3-p8K"/>
@@ -1166,6 +1227,9 @@
                                         </variation>
                                     </stackView>
                                 </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="20" y="30" width="760" height="695"/>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -1214,6 +1278,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iYq-i4-rpL"/>
+        <segue reference="9bu-So-WZr"/>
     </inferredMetricsTieBreakers>
 </document>
