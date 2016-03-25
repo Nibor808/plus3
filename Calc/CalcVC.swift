@@ -450,7 +450,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             
             row = rowToSelectTxt.text!
             
-            for var i = 0; i < result.count; i++ {
+            for i in 0 ..< result.count {
                 
                 if i == Int(row) && row.isNumeric() == true {
                     
@@ -502,7 +502,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         if result.count > 0 && result.count >= Int(row) {
             
-            for var i = 0; i < result.count; i++ {
+            for i in 0 ..< result.count {
                 
                 if i == Int(row) {
                     
@@ -938,11 +938,16 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             
             outputTxtHeight.constant = 294
             
+        }else if screenSize.height == 1366 {
+            
+            outputTxtHeight.constant = 550
+            
         }else {
             
             outputTxtHeight.constant = 375
         }
-
+        
+        
         fetchArr()
         
         equalsBtn.enabled = false

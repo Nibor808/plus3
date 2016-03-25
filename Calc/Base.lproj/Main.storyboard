@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NMi-Vj-a7i">
-                                <rect key="frame" x="20" y="28" width="560" height="464"/>
+                                <rect key="frame" x="20" y="28" width="560" height="539"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SPW-Zb-gQT">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -90,10 +90,10 @@
                                         </variation>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KVV-Et-4PF">
-                                        <rect key="frame" x="0.0" y="35" width="560" height="50"/>
+                                        <rect key="frame" x="0.0" y="35" width="560" height="125"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="D5D-zI-DSF"/>
+                                            <constraint firstAttribute="height" constant="125" id="D5D-zI-DSF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -103,7 +103,7 @@
                                         </variation>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="NEH-h9-KuQ" userLabel="MainCalcST">
-                                        <rect key="frame" x="0.0" y="90" width="560" height="339"/>
+                                        <rect key="frame" x="0.0" y="165" width="560" height="339"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="D31-7U-SI0">
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="66"/>
@@ -426,7 +426,7 @@
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9eN-OL-dwq">
-                                        <rect key="frame" x="0.0" y="434" width="560" height="30"/>
+                                        <rect key="frame" x="0.0" y="509" width="560" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI7-Ud-aVn">
                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
@@ -487,7 +487,7 @@
                                         </variation>
                                     </stackView>
                                     <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FRS-V5-qhP">
-                                        <rect key="frame" x="0.0" y="464" width="560" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="539" width="560" height="0.0"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-k9-UeG">
                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="0.0"/>
@@ -540,6 +540,14 @@
                                         </variation>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="9eN-OL-dwq" firstAttribute="top" relation="lessThanOrEqual" secondItem="KVV-Et-4PF" secondAttribute="bottom" constant="349" id="02t-MQ-9Om"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="02t-MQ-9Om"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="20" y="28" width="760" height="574"/>
                                 </variation>
