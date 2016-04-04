@@ -19,7 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.window?.tintColor = UIColor.darkGrayColor()
+        firstLaunch()
         return true
+    }
+    
+    func firstLaunch() -> Bool {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        if defaults.stringForKey("hasLaunchedBefore") != nil {
+            
+            defaults.setBool(true, forKey: "hasLaunchedBefore")
+            
+            return false
+        }else {
+            
+            defaults.setBool(false, forKey: "hasLaunchedBefore")
+            defaults.setObject(NSDate(), forKey: "firstLaunchDate")
+            return true
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

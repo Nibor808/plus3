@@ -10,6 +10,7 @@ import MessageUI
 import CoreData
 import SwiftString
 
+
 class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailComposeViewControllerDelegate {
     
     //IBOUTLETS
@@ -61,8 +62,10 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
     var sign = ""
     let date = NSDate()
     var isEditingNote = false
+    var counter = 0
+    var reviewCounter = 25
+    //var haveRated = false
     
-   
     //IBACTIONS
     @IBAction func onUnitsPressed(sender: AnyObject) {
         
@@ -90,7 +93,6 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             
             let mailComposer = MFMailComposeViewController()
             mailComposer.mailComposeDelegate = self
-            mailComposer.setSubject(dateString)
             mailComposer.setMessageBody("", isHTML: false)
             
             let joinedString = mainResultArr.joinWithSeparator("\n")
@@ -340,6 +342,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             
             i.enabled = false
         }
+        
     }
     
     @IBAction func onDotPressed(sender: CalcButton) {
@@ -365,18 +368,20 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
     
     @IBAction func onClearPressed(sender: TopRowButton) {
         
-        for i in calcBtns {
-            
-            i.enabled = true
-        }
         
         equalsBtn.enabled = false
         
         if sender.selected {
             
             if !result.isEmpty {
+                
+                for i in calcBtns {
+                    
+                    i.enabled = true
+                }
+
             
-            let alert = UIAlertController(title: "", message: "Are you sure you want to delete the whole claculation?", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "", message: "Are you sure you want to delete the whole calculation?", preferredStyle: UIAlertControllerStyle.Alert)
             
             
             
@@ -423,6 +428,11 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             }
             
         }else {
+            
+            for i in calcBtns {
+                
+                i.enabled = false
+            }
             
             clearBtn.selected = false
             
@@ -680,7 +690,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                     
                     let resultCalcTemp = Double(leftValString)! + Double(rightValString)!
                     
-                    resultCalc = Double(round(10000*resultCalcTemp)/10000)
+                    resultCalc = Double(round(1000000*resultCalcTemp)/1000000)
                     
                     result.append(leftValString + " + ")
                     
@@ -690,7 +700,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                     
                     let resultCalcTemp = Double(leftValString)! - Double(rightValString)!
                     
-                    resultCalc = Double(round(10000*resultCalcTemp)/10000)
+                    resultCalc = Double(round(1000000*resultCalcTemp)/1000000)
                     
                     result.append(leftValString + " - ")
                     
@@ -701,7 +711,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                     
                     let resultCalcTemp = Double(leftValString)! * Double(rightValString)!
                     
-                    resultCalc = Double(round(10000*resultCalcTemp)/10000)
+                    resultCalc = Double(round(1000000*resultCalcTemp)/1000000)
                     
                     result.append(leftValString + " x ")
                     
@@ -720,7 +730,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                         
                         let resultCalcTemp = Double(leftValString)! / Double(rightValString)!
                         
-                        resultCalc = Double(round(10000*resultCalcTemp)/10000)
+                        resultCalc = Double(round(1000000*resultCalcTemp)/1000000)
                         
                         result.append(leftValString + " / ")
                         
@@ -737,31 +747,29 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                         
                         let percentCalcTemp = Double(leftValString)! * Double(percentage)
                         
-                        let percentCalc = Double(round(10000*percentCalcTemp)/10000)
+                        let percentCalc = Double(round(1000000*percentCalcTemp)/1000000)
                         
                         if sign == "+" {
                             
                             let resultCalcTemp = Double(leftValString)! + Double(percentCalc)
                             
-                            resultCalc = Double(round(10000*resultCalcTemp)/10000)
+                            resultCalc = Double(round(1000000*resultCalcTemp)/1000000)
                             
                         }else if sign == "-" {
                             
                             let resultCalcTemp = Double(leftValString)! - Double(percentCalc)
                             
-                            resultCalc = Double(round(10000*resultCalcTemp)/10000)
+                            resultCalc = Double(round(1000000*resultCalcTemp)/1000000)
                             
                         }else if sign == "x" {
                             
-                            let resultCalcTemp = Double(leftValString)! * Double(percentCalc)
-                            
-                            resultCalc = Double(round(10000*resultCalcTemp)/10000)
+                            resultCalc = percentCalc
                             
                         }else if sign == "/" {
                             
                             let resultCalcTemp = Double(leftValString)! / Double(percentCalc)
                             
-                            resultCalc = Double(round(10000*resultCalcTemp)/10000)
+                            resultCalc = Double(round(1000000*resultCalcTemp)/1000000)
                             
                         }
                         
@@ -899,9 +907,70 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         (rowToSelectTxt).resignFirstResponder()
         (addNoteTxt).resignFirstResponder()
         
-        
         return true
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        let hasLaunched = defaults.valueForKey("hasLaunchedBefore") as? Bool
+        
+        let launchDate = defaults.valueForKey("firstLaunchDate") as! NSDate
+        
+        let timeSinceLaunch = NSDate().timeIntervalSinceDate(launchDate)
+        
+        let rated = defaults.valueForKey("haveRated") as? Bool
+        
+        if  hasLaunched == true && timeSinceLaunch >= 10.0 && (rated == nil || rated == false) {
+            
+            let alert = UIAlertController(title: "Finding +3 Useful?", message: "If you are finding +3 useful, we hope you won't mind taking a moment to give us a rating and review in the App store. We love hearing from you! If you have any comments or suggestions please drop us a line using the Feedback button below. As always we appreciate your support.", preferredStyle: .Alert)
+            
+            
+            alert.addAction(UIAlertAction(title: "Rate Us", style: .Default, handler: { (action: UIAlertAction) -> Void in
+                
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://itunes.apple.com/us/app/+3/id1095135903?mt=8")!)
+                alert.dismissViewControllerAnimated(true, completion: nil)
+                defaults.setObject(true, forKey: "haveRated")
+                
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Maybe Later", style: .Default, handler: { (action: UIAlertAction) -> Void in
+                
+                alert.dismissViewControllerAnimated(true, completion: nil)
+                defaults.setObject(false, forKey: "haveRated")
+                defaults.setObject(NSDate(), forKey: "firstLaunchDate")
+                
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Feedback", style: .Default, handler: { (action: UIAlertAction) -> Void in
+                
+                let email = "plus3app@incubo.ca"
+                let url = NSURL(string: "mailto:\(email)")!
+                UIApplication.sharedApplication().openURL(url)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "No Thanks", style: .Default, handler: { (action: UIAlertAction) -> Void in
+                
+                alert.dismissViewControllerAnimated(true, completion: nil)
+                defaults.setObject(true, forKey: "haveRated")
+                
+            }))
+            
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            alert.view.tintColor = ALERT_COLOR
+            
+        }else {
+            
+            return
+//            print("Opps")
+//            print("Has it Launched: \(hasLaunched)")
+//            print("Time Since: \(timeSinceLaunch)")
+//            print("Is it rated: \(rated)")
+        }
+
     }
     
     
@@ -909,8 +978,8 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         super.viewDidLoad()
         
         clearBtn.selected = true
-        clearBtn.setTitle("C", forState: .Normal)
-        clearBtn.setTitle("A/C", forState: .Selected)
+        clearBtn.setTitle("CE", forState: .Normal)
+        clearBtn.setTitle("C", forState: .Selected)
         clearBtn.setTitleColor(UIColor.whiteColor(), forState: .Selected)
         cancelBtn.enabled = false
         cancelBtn.setTitleColor(UIColor.darkGrayColor(), forState: .Disabled)

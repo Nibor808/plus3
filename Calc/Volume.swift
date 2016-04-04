@@ -1233,7 +1233,7 @@ class Volume {
     
     func ptUSToPtConvert(vol:String) -> String {
         
-        let conversionTemp = Double(vol)! * 0.0520421
+        let conversionTemp = Double(vol)! * 0.832674
         
         let conversion = Double(round(1000000*conversionTemp)/1000000)
         

@@ -106,7 +106,7 @@ class Area {
     //hec CONVERSIONS
     func hecToM2Convert(area:String) -> String {
         
-        let conversionTemp = Double(area)! * 1000
+        let conversionTemp = Double(area)! * 10000
         
         let conversion = Double(round(1000000*conversionTemp)/1000000)
         

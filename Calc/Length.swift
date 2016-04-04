@@ -257,7 +257,7 @@ class Length {
     
     func kmToCmConvert(len:String) -> String {
         
-        let conversionTemp = Double(len)! * 10000
+        let conversionTemp = Double(len)! * 100000
         
         let conversion = Double(round(1000000*conversionTemp)/1000000)
         
