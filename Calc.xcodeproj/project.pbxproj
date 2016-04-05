@@ -432,7 +432,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.CalcNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2b4968cb-039e-4b92-b750-3f9b774d1856";
+				PROVISIONING_PROFILE = "603cd0a9-6e9a-4dc2-b035-c9306943731a";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -448,7 +448,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.CalcNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2b4968cb-039e-4b92-b750-3f9b774d1856";
+				PROVISIONING_PROFILE = "603cd0a9-6e9a-4dc2-b035-c9306943731a";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

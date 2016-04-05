@@ -419,8 +419,11 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                 return
                 
             }))
-            
-            presentViewController(alert, animated: true, completion: nil)
+                alert.view.tintColor = ALERT_COLOR
+                presentViewController(alert, animated: true, completion: {
+                    
+                    alert.view.tintColor = ALERT_COLOR
+                })
                 
             }else {
                 
@@ -923,9 +926,9 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         let rated = defaults.valueForKey("haveRated") as? Bool
         
-        if  hasLaunched == true && timeSinceLaunch >= 10.0 && (rated == nil || rated == false) {
+        if  hasLaunched == true && timeSinceLaunch >= 1296000.0 && (rated == nil || rated == false) {
             
-            let alert = UIAlertController(title: "Finding +3 Useful?", message: "If you are finding +3 useful, we hope you won't mind taking a moment to give us a rating and review in the App store. We love hearing from you! If you have any comments or suggestions please drop us a line using the Feedback button below. As always we appreciate your support.", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Finding +3 Useful?", message: "If you are finding +3 useful, we hope you won't mind taking a moment to give us a rating and review in the App Store. We love hearing from you! If you have any comments or suggestions please drop us a line using the Feedback button below. As always we appreciate your support.", preferredStyle: .Alert)
             
             
             alert.addAction(UIAlertAction(title: "Rate Us", style: .Default, handler: { (action: UIAlertAction) -> Void in
@@ -959,16 +962,15 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             }))
             
             
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.presentViewController(alert, animated: true, completion: {
+                
+                alert.view.tintColor = ALERT_COLOR
+            })
             alert.view.tintColor = ALERT_COLOR
             
         }else {
             
             return
-//            print("Opps")
-//            print("Has it Launched: \(hasLaunched)")
-//            print("Time Since: \(timeSinceLaunch)")
-//            print("Is it rated: \(rated)")
         }
 
     }
