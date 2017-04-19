@@ -115,7 +115,7 @@
 				D047969E1C89D76B006DE2A7 /* Controller */,
 				D047966C1C85E8F2006DE2A7 /* Model */,
 				D04796361C7FC34D006DE2A7 /* View */,
-				D04796381C7FC35D006DE2A7 /* Resources */,
+				D04796381C7FC35D006DE2A7 /* Deps */,
 				D04796201C7FC333006DE2A7 /* AppDelegate.swift */,
 				D04796241C7FC333006DE2A7 /* Main.storyboard */,
 				D047962A1C7FC333006DE2A7 /* Assets.xcassets */,
@@ -138,12 +138,12 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		D04796381C7FC35D006DE2A7 /* Resources */ = {
+		D04796381C7FC35D006DE2A7 /* Deps */ = {
 			isa = PBXGroup;
 			children = (
 				D04796CD1C91BF14006DE2A7 /* Constants.swift */,
 			);
-			name = Resources;
+			name = Deps;
 			sourceTree = "<group>";
 		};
 		D047966C1C85E8F2006DE2A7 /* Model */ = {
@@ -201,12 +201,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Incubo;
 				TargetAttributes = {
 					D047961C1C7FC333006DE2A7 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = X975YC666W;
+						DevelopmentTeam = 2YU3EN97DX;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -351,8 +353,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -396,8 +400,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -416,6 +422,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -425,14 +432,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0690268595275443F6E37E81 /* Pods-Calc.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Robin Erickson (3PV5A24KHJ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Robin Erickson (3PV5A24KHJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2YU3EN97DX;
 				INFOPLIST_FILE = Calc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.CalcNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "603cd0a9-6e9a-4dc2-b035-c9306943731a";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -441,14 +452,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7FA80D1A5A63F143DBBBDB6C /* Pods-Calc.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Robin Erickson (X975YC666W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Robin Erickson (X975YC666W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2YU3EN97DX;
 				INFOPLIST_FILE = Calc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.incubo.CalcNew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "603cd0a9-6e9a-4dc2-b035-c9306943731a";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

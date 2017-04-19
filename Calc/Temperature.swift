@@ -11,7 +11,7 @@ import Foundation
 class Temperature {
     
     
-    private var _temp:String
+    fileprivate var _temp:String
     
     var temp:String {
         
@@ -26,7 +26,7 @@ class Temperature {
         self._temp = temp
     }
     
-    func celToFarConvert(temp:String) -> String {
+    func celToFarConvert(_ temp:String) -> String {
         
         let conversionTemp = ((Double(temp)! * 9) / 5) + 32
         
@@ -36,7 +36,7 @@ class Temperature {
         
     }
     
-    func farToCelConvert(temp:String) -> String {
+    func farToCelConvert(_ temp:String) -> String {
         
         let conversionTemp = ((Double(temp)! - 32) * 5) / 9
         

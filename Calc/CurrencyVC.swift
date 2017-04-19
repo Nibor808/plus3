@@ -20,7 +20,7 @@ class CurrencyVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     var currency: Currency!
     
-    @IBAction func onConvertBtnPressed(sender: AnyObject) {
+    @IBAction func onConvertBtnPressed(_ sender: AnyObject) {
         
         if usdTxt.text?.isNumeric() == true {
             
@@ -420,37 +420,37 @@ class CurrencyVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         return inputArr.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        return inputArr.objectAtIndex(row) as? String
+        return inputArr.object(at: row) as? String
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        let x = currencyPicker.selectedRowInComponent(0)
+        let x = currencyPicker.selectedRow(inComponent: 0)
         
         toLbl.text = inputArr[x] as? String
         
         toTxt.text = ""
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
-        let screenSize = UIScreen.mainScreen().bounds
+        let screenSize = UIScreen.main.bounds
         let pickerLabel = UILabel()
         
-        pickerLabel.textColor = UIColor.darkGrayColor()
-        pickerLabel.text = inputArr.objectAtIndex(row) as? String
+        pickerLabel.textColor = UIColor.darkGray
+        pickerLabel.text = inputArr.object(at: row) as? String
         
         if screenSize.width <= 375.0 {
             
@@ -461,21 +461,21 @@ class CurrencyVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             pickerLabel.font = UIFont(name: "Helvetica Neue", size: 24.0)
         }
 
-        pickerLabel.textAlignment = NSTextAlignment.Center
-        pickerLabel.backgroundColor = UIColor.whiteColor()
+        pickerLabel.textAlignment = NSTextAlignment.center
+        pickerLabel.backgroundColor = UIColor.white
         return pickerLabel
 
         
     }
     
     //KEYBOARD CONTROLS
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)
         
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         toTxt.resignFirstResponder()
         

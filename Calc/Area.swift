@@ -10,7 +10,7 @@ import Foundation
 
 class Area {
     
-    private var _area:String
+    fileprivate var _area:String
     
     
     var area:String {
@@ -31,7 +31,7 @@ class Area {
     
     
     //m2 CONVERSIONS
-    func m2ToHecConvert(area:String) -> String {
+    func m2ToHecConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.0001
         
@@ -41,7 +41,7 @@ class Area {
         
     }
 
-    func m2ToKm2Convert(area:String) -> String {
+    func m2ToKm2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.000001
         
@@ -51,7 +51,7 @@ class Area {
         
     }
     
-    func m2ToIn2Convert(area:String) -> String {
+    func m2ToIn2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 1550
         
@@ -61,7 +61,7 @@ class Area {
         
     }
     
-    func m2ToFt2Convert(area:String) -> String {
+    func m2ToFt2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 10.7639
         
@@ -71,7 +71,7 @@ class Area {
         
     }
     
-    func m2ToYd2Convert(area:String) -> String {
+    func m2ToYd2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 1.19599
         
@@ -81,7 +81,7 @@ class Area {
         
     }
     
-    func m2ToAcrConvert(area:String) -> String {
+    func m2ToAcrConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.000247105
         
@@ -91,7 +91,7 @@ class Area {
         
     }
     
-    func m2ToMl2Convert(area:String) -> String {
+    func m2ToMl2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.0000003861
         
@@ -104,7 +104,7 @@ class Area {
 
     
     //hec CONVERSIONS
-    func hecToM2Convert(area:String) -> String {
+    func hecToM2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 10000
         
@@ -114,7 +114,7 @@ class Area {
         
     }
     
-    func hecToKm2Convert(area:String) -> String {
+    func hecToKm2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.01
         
@@ -124,7 +124,7 @@ class Area {
         
     }
     
-    func hecToIn2Convert(area:String) -> String {
+    func hecToIn2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 15500000
         
@@ -134,7 +134,7 @@ class Area {
         
     }
     
-    func hecToFt2Convert(area:String) -> String {
+    func hecToFt2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 107639
         
@@ -144,7 +144,7 @@ class Area {
         
     }
     
-    func hecToYd2Convert(area:String) -> String {
+    func hecToYd2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 11959.9
         
@@ -154,7 +154,7 @@ class Area {
         
     }
     
-    func hecToAcrConvert(area:String) -> String {
+    func hecToAcrConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 2.47105
         
@@ -164,7 +164,7 @@ class Area {
         
     }
     
-    func hecToMl2Convert(area:String) -> String {
+    func hecToMl2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.00386102
         
@@ -176,7 +176,7 @@ class Area {
 
     
     //km2 CONVERSIONS
-    func km2ToM2Convert(area:String) -> String {
+    func km2ToM2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 1000000
         
@@ -186,7 +186,7 @@ class Area {
         
     }
     
-    func km2ToHecConvert(area:String) -> String {
+    func km2ToHecConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 100
         
@@ -196,7 +196,7 @@ class Area {
         
     }
     
-    func km2ToIn2Convert(area:String) -> String {
+    func km2ToIn2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 1550000000
         
@@ -206,7 +206,7 @@ class Area {
         
     }
     
-    func km2ToFt2Convert(area:String) -> String {
+    func km2ToFt2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 10760000
         
@@ -216,7 +216,7 @@ class Area {
         
     }
     
-    func km2ToYd2Convert(area:String) -> String {
+    func km2ToYd2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 1196000
         
@@ -226,7 +226,7 @@ class Area {
         
     }
     
-    func km2ToAcrConvert(area:String) -> String {
+    func km2ToAcrConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 247.105
         
@@ -236,7 +236,7 @@ class Area {
         
     }
     
-    func km2ToMl2Convert(area:String) -> String {
+    func km2ToMl2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.386102
         
@@ -248,7 +248,7 @@ class Area {
     
     
     //in2 CONVERSIONS
-    func in2ToM2Convert(area:String) -> String {
+    func in2ToM2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.00064516
         
@@ -258,7 +258,7 @@ class Area {
         
     }
     
-    func in2ToHecConvert(area:String) -> String {
+    func in2ToHecConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.000000064516
         
@@ -268,7 +268,7 @@ class Area {
         
     }
     
-    func in2ToKm2Convert(area:String) -> String {
+    func in2ToKm2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.00000000064516
         
@@ -278,7 +278,7 @@ class Area {
         
     }
     
-    func in2ToFt2Convert(area:String) -> String {
+    func in2ToFt2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.00694444
         
@@ -288,7 +288,7 @@ class Area {
         
     }
     
-    func in2ToYd2Convert(area:String) -> String {
+    func in2ToYd2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.000771605
         
@@ -298,7 +298,7 @@ class Area {
         
     }
     
-    func in2ToAcrConvert(area:String) -> String {
+    func in2ToAcrConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.00000015942
         
@@ -308,7 +308,7 @@ class Area {
         
     }
     
-    func in2ToMl2Convert(area:String) -> String {
+    func in2ToMl2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.0000000002491
         
@@ -320,7 +320,7 @@ class Area {
     
     
     //ft2 CONVERSIONS
-    func ft2ToM2Convert(area:String) -> String {
+    func ft2ToM2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.092903
         
@@ -330,7 +330,7 @@ class Area {
         
     }
     
-    func ft2ToHecConvert(area:String) -> String {
+    func ft2ToHecConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.0000092903
         
@@ -340,7 +340,7 @@ class Area {
         
     }
     
-    func ft2ToKm2Convert(area:String) -> String {
+    func ft2ToKm2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.000000092903
         
@@ -350,7 +350,7 @@ class Area {
         
     }
     
-    func ft2ToIn2Convert(area:String) -> String {
+    func ft2ToIn2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 144
         
@@ -360,7 +360,7 @@ class Area {
         
     }
     
-    func ft2ToYd2Convert(area:String) -> String {
+    func ft2ToYd2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.111111
         
@@ -370,7 +370,7 @@ class Area {
         
     }
     
-    func ft2ToAcrConvert(area:String) -> String {
+    func ft2ToAcrConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.000022957
         
@@ -380,7 +380,7 @@ class Area {
         
     }
     
-    func ft2ToMl2Convert(area:String) -> String {
+    func ft2ToMl2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.00000003587
         
@@ -392,7 +392,7 @@ class Area {
     
     
     //yd2 CONVERSIONS
-    func yd2ToM2Convert(area:String) -> String {
+    func yd2ToM2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.836127
         
@@ -402,7 +402,7 @@ class Area {
         
     }
     
-    func yd2ToHecConvert(area:String) -> String {
+    func yd2ToHecConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.000083613
         
@@ -412,7 +412,7 @@ class Area {
         
     }
     
-    func yd2ToKm2Convert(area:String) -> String {
+    func yd2ToKm2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.00000083613
         
@@ -422,7 +422,7 @@ class Area {
         
     }
     
-    func yd2ToIn2Convert(area:String) -> String {
+    func yd2ToIn2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 1296
         
@@ -432,7 +432,7 @@ class Area {
         
     }
     
-    func yd2ToFt2Convert(area:String) -> String {
+    func yd2ToFt2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 9
         
@@ -442,7 +442,7 @@ class Area {
         
     }
     
-    func yd2ToAcrConvert(area:String) -> String {
+    func yd2ToAcrConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.000206612
         
@@ -452,7 +452,7 @@ class Area {
         
     }
     
-    func yd2ToMl2Convert(area:String) -> String {
+    func yd2ToMl2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.00000032283
         
@@ -464,7 +464,7 @@ class Area {
     
     
     //acr CONVERSIONS
-    func acrToM2Convert(area:String) -> String {
+    func acrToM2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 4046.86
         
@@ -474,7 +474,7 @@ class Area {
         
     }
     
-    func acrToHecConvert(area:String) -> String {
+    func acrToHecConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.404686
         
@@ -484,7 +484,7 @@ class Area {
         
     }
     
-    func acrToKm2Convert(area:String) -> String {
+    func acrToKm2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.00404686
         
@@ -494,7 +494,7 @@ class Area {
         
     }
     
-    func acrToIn2Convert(area:String) -> String {
+    func acrToIn2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 6273000
         
@@ -504,7 +504,7 @@ class Area {
         
     }
     
-    func acrToFt2Convert(area:String) -> String {
+    func acrToFt2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 43560
         
@@ -514,7 +514,7 @@ class Area {
         
     }
     
-    func acrToYd2Convert(area:String) -> String {
+    func acrToYd2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 4840
         
@@ -524,7 +524,7 @@ class Area {
         
     }
     
-    func acrToMl2Convert(area:String) -> String {
+    func acrToMl2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 0.0015625
         
@@ -536,7 +536,7 @@ class Area {
     
     
     //ml2 CONVERSIONS
-    func ml2ToM2Convert(area:String) -> String {
+    func ml2ToM2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 2590000
         
@@ -546,7 +546,7 @@ class Area {
         
     }
     
-    func ml2ToHecConvert(area:String) -> String {
+    func ml2ToHecConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 258.999
         
@@ -556,7 +556,7 @@ class Area {
         
     }
     
-    func ml2ToKm2Convert(area:String) -> String {
+    func ml2ToKm2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 2.58999
         
@@ -566,7 +566,7 @@ class Area {
         
     }
     
-    func ml2ToIn2Convert(area:String) -> String {
+    func ml2ToIn2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 4014000000
         
@@ -576,7 +576,7 @@ class Area {
         
     }
     
-    func ml2ToFt2Convert(area:String) -> String {
+    func ml2ToFt2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 27880000
         
@@ -586,7 +586,7 @@ class Area {
         
     }
     
-    func ml2ToYd2Convert(area:String) -> String {
+    func ml2ToYd2Convert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 3098000
         
@@ -596,7 +596,7 @@ class Area {
         
     }
     
-    func ml2ToAcrConvert(area:String) -> String {
+    func ml2ToAcrConvert(_ area:String) -> String {
         
         let conversionTemp = Double(area)! * 640
         

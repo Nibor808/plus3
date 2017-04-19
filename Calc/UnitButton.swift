@@ -15,9 +15,9 @@ class UnitButton: UIButton {
         
         super.init(coder: aDecoder)!
         
-        self.setTitleColor(UIColor.whiteColor(), forState: .Selected)
+        self.setTitleColor(UIColor.white, for: .selected)
       
-        self.setBackgroundColor(UIColor.lightGrayColor(), forState: .Selected)
+        self.setBackgroundColor(UIColor.lightGray, forState: .selected)
     
     }
     

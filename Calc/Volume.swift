@@ -11,7 +11,7 @@ import Foundation
 
 class Volume {
     
-    private var _vol:String
+    fileprivate var _vol:String
     
     
     var vol:String {
@@ -30,7 +30,7 @@ class Volume {
     
     
     //ml CONVERSIONS
-    func mlToM3Convert(vol:String) -> String {
+    func mlToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000001
         
@@ -40,7 +40,7 @@ class Volume {
         
     }
     
-    func mlToLConvert(vol:String) -> String {
+    func mlToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.001
         
@@ -50,7 +50,7 @@ class Volume {
         
     }
 
-    func mlToHecLConvert(vol:String) -> String {
+    func mlToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00001
         
@@ -60,7 +60,7 @@ class Volume {
         
     }
 
-    func mlToIn3Convert(vol:String) -> String {
+    func mlToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0610237
         
@@ -70,7 +70,7 @@ class Volume {
         
     }
 
-    func mlToFt3Convert(vol:String) -> String {
+    func mlToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000035315
         
@@ -80,7 +80,7 @@ class Volume {
         
     }
 
-    func mlToFlOzConvert(vol:String) -> String {
+    func mlToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0351951
         
@@ -90,7 +90,7 @@ class Volume {
         
     }
 
-    func mlToPtConvert(vol:String) -> String {
+    func mlToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00175975
         
@@ -100,7 +100,7 @@ class Volume {
         
     }
 
-    func mlToGalConvert(vol:String) -> String {
+    func mlToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000219969
         
@@ -110,7 +110,7 @@ class Volume {
         
     }
 
-    func mlToFlOzUSConvert(vol:String) -> String {
+    func mlToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.033814
         
@@ -120,7 +120,7 @@ class Volume {
         
     }
 
-    func mlToPtUSConvert(vol:String) -> String {
+    func mlToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00211338
         
@@ -130,7 +130,7 @@ class Volume {
         
     }
 
-    func mlToGalUSConvert(vol:String) -> String {
+    func mlToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000264172
         
@@ -142,7 +142,7 @@ class Volume {
     
     
     //m3 CONVERSION
-    func m3ToMlConvert(vol:String) -> String {
+    func m3ToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1000000
         
@@ -152,7 +152,7 @@ class Volume {
         
     }
     
-    func m3ToLConvert(vol:String) -> String {
+    func m3ToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1000
         
@@ -162,7 +162,7 @@ class Volume {
         
     }
 
-    func m3ToHecLConvert(vol:String) -> String {
+    func m3ToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 10
         
@@ -172,7 +172,7 @@ class Volume {
         
     }
 
-    func m3ToIn3Convert(vol:String) -> String {
+    func m3ToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 61023.7
         
@@ -182,7 +182,7 @@ class Volume {
         
     }
 
-    func m3ToFt3Convert(vol:String) -> String {
+    func m3ToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 35.3147
         
@@ -192,7 +192,7 @@ class Volume {
         
     }
 
-    func m3ToFlOzConvert(vol:String) -> String {
+    func m3ToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 35195.1
         
@@ -202,7 +202,7 @@ class Volume {
         
     }
 
-    func m3ToPtConvert(vol:String) -> String {
+    func m3ToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1759.75
         
@@ -212,7 +212,7 @@ class Volume {
         
     }
 
-    func m3ToGalConvert(vol:String) -> String {
+    func m3ToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 219.969
         
@@ -222,7 +222,7 @@ class Volume {
         
     }
 
-    func m3ToFlOzUSConvert(vol:String) -> String {
+    func m3ToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 33814
         
@@ -232,7 +232,7 @@ class Volume {
         
     }
 
-    func m3ToPtUSConvert(vol:String) -> String {
+    func m3ToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 2113.38
         
@@ -242,7 +242,7 @@ class Volume {
         
     }
 
-    func m3ToGalUSConvert(vol:String) -> String {
+    func m3ToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 264.172
         
@@ -255,7 +255,7 @@ class Volume {
     
     
     //l CONVERSIONS
-    func lToM3Convert(vol:String) -> String {
+    func lToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.001
         
@@ -265,7 +265,7 @@ class Volume {
         
     }
     
-    func lToMlConvert(vol:String) -> String {
+    func lToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1000
         
@@ -275,7 +275,7 @@ class Volume {
         
     }
     
-    func lToHecLConvert(vol:String) -> String {
+    func lToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.01
         
@@ -285,7 +285,7 @@ class Volume {
         
     }
     
-    func lToIn3Convert(vol:String) -> String {
+    func lToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 61.0237
         
@@ -295,7 +295,7 @@ class Volume {
         
     }
     
-    func lToFt3Convert(vol:String) -> String {
+    func lToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0353147
         
@@ -305,7 +305,7 @@ class Volume {
         
     }
     
-    func lToFlOzConvert(vol:String) -> String {
+    func lToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 35.1951
         
@@ -315,7 +315,7 @@ class Volume {
         
     }
     
-    func lToPtConvert(vol:String) -> String {
+    func lToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1.75975
         
@@ -325,7 +325,7 @@ class Volume {
         
     }
     
-    func lToGalConvert(vol:String) -> String {
+    func lToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.219969
         
@@ -335,7 +335,7 @@ class Volume {
         
     }
     
-    func lToFlOzUSConvert(vol:String) -> String {
+    func lToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 33.814
         
@@ -345,7 +345,7 @@ class Volume {
         
     }
     
-    func lToPtUSConvert(vol:String) -> String {
+    func lToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 2.11338
         
@@ -355,7 +355,7 @@ class Volume {
         
     }
     
-    func lToGalUSConvert(vol:String) -> String {
+    func lToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.264172
         
@@ -367,7 +367,7 @@ class Volume {
 
 
     //hecL CONVERSIONS
-    func hecLToM3Convert(vol:String) -> String {
+    func hecLToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.1
         
@@ -377,7 +377,7 @@ class Volume {
         
     }
     
-    func hecLToLConvert(vol:String) -> String {
+    func hecLToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 100
         
@@ -387,7 +387,7 @@ class Volume {
         
     }
     
-    func hecLToMlConvert(vol:String) -> String {
+    func hecLToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 100000
         
@@ -397,7 +397,7 @@ class Volume {
         
     }
     
-    func hecLToIn3Convert(vol:String) -> String {
+    func hecLToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 6102.37
         
@@ -407,7 +407,7 @@ class Volume {
         
     }
     
-    func hecLToFt3Convert(vol:String) -> String {
+    func hecLToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 3.53147
         
@@ -417,7 +417,7 @@ class Volume {
         
     }
     
-    func hecLToFlOzConvert(vol:String) -> String {
+    func hecLToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 3519.51
         
@@ -427,7 +427,7 @@ class Volume {
         
     }
     
-    func hecLToPtConvert(vol:String) -> String {
+    func hecLToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 175.975
         
@@ -437,7 +437,7 @@ class Volume {
         
     }
     
-    func hecLToGalConvert(vol:String) -> String {
+    func hecLToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 21.9969
         
@@ -447,7 +447,7 @@ class Volume {
         
     }
     
-    func hecLToFlOzUSConvert(vol:String) -> String {
+    func hecLToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 3381.4
         
@@ -457,7 +457,7 @@ class Volume {
         
     }
     
-    func hecLToPtUSConvert(vol:String) -> String {
+    func hecLToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 211.338
         
@@ -467,7 +467,7 @@ class Volume {
         
     }
     
-    func hecLToGalUSConvert(vol:String) -> String {
+    func hecLToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 26.4172
         
@@ -479,7 +479,7 @@ class Volume {
 
     
     //in3 CONVERSIONS
-    func in3ToM3Convert(vol:String) -> String {
+    func in3ToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000016387
         
@@ -489,7 +489,7 @@ class Volume {
         
     }
     
-    func in3ToLConvert(vol:String) -> String {
+    func in3ToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0163871
         
@@ -499,7 +499,7 @@ class Volume {
         
     }
     
-    func in3ToHecLConvert(vol:String) -> String {
+    func in3ToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000163871
         
@@ -509,7 +509,7 @@ class Volume {
         
     }
     
-    func in3ToMlConvert(vol:String) -> String {
+    func in3ToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 16.3871
         
@@ -519,7 +519,7 @@ class Volume {
         
     }
     
-    func in3ToFt3Convert(vol:String) -> String {
+    func in3ToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000578704
         
@@ -529,7 +529,7 @@ class Volume {
         
     }
     
-    func in3ToFlOzConvert(vol:String) -> String {
+    func in3ToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.576744
         
@@ -539,7 +539,7 @@ class Volume {
         
     }
     
-    func in3ToPtConvert(vol:String) -> String {
+    func in3ToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0288372
         
@@ -549,7 +549,7 @@ class Volume {
         
     }
     
-    func in3ToGalConvert(vol:String) -> String {
+    func in3ToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00360465
         
@@ -559,7 +559,7 @@ class Volume {
         
     }
     
-    func in3ToFlOzUSConvert(vol:String) -> String {
+    func in3ToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.554113
         
@@ -569,7 +569,7 @@ class Volume {
         
     }
     
-    func in3ToPtUSConvert(vol:String) -> String {
+    func in3ToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.034632
         
@@ -579,7 +579,7 @@ class Volume {
         
     }
     
-    func in3ToGalUSConvert(vol:String) -> String {
+    func in3ToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.004329
         
@@ -591,7 +591,7 @@ class Volume {
     
     
     //ft3 CONVERSIONS
-    func ft3ToM3Convert(vol:String) -> String {
+    func ft3ToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0283168
         
@@ -601,7 +601,7 @@ class Volume {
         
     }
     
-    func ft3ToLConvert(vol:String) -> String {
+    func ft3ToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 28.3168
         
@@ -611,7 +611,7 @@ class Volume {
         
     }
     
-    func ft3ToHecLConvert(vol:String) -> String {
+    func ft3ToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.283168
         
@@ -621,7 +621,7 @@ class Volume {
         
     }
     
-    func ft3ToMlConvert(vol:String) -> String {
+    func ft3ToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 28316.8
         
@@ -631,7 +631,7 @@ class Volume {
         
     }
     
-    func ft3ToIn3Convert(vol:String) -> String {
+    func ft3ToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1728
         
@@ -641,7 +641,7 @@ class Volume {
         
     }
     
-    func ft3ToFlOzConvert(vol:String) -> String {
+    func ft3ToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 996.614
         
@@ -651,7 +651,7 @@ class Volume {
         
     }
     
-    func ft3ToPtConvert(vol:String) -> String {
+    func ft3ToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 49.8307
         
@@ -661,7 +661,7 @@ class Volume {
         
     }
     
-    func ft3ToGalConvert(vol:String) -> String {
+    func ft3ToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 6.22884
         
@@ -671,7 +671,7 @@ class Volume {
         
     }
     
-    func ft3ToFlOzUSConvert(vol:String) -> String {
+    func ft3ToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 957.506
         
@@ -681,7 +681,7 @@ class Volume {
         
     }
     
-    func ft3ToPtUSConvert(vol:String) -> String {
+    func ft3ToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 59.8442
         
@@ -691,7 +691,7 @@ class Volume {
         
     }
     
-    func ft3ToGalUSConvert(vol:String) -> String {
+    func ft3ToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 7.48052
         
@@ -703,7 +703,7 @@ class Volume {
 
 
     //floz CONVERSIONS
-    func flozToM3Convert(vol:String) -> String {
+    func flozToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000028413
         
@@ -713,7 +713,7 @@ class Volume {
         
     }
     
-    func flozToLConvert(vol:String) -> String {
+    func flozToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0284131
         
@@ -723,7 +723,7 @@ class Volume {
         
     }
     
-    func flozToHecLConvert(vol:String) -> String {
+    func flozToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000284131
         
@@ -733,7 +733,7 @@ class Volume {
         
     }
     
-    func flozToMlConvert(vol:String) -> String {
+    func flozToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 28.4131
         
@@ -743,7 +743,7 @@ class Volume {
         
     }
     
-    func flozToIn3Convert(vol:String) -> String {
+    func flozToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1.73387
         
@@ -753,7 +753,7 @@ class Volume {
         
     }
     
-    func flozToFt3Convert(vol:String) -> String {
+    func flozToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0010034
         
@@ -763,7 +763,7 @@ class Volume {
         
     }
     
-    func flozToPtConvert(vol:String) -> String {
+    func flozToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.05
         
@@ -773,7 +773,7 @@ class Volume {
         
     }
     
-    func flozToGalConvert(vol:String) -> String {
+    func flozToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00625
         
@@ -783,7 +783,7 @@ class Volume {
         
     }
     
-    func flozToFlOzUSConvert(vol:String) -> String {
+    func flozToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.96076
         
@@ -793,7 +793,7 @@ class Volume {
         
     }
     
-    func flozToPtUSConvert(vol:String) -> String {
+    func flozToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0600475
         
@@ -803,7 +803,7 @@ class Volume {
         
     }
     
-    func flozToGalUSConvert(vol:String) -> String {
+    func flozToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00750594
         
@@ -815,7 +815,7 @@ class Volume {
 
 
     //pt CONVERSIONS
-    func ptToM3Convert(vol:String) -> String {
+    func ptToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000568261
         
@@ -825,7 +825,7 @@ class Volume {
         
     }
     
-    func ptToLConvert(vol:String) -> String {
+    func ptToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.568261
         
@@ -835,7 +835,7 @@ class Volume {
         
     }
     
-    func ptToHecLConvert(vol:String) -> String {
+    func ptToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00568261
         
@@ -845,7 +845,7 @@ class Volume {
         
     }
     
-    func ptToMlConvert(vol:String) -> String {
+    func ptToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 568.261
         
@@ -855,7 +855,7 @@ class Volume {
         
     }
     
-    func ptToIn3Convert(vol:String) -> String {
+    func ptToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 34.6774
         
@@ -865,7 +865,7 @@ class Volume {
         
     }
     
-    func ptToFlOzConvert(vol:String) -> String {
+    func ptToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 20
         
@@ -875,7 +875,7 @@ class Volume {
         
     }
     
-    func ptToFt3Convert(vol:String) -> String {
+    func ptToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.020068
         
@@ -885,7 +885,7 @@ class Volume {
         
     }
     
-    func ptToGalConvert(vol:String) -> String {
+    func ptToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.125
         
@@ -895,7 +895,7 @@ class Volume {
         
     }
     
-    func ptToFlOzUSConvert(vol:String) -> String {
+    func ptToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 19.2152
         
@@ -905,7 +905,7 @@ class Volume {
         
     }
     
-    func ptToPtUSConvert(vol:String) -> String {
+    func ptToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1.20095
         
@@ -915,7 +915,7 @@ class Volume {
         
     }
     
-    func ptToGalUSConvert(vol:String) -> String {
+    func ptToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.150119
         
@@ -927,7 +927,7 @@ class Volume {
 
     
     //gal CONVERSIONS
-    func galToM3Convert(vol:String) -> String {
+    func galToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00454609
         
@@ -937,7 +937,7 @@ class Volume {
         
     }
     
-    func galToLConvert(vol:String) -> String {
+    func galToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 4.54609
         
@@ -947,7 +947,7 @@ class Volume {
         
     }
     
-    func galToHecLConvert(vol:String) -> String {
+    func galToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0454609
         
@@ -957,7 +957,7 @@ class Volume {
         
     }
     
-    func galToMlConvert(vol:String) -> String {
+    func galToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 4546.09
         
@@ -967,7 +967,7 @@ class Volume {
         
     }
     
-    func galToIn3Convert(vol:String) -> String {
+    func galToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 277.419
         
@@ -977,7 +977,7 @@ class Volume {
         
     }
     
-    func galToFlOzConvert(vol:String) -> String {
+    func galToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 160
         
@@ -987,7 +987,7 @@ class Volume {
         
     }
     
-    func galToFt3Convert(vol:String) -> String {
+    func galToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.160544
         
@@ -997,7 +997,7 @@ class Volume {
         
     }
     
-    func galToPtConvert(vol:String) -> String {
+    func galToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 8
         
@@ -1007,7 +1007,7 @@ class Volume {
         
     }
     
-    func galToFlOzUSConvert(vol:String) -> String {
+    func galToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 153.722
         
@@ -1017,7 +1017,7 @@ class Volume {
         
     }
     
-    func galToPtUSConvert(vol:String) -> String {
+    func galToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 9.6076
         
@@ -1027,7 +1027,7 @@ class Volume {
         
     }
     
-    func galToGalUSConvert(vol:String) -> String {
+    func galToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1.20095
         
@@ -1039,7 +1039,7 @@ class Volume {
     
     
     //flozUS CONVERSIONS
-    func flozUSToM3Convert(vol:String) -> String {
+    func flozUSToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000029574
         
@@ -1049,7 +1049,7 @@ class Volume {
         
     }
     
-    func flozUSToLConvert(vol:String) -> String {
+    func flozUSToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0295735
         
@@ -1059,7 +1059,7 @@ class Volume {
         
     }
     
-    func flozUSToHecLConvert(vol:String) -> String {
+    func flozUSToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000295735
         
@@ -1069,7 +1069,7 @@ class Volume {
         
     }
     
-    func flozUSToMlConvert(vol:String) -> String {
+    func flozUSToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 29.5735
         
@@ -1079,7 +1079,7 @@ class Volume {
         
     }
     
-    func flozUSToIn3Convert(vol:String) -> String {
+    func flozUSToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1.80469
         
@@ -1089,7 +1089,7 @@ class Volume {
         
     }
     
-    func flozUSToFlOzConvert(vol:String) -> String {
+    func flozUSToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 1.04084
         
@@ -1099,7 +1099,7 @@ class Volume {
         
     }
     
-    func flozUSToFt3Convert(vol:String) -> String {
+    func flozUSToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00104438
         
@@ -1109,7 +1109,7 @@ class Volume {
         
     }
     
-    func flozUSToGalConvert(vol:String) -> String {
+    func flozUSToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00650527
         
@@ -1119,7 +1119,7 @@ class Volume {
         
     }
     
-    func flozUSToPtConvert(vol:String) -> String {
+    func flozUSToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0520421
         
@@ -1129,7 +1129,7 @@ class Volume {
         
     }
     
-    func flozUSToPtUSConvert(vol:String) -> String {
+    func flozUSToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0625
         
@@ -1139,7 +1139,7 @@ class Volume {
         
     }
     
-    func flozUSToGalUSConvert(vol:String) -> String {
+    func flozUSToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0078125
         
@@ -1151,7 +1151,7 @@ class Volume {
     
     
     //ptUS CONVERSIONS
-    func ptUSToM3Convert(vol:String) -> String {
+    func ptUSToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.000473176
         
@@ -1161,7 +1161,7 @@ class Volume {
         
     }
     
-    func ptUSToLConvert(vol:String) -> String {
+    func ptUSToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.473176
         
@@ -1171,7 +1171,7 @@ class Volume {
         
     }
     
-    func ptUSToHecLConvert(vol:String) -> String {
+    func ptUSToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00473176
         
@@ -1181,7 +1181,7 @@ class Volume {
         
     }
     
-    func ptUSToMlConvert(vol:String) -> String {
+    func ptUSToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 473.176
         
@@ -1191,7 +1191,7 @@ class Volume {
         
     }
     
-    func ptUSToIn3Convert(vol:String) -> String {
+    func ptUSToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 28.875
         
@@ -1201,7 +1201,7 @@ class Volume {
         
     }
     
-    func ptUSToFlOzConvert(vol:String) -> String {
+    func ptUSToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 16.6535
         
@@ -1211,7 +1211,7 @@ class Volume {
         
     }
     
-    func ptUSToFt3Convert(vol:String) -> String {
+    func ptUSToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0167101
         
@@ -1221,7 +1221,7 @@ class Volume {
         
     }
     
-    func ptUSToGalConvert(vol:String) -> String {
+    func ptUSToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.104084
         
@@ -1231,7 +1231,7 @@ class Volume {
         
     }
     
-    func ptUSToPtConvert(vol:String) -> String {
+    func ptUSToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.832674
         
@@ -1241,7 +1241,7 @@ class Volume {
         
     }
     
-    func ptUSToFlOzUSConvert(vol:String) -> String {
+    func ptUSToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 16
         
@@ -1251,7 +1251,7 @@ class Volume {
         
     }
     
-    func ptUSToGalUSConvert(vol:String) -> String {
+    func ptUSToGalUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.125
         
@@ -1263,7 +1263,7 @@ class Volume {
     
     
     //galUS CONVERSIONS
-    func galUSToM3Convert(vol:String) -> String {
+    func galUSToM3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.00378541
         
@@ -1273,7 +1273,7 @@ class Volume {
         
     }
     
-    func galUSToLConvert(vol:String) -> String {
+    func galUSToLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 3.78541
         
@@ -1283,7 +1283,7 @@ class Volume {
         
     }
     
-    func galUSToHecLConvert(vol:String) -> String {
+    func galUSToHecLConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.0378541
         
@@ -1293,7 +1293,7 @@ class Volume {
         
     }
     
-    func galUSToMlConvert(vol:String) -> String {
+    func galUSToMlConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 3785.41
         
@@ -1303,7 +1303,7 @@ class Volume {
         
     }
     
-    func galUSToIn3Convert(vol:String) -> String {
+    func galUSToIn3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 231
         
@@ -1313,7 +1313,7 @@ class Volume {
         
     }
     
-    func galUSToFlOzConvert(vol:String) -> String {
+    func galUSToFlOzConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 133.228
         
@@ -1323,7 +1323,7 @@ class Volume {
         
     }
     
-    func galUSToFt3Convert(vol:String) -> String {
+    func galUSToFt3Convert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.133681
         
@@ -1333,7 +1333,7 @@ class Volume {
         
     }
     
-    func galUSToGalConvert(vol:String) -> String {
+    func galUSToGalConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 0.832674
         
@@ -1343,7 +1343,7 @@ class Volume {
         
     }
     
-    func galUSToPtConvert(vol:String) -> String {
+    func galUSToPtConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 6.66139
         
@@ -1353,7 +1353,7 @@ class Volume {
         
     }
     
-    func galUSToPtUSConvert(vol:String) -> String {
+    func galUSToPtUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 8
         
@@ -1363,7 +1363,7 @@ class Volume {
         
     }
     
-    func galUSToFlOzUSConvert(vol:String) -> String {
+    func galUSToFlOzUSConvert(_ vol:String) -> String {
         
         let conversionTemp = Double(vol)! * 128
         

@@ -11,9 +11,9 @@ import Alamofire
 
 class Currency {
     
-    private var _currencyUrl:String!
-    private var _name:String!
-    private var _data:Dictionary<String,AnyObject>!
+    fileprivate var _currencyUrl:String!
+    fileprivate var _name:String!
+    fileprivate var _data:Dictionary<String,AnyObject>!
     var aedConvertFactor:Double!
     var angConvertFactor:Double!
     var arsConvertFactor:Double!
@@ -87,9 +87,9 @@ class Currency {
        
     }
     
-    func dowloadCurrency(completed: DownloadComplete) {
+    func dowloadCurrency(_ completed: DownloadComplete) {
         
-        let url = NSURL(string: URL)!
+        let url = Foundation.URL(string: URL)!
         
         Alamofire.request(.GET, url).responseJSON {
             
@@ -394,399 +394,399 @@ class Currency {
     
     
         
-        func AED(num:Double) -> Double {
+        func AED(_ num:Double) -> Double {
             
             let converted = num * aedConvertFactor
             
             return converted
         }
         
-        func ANG(num:Double) -> Double {
+        func ANG(_ num:Double) -> Double {
             
             let converted = num * angConvertFactor
             
             return converted
         }
         
-        func ARS(num:Double) -> Double {
+        func ARS(_ num:Double) -> Double {
             
             let converted = num * arsConvertFactor
             
             return converted
         }
 
-        func AUD(num:Double) -> Double {
+        func AUD(_ num:Double) -> Double {
             
             let converted = num * audConvertFactor
             
             return converted
         }
 
-        func BBD(num:Double) -> Double {
+        func BBD(_ num:Double) -> Double {
             
             let converted = num * bbdConvertFactor
             
             return converted
         }
         
-        func BDT(num:Double) -> Double {
+        func BDT(_ num:Double) -> Double {
             
             let converted = num * bdtConvertFactor
             
             return converted
         }
         
-        func BMD(num:Double) -> Double {
+        func BMD(_ num:Double) -> Double {
             
             let converted = num * bmdConvertFactor
             
             return converted
         }
         
-        func BRL(num:Double) -> Double {
+        func BRL(_ num:Double) -> Double {
             
             let converted = num * brlConvertFactor
             
             return converted
         }
         
-        func BTC(num:Double) -> Double {
+        func BTC(_ num:Double) -> Double {
             
             let converted = num * btcConvertFactor
             
             return converted
         }
         
-        func BYR(num:Double) -> Double {
+        func BYR(_ num:Double) -> Double {
             
             let converted = num * byrConvertFactor
             
             return converted
         }
         
-        func BZD(num:Double) -> Double {
+        func BZD(_ num:Double) -> Double {
             
             let converted = num * bzdConvertFactor
             
             return converted
         }
         
-        func CAD(num:Double) -> Double {
+        func CAD(_ num:Double) -> Double {
             
             let converted = num * cadConvertFactor
             
             return converted
         }
         
-        func CHF(num:Double) -> Double {
+        func CHF(_ num:Double) -> Double {
             
             let converted = num * chfConvertFactor
             
             return converted
         }
 
-        func CNY(num:Double) -> Double {
+        func CNY(_ num:Double) -> Double {
             
             let converted = num * cnyConvertFactor
             
             return converted
         }
         
-        func CRC(num:Double) -> Double {
+        func CRC(_ num:Double) -> Double {
             
             let converted = num * crcConvertFactor
             
             return converted
         }
         
-        func CUP(num:Double) -> Double {
+        func CUP(_ num:Double) -> Double {
             
             let converted = num * cupConvertFactor
             
             return converted
         }
         
-        func CZK(num:Double) -> Double {
+        func CZK(_ num:Double) -> Double {
             
             let converted = num * czkConvertFactor
             
             return converted
         }
         
-        func DKK(num:Double) -> Double {
+        func DKK(_ num:Double) -> Double {
             
             let converted = num * dkkConvertFactor
             
             return converted
         }
 
-        func DOP(num:Double) -> Double {
+        func DOP(_ num:Double) -> Double {
             
             let converted = num * dopConvertFactor
             
             return converted
         }
 
-        func EGP(num:Double) -> Double {
+        func EGP(_ num:Double) -> Double {
             
             let converted = num * egpConvertFactor
             
             return converted
         }
 
-        func EUR(num:Double) -> Double {
+        func EUR(_ num:Double) -> Double {
             
             let converted = num * eurConvertFactor
             
             return converted
         }
 
-        func GBP(num:Double) -> Double {
+        func GBP(_ num:Double) -> Double {
             
             let converted = num * gbpConvertFactor
             
             return converted
         }
         
-        func HKD(num:Double) -> Double {
+        func HKD(_ num:Double) -> Double {
             
             let converted = num * hkdConvertFactor
             
             return converted
         }
         
-        func ILS(num:Double) -> Double {
+        func ILS(_ num:Double) -> Double {
             
             let converted = num * ilsConvertFactor
             
             return converted
         }
         
-        func INR(num:Double) -> Double {
+        func INR(_ num:Double) -> Double {
             
             let converted = num * inrConvertFactor
             
             return converted
         }
         
-        func IQD(num:Double) -> Double {
+        func IQD(_ num:Double) -> Double {
             
             let converted = num * iqdConvertFactor
             
             return converted
         }
         
-        func IRR(num:Double) -> Double {
+        func IRR(_ num:Double) -> Double {
             
             let converted = num * irrConvertFactor
             
             return converted
         }
         
-        func ISK(num:Double) -> Double {
+        func ISK(_ num:Double) -> Double {
             
             let converted = num * iskConvertFactor
             
             return converted
         }
         
-        func JMD(num:Double) -> Double {
+        func JMD(_ num:Double) -> Double {
             
             let converted = num * jmdConvertFactor
             
             return converted
         }
         
-        func JPY(num:Double) -> Double {
+        func JPY(_ num:Double) -> Double {
             
             let converted = num * jpyConvertFactor
             
             return converted
         }
         
-        func KES(num:Double) -> Double {
+        func KES(_ num:Double) -> Double {
             
             let converted = num * kesConvertFactor
             
             return converted
         }
         
-        func KRW(num:Double) -> Double {
+        func KRW(_ num:Double) -> Double {
             
             let converted = num * krwConvertFactor
             
             return converted
         }
 
-        func KWD(num:Double) -> Double {
+        func KWD(_ num:Double) -> Double {
             
             let converted = num * kwdConvertFactor
             
             return converted
         }
 
-        func KYD(num:Double) -> Double {
+        func KYD(_ num:Double) -> Double {
             
             let converted = num * kydConvertFactor
             
             return converted
         }
         
-        func KZT(num:Double) -> Double {
+        func KZT(_ num:Double) -> Double {
             
             let converted = num * kztConvertFactor
             
             return converted
         }
         
-        func LKR(num:Double) -> Double {
+        func LKR(_ num:Double) -> Double {
             
             let converted = num * lkrConvertFactor
             
             return converted
         }
         
-        func MXN(num:Double) -> Double {
+        func MXN(_ num:Double) -> Double {
             
             let converted = num * mxnConvertFactor
             
             return converted
         }
         
-        func NGN(num:Double) -> Double {
+        func NGN(_ num:Double) -> Double {
             
             let converted = num * ngnConvertFactor
             
             return converted
         }
         
-        func NOK(num:Double) -> Double {
+        func NOK(_ num:Double) -> Double {
             
             let converted = num * nokConvertFactor
             
             return converted
         }
 
-        func NPR(num:Double) -> Double {
+        func NPR(_ num:Double) -> Double {
             
             let converted = num * nprConvertFactor
             
             return converted
         }
         
-        func NZD(num:Double) -> Double {
+        func NZD(_ num:Double) -> Double {
             
             let converted = num * nzdConvertFactor
             
             return converted
         }
         
-        func PKR(num:Double) -> Double {
+        func PKR(_ num:Double) -> Double {
             
             let converted = num * pkrConvertFactor
             
             return converted
         }
         
-        func PLN(num:Double) -> Double {
+        func PLN(_ num:Double) -> Double {
             
             let converted = num * plnConvertFactor
             
             return converted
         }
 
-        func RUB(num:Double) -> Double {
+        func RUB(_ num:Double) -> Double {
             
             let converted = num * rubConvertFactor
             
             return converted
         }
 
-        func SAR(num:Double) -> Double {
+        func SAR(_ num:Double) -> Double {
             
             let converted = num * sarConvertFactor
             
             return converted
         }
         
-        func SEK(num:Double) -> Double {
+        func SEK(_ num:Double) -> Double {
             
             let converted = num * sekConvertFactor
             
             return converted
         }
 
-        func SGD(num:Double) -> Double {
+        func SGD(_ num:Double) -> Double {
             
             let converted = num * sgdConvertFactor
             
             return converted
         }
         
-        func THB(num:Double) -> Double {
+        func THB(_ num:Double) -> Double {
             
             let converted = num * thbConvertFactor
             
             return converted
         }
         
-        func TRY(num:Double) -> Double {
+        func TRY(_ num:Double) -> Double {
             
             let converted = num * tryConvertFactor
             
             return converted
         }
         
-        func TTD(num:Double) -> Double {
+        func TTD(_ num:Double) -> Double {
             
             let converted = num * ttdConvertFactor
             
             return converted
         }
         
-        func TWD(num:Double) -> Double {
+        func TWD(_ num:Double) -> Double {
             
             let converted = num * twdConvertFactor
             
             return converted
         }
         
-        func UAH(num:Double) -> Double {
+        func UAH(_ num:Double) -> Double {
             
             let converted = num * uahConvertFactor
             
             return converted
         }
         
-        func UYU(num:Double) -> Double {
+        func UYU(_ num:Double) -> Double {
             
             let converted = num * uyuConvertFactor
             
             return converted
         }
         
-        func VEF(num:Double) -> Double {
+        func VEF(_ num:Double) -> Double {
             
             let converted = num * vefConvertFactor
             
             return converted
         }
         
-        func XAG(num:Double) -> Double {
+        func XAG(_ num:Double) -> Double {
             
             let converted = num * xagConvertFactor
             
             return converted
         }
         
-        func XAU(num:Double) -> Double {
+        func XAU(_ num:Double) -> Double {
             
             let converted = num * xauConvertFactor
             
             return converted
         }
         
-        func XCD(num:Double) -> Double {
+        func XCD(_ num:Double) -> Double {
             
             let converted = num * xcdConvertFactor
             

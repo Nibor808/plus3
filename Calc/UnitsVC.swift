@@ -39,13 +39,13 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
     let tempPickData = ["Celcius [c]" , "Farenheit [f]"]
     
 
-    @IBAction func onLengthPressed(sender: UIButton) {
+    @IBAction func onLengthPressed(_ sender: UIButton) {
         
-        areaBtn.selected = false
-        lengthBtn.selected = true
-        volumeBtn.selected = false
-        massBtn.selected = false
-        tempBtn.selected = false
+        areaBtn.isSelected = false
+        lengthBtn.isSelected = true
+        volumeBtn.isSelected = false
+        massBtn.isSelected = false
+        tempBtn.isSelected = false
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
@@ -56,13 +56,13 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         toPicker.reloadAllComponents()
     }
     
-    @IBAction func onAreaPressed(sender: UIButton) {
+    @IBAction func onAreaPressed(_ sender: UIButton) {
         
-        areaBtn.selected = true
-        lengthBtn.selected = false
-        volumeBtn.selected = false
-        massBtn.selected = false
-        tempBtn.selected = false
+        areaBtn.isSelected = true
+        lengthBtn.isSelected = false
+        volumeBtn.isSelected = false
+        massBtn.isSelected = false
+        tempBtn.isSelected = false
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
@@ -74,13 +74,13 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         
     }
     
-    @IBAction func onVolumePressed(sender: UIButton) {
+    @IBAction func onVolumePressed(_ sender: UIButton) {
         
-        areaBtn.selected = false
-        lengthBtn.selected = false
-        volumeBtn.selected = true
-        massBtn.selected = false
-        tempBtn.selected = false
+        areaBtn.isSelected = false
+        lengthBtn.isSelected = false
+        volumeBtn.isSelected = true
+        massBtn.isSelected = false
+        tempBtn.isSelected = false
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
@@ -92,13 +92,13 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
 
     }
     
-    @IBAction func onMassPressed(sender: UIButton) {
+    @IBAction func onMassPressed(_ sender: UIButton) {
         
-        areaBtn.selected = false
-        lengthBtn.selected = false
-        volumeBtn.selected = false
-        massBtn.selected = true
-        tempBtn.selected = false
+        areaBtn.isSelected = false
+        lengthBtn.isSelected = false
+        volumeBtn.isSelected = false
+        massBtn.isSelected = true
+        tempBtn.isSelected = false
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
@@ -110,13 +110,13 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
 
     }
     
-    @IBAction func onTempPressed(sender: UIButton) {
+    @IBAction func onTempPressed(_ sender: UIButton) {
         
-        areaBtn.selected = false
-        lengthBtn.selected = false
-        volumeBtn.selected = false
-        massBtn.selected = false
-        tempBtn.selected = true
+        areaBtn.isSelected = false
+        lengthBtn.isSelected = false
+        volumeBtn.isSelected = false
+        massBtn.isSelected = false
+        tempBtn.isSelected = true
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"
@@ -128,7 +128,7 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
 
     }
     
-    @IBAction func onConvertPressed(sender: AnyObject) {
+    @IBAction func onConvertPressed(_ sender: AnyObject) {
       
         if toLbl.text != "Select a Unit" && fromTxt.text?.isNumeric() == true {
             
@@ -1456,29 +1456,29 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
 
     
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         
         return 1
     }
 
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         return inputArr.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        return inputArr.objectAtIndex(row) as? String
+        return inputArr.object(at: row) as? String
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        let x = fromPicker.selectedRowInComponent(0)
+        let x = fromPicker.selectedRow(inComponent: 0)
         
         fromLbl.text = inputArr[x] as? String
         
-        let y = toPicker.selectedRowInComponent(0)
+        let y = toPicker.selectedRow(inComponent: 0)
         
         toLbl.text = inputArr[y] as? String
         
@@ -1486,13 +1486,13 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
-        let screenSize = UIScreen.mainScreen().bounds
+        let screenSize = UIScreen.main.bounds
         let pickerLabel = UILabel()
         
-        pickerLabel.textColor = UIColor.darkGrayColor()
-        pickerLabel.text = inputArr.objectAtIndex(row) as? String
+        pickerLabel.textColor = UIColor.darkGray
+        pickerLabel.text = inputArr.object(at: row) as? String
         
         if screenSize.width <= 375.0 {
             
@@ -1508,19 +1508,19 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         }
 
         
-        pickerLabel.textAlignment = NSTextAlignment.Center
-        pickerLabel.backgroundColor = UIColor.whiteColor()
+        pickerLabel.textAlignment = NSTextAlignment.center
+        pickerLabel.backgroundColor = UIColor.white
         return pickerLabel
     }
     
     //KEYBOARD CONTROLS
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)
         
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         toTxt.resignFirstResponder()
         
@@ -1538,7 +1538,7 @@ class UnitsVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, U
         toPicker.delegate = self
         
         inputArr = areaPickData
-        areaBtn.selected = true
+        areaBtn.isSelected = true
         
         fromLbl.text = "Select a Unit"
         toLbl.text = "Select a Unit"

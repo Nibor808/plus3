@@ -10,7 +10,7 @@ import Foundation
 
 class Length {
     
-    private var _len:String
+    fileprivate var _len:String
     
     var len:String {
         
@@ -29,7 +29,7 @@ class Length {
     
     
     //mm CONVERSIONS
-    func mmToCmConvert(len:String) -> String {
+    func mmToCmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.1
         
@@ -39,7 +39,7 @@ class Length {
         
     }
     
-    func mmToMConvert(len:String) -> String {
+    func mmToMConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.001
         
@@ -49,7 +49,7 @@ class Length {
         
     }
     
-    func mmToKmConvert(len:String) -> String {
+    func mmToKmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.000001
         
@@ -59,7 +59,7 @@ class Length {
         
     }
     
-    func mmToInConvert(len:String) -> String {
+    func mmToInConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0393701
         
@@ -69,7 +69,7 @@ class Length {
         
     }
     
-    func mmToFtConvert(len:String) -> String {
+    func mmToFtConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0032808399
         
@@ -79,7 +79,7 @@ class Length {
         
     }
     
-    func mmToYdConvert(len:String) -> String {
+    func mmToYdConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.00109361
         
@@ -89,7 +89,7 @@ class Length {
         
     }
     
-    func mmToMlConvert(len:String) -> String {
+    func mmToMlConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.00000062
         
@@ -101,7 +101,7 @@ class Length {
     
     
     //cm CONVERSIONS
-    func cmToMmConvert(len:String) -> String {
+    func cmToMmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 10
         
@@ -111,7 +111,7 @@ class Length {
         
     }
 
-    func cmToMConvert(len:String) -> String {
+    func cmToMConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.01
         
@@ -121,7 +121,7 @@ class Length {
         
     }
 
-    func cmToKmConvert(len:String) -> String {
+    func cmToKmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.00001
         
@@ -131,7 +131,7 @@ class Length {
         
     }
     
-    func cmToInConvert(len:String) -> String {
+    func cmToInConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.393701
         
@@ -141,7 +141,7 @@ class Length {
         
     }
 
-    func cmToFtConvert(len:String) -> String {
+    func cmToFtConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0328084
         
@@ -151,7 +151,7 @@ class Length {
         
     }
 
-    func cmToYdConvert(len:String) -> String {
+    func cmToYdConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0109361
         
@@ -161,7 +161,7 @@ class Length {
         
     }
     
-    func cmToMlConvert(len:String) -> String {
+    func cmToMlConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0000062
         
@@ -173,7 +173,7 @@ class Length {
 
 
     //m CONVERSION
-    func mToMmConvert(len:String) -> String {
+    func mToMmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 1000
         
@@ -183,7 +183,7 @@ class Length {
         
     }
     
-    func mToCmConvert(len:String) -> String {
+    func mToCmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 100
         
@@ -193,7 +193,7 @@ class Length {
         
     }
     
-    func mToKmConvert(len:String) -> String {
+    func mToKmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.001
         
@@ -203,7 +203,7 @@ class Length {
         
     }
     
-    func mToInConvert(len:String) -> String {
+    func mToInConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 39.3701
         
@@ -213,7 +213,7 @@ class Length {
         
     }
     
-    func mToFtConvert(len:String) -> String {
+    func mToFtConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 3.28084
         
@@ -223,7 +223,7 @@ class Length {
         
     }
     
-    func mToYdConvert(len:String) -> String {
+    func mToYdConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 1.09361
         
@@ -233,7 +233,7 @@ class Length {
         
     }
     
-    func mToMlConvert(len:String) -> String {
+    func mToMlConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.000621371
         
@@ -245,7 +245,7 @@ class Length {
 
     
     //km CONVERSIONS
-    func kmToMmConvert(len:String) -> String {
+    func kmToMmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 1000000
         
@@ -255,7 +255,7 @@ class Length {
         
     }
     
-    func kmToCmConvert(len:String) -> String {
+    func kmToCmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 100000
         
@@ -265,7 +265,7 @@ class Length {
         
     }
     
-    func kmToMConvert(len:String) -> String {
+    func kmToMConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 1000
         
@@ -275,7 +275,7 @@ class Length {
         
     }
     
-    func kmToInConvert(len:String) -> String {
+    func kmToInConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 39370.1
         
@@ -285,7 +285,7 @@ class Length {
         
     }
     
-    func kmToFtConvert(len:String) -> String {
+    func kmToFtConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 3280.84
         
@@ -295,7 +295,7 @@ class Length {
         
     }
     
-    func kmToYdConvert(len:String) -> String {
+    func kmToYdConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 1093.61
         
@@ -305,7 +305,7 @@ class Length {
         
     }
     
-    func kmToMlConvert(len:String) -> String {
+    func kmToMlConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.621371
         
@@ -317,7 +317,7 @@ class Length {
 
 
     //in CONVERSIONS
-    func inToMmConvert(len:String) -> String {
+    func inToMmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 25.4
         
@@ -327,7 +327,7 @@ class Length {
         
     }
     
-    func inToCmConvert(len:String) -> String {
+    func inToCmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 2.54
         
@@ -337,7 +337,7 @@ class Length {
         
     }
     
-    func inToMConvert(len:String) -> String {
+    func inToMConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0254
         
@@ -347,7 +347,7 @@ class Length {
         
     }
     
-    func inToKmConvert(len:String) -> String {
+    func inToKmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0000254
         
@@ -357,7 +357,7 @@ class Length {
         
     }
     
-    func inToFtConvert(len:String) -> String {
+    func inToFtConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0833333
         
@@ -367,7 +367,7 @@ class Length {
         
     }
     
-    func inToYdConvert(len:String) -> String {
+    func inToYdConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0277778
         
@@ -377,7 +377,7 @@ class Length {
         
     }
     
-    func inToMlConvert(len:String) -> String {
+    func inToMlConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0000015783
         
@@ -389,7 +389,7 @@ class Length {
     
     
     //ft CONVERSIONS
-    func ftToMmConvert(len:String) -> String {
+    func ftToMmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 304.8
         
@@ -399,7 +399,7 @@ class Length {
         
     }
     
-    func ftToCmConvert(len:String) -> String {
+    func ftToCmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 30.84
         
@@ -409,7 +409,7 @@ class Length {
         
     }
     
-    func ftToMConvert(len:String) -> String {
+    func ftToMConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.3048
         
@@ -419,7 +419,7 @@ class Length {
         
     }
     
-    func ftToKmConvert(len:String) -> String {
+    func ftToKmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0003048
         
@@ -429,7 +429,7 @@ class Length {
         
     }
     
-    func ftToInConvert(len:String) -> String {
+    func ftToInConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 12
         
@@ -439,7 +439,7 @@ class Length {
         
     }
     
-    func ftToYdConvert(len:String) -> String {
+    func ftToYdConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.333333
         
@@ -449,7 +449,7 @@ class Length {
         
     }
     
-    func ftToMlConvert(len:String) -> String {
+    func ftToMlConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.00018939375
         
@@ -461,7 +461,7 @@ class Length {
     
     
     //yd CONVERSIONS
-    func ydToMmConvert(len:String) -> String {
+    func ydToMmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 914.4
         
@@ -471,7 +471,7 @@ class Length {
         
     }
     
-    func ydToCmConvert(len:String) -> String {
+    func ydToCmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 91.44
         
@@ -481,7 +481,7 @@ class Length {
         
     }
     
-    func ydToMConvert(len:String) -> String {
+    func ydToMConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.9144
         
@@ -491,7 +491,7 @@ class Length {
         
     }
     
-    func ydToKmConvert(len:String) -> String {
+    func ydToKmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.0009144
         
@@ -501,7 +501,7 @@ class Length {
         
     }
     
-    func ydToInConvert(len:String) -> String {
+    func ydToInConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 36
         
@@ -511,7 +511,7 @@ class Length {
         
     }
     
-    func ydToFtConvert(len:String) -> String {
+    func ydToFtConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 3
         
@@ -521,7 +521,7 @@ class Length {
         
     }
     
-    func ydToMlConvert(len:String) -> String {
+    func ydToMlConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 0.000568182
         
@@ -533,7 +533,7 @@ class Length {
     
     
     //ml CONVERSIONS
-    func mlToMmConvert(len:String) -> String {
+    func mlToMmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 1609000
         
@@ -543,7 +543,7 @@ class Length {
         
     }
     
-    func mlToCmConvert(len:String) -> String {
+    func mlToCmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 160934
         
@@ -553,7 +553,7 @@ class Length {
         
     }
     
-    func mlToMConvert(len:String) -> String {
+    func mlToMConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 1609.34
         
@@ -563,7 +563,7 @@ class Length {
         
     }
     
-    func mlToKmConvert(len:String) -> String {
+    func mlToKmConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 1.60934
         
@@ -573,7 +573,7 @@ class Length {
         
     }
     
-    func mlToInConvert(len:String) -> String {
+    func mlToInConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 63360
         
@@ -583,7 +583,7 @@ class Length {
         
     }
     
-    func mlToFtConvert(len:String) -> String {
+    func mlToFtConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 5280
         
@@ -593,7 +593,7 @@ class Length {
         
     }
     
-    func mlToYdConvert(len:String) -> String {
+    func mlToYdConvert(_ len:String) -> String {
         
         let conversionTemp = Double(len)! * 1760
         

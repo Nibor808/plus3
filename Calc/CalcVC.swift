@@ -9,6 +9,30 @@ import UIKit
 import MessageUI
 import CoreData
 import SwiftString
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l >= r
+  default:
+    return !(lhs < rhs)
+  }
+}
+
 
 
 class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailComposeViewControllerDelegate {
@@ -60,34 +84,34 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
     var note = ""
     var row = ""
     var sign = ""
-    let date = NSDate()
+    let date = Date()
     var isEditingNote = false
     var counter = 0
     var reviewCounter = 25
     //var haveRated = false
     
     //IBACTIONS
-    @IBAction func onUnitsPressed(sender: AnyObject) {
+    @IBAction func onUnitsPressed(_ sender: AnyObject) {
         
         clearSavedData()
         saveArr()
     }
     
     
-    @IBAction func onCurrencyPressed(sender: AnyObject) {
+    @IBAction func onCurrencyPressed(_ sender: AnyObject) {
         
         clearSavedData()
         saveArr()
     }
     
     
-    @IBAction func onExportPressed(sender: UIButton) {
+    @IBAction func onExportPressed(_ sender: UIButton) {
         
-        let formatter = NSDateFormatter()
-        formatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.short
+        formatter.timeStyle = DateFormatter.Style.short
         
-        let dateString = formatter.stringFromDate(date)
+        let dateString = formatter.string(from: date)
         
         if (MFMailComposeViewController.canSendMail()) {
             
@@ -95,11 +119,11 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             mailComposer.mailComposeDelegate = self
             mailComposer.setMessageBody("", isHTML: false)
             
-            let joinedString = mainResultArr.joinWithSeparator("\n")
-            if let data = (joinedString as NSString).dataUsingEncoding(NSUTF8StringEncoding) {
+            let joinedString = mainResultArr.joined(separator: "\n")
+            if let data = (joinedString as NSString).data(using: String.Encoding.utf8) {
                 
                 mailComposer.addAttachmentData(data, mimeType: "text/plain", fileName: "Calculation " + dateString)
-                self.presentViewController(mailComposer, animated: true, completion: nil)
+                self.present(mailComposer, animated: true, completion: nil)
                 
             }
             
@@ -114,22 +138,22 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
     }
     
     
-    @IBAction func addNoteBtn(sender: UIButton) {
+    @IBAction func addNoteBtn(_ sender: UIButton) {
         
         row = rowToSelectTxt.text!
         
-        exportBtn.hidden = true
-        currencyBtn.hidden = true
-        unitsBtn.hidden = true
+        exportBtn.isHidden = true
+        currencyBtn.isHidden = true
+        unitsBtn.isHidden = true
         
-        rowToSelectTxt.enabled = true
-        rowToSelectTxt.highlighted = true
-        calcStackView.hidden = true
-        addNoteBtn.setTitle("Confirm", forState: .Normal)
+        rowToSelectTxt.isEnabled = true
+        rowToSelectTxt.isHighlighted = true
+        calcStackView.isHidden = true
+        addNoteBtn.setTitle("Confirm", for: UIControlState())
         
         rowToSelectTxt.becomeFirstResponder()
         
-        cancelBtn.enabled = true
+        cancelBtn.isEnabled = true
         
         rowToSelectTxt.attributedPlaceholder = NSAttributedString(string: "Line #")
         
@@ -138,7 +162,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             if result.count != 0 && result.count - 1 >= Int(row) && rowToSelectTxt.text?.isNumeric() == true {
                 
                 noteLbl.text = "Note For Line: " + row
-                noteStack.hidden = false
+                noteStack.isHidden = false
                 
                 editNote()
                 
@@ -148,9 +172,9 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                 
                 let selectedRange = addNoteTxt.endOfDocument
                 
-                if let newPosition = addNoteTxt.positionFromPosition(selectedRange, offset: -1) {
+                if let newPosition = addNoteTxt.position(from: selectedRange, offset: -1) {
                     
-                    addNoteTxt.selectedTextRange = addNoteTxt.textRangeFromPosition(newPosition, toPosition: newPosition)
+                    addNoteTxt.selectedTextRange = addNoteTxt.textRange(from: newPosition, to: newPosition)
                         
                 }
                     
@@ -164,18 +188,18 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         }
     }
     
-    @IBAction func doneBtn(sender: UIButton) {
+    @IBAction func doneBtn(_ sender: UIButton) {
         
-        addNoteBtn.enabled = true
-        noteStack.hidden = true
-        rowToSelectTxt.enabled = false
-        calcStackView.hidden = false
-        cancelBtn.enabled = false
-        exportBtn.hidden = false
-        currencyBtn.hidden = false
-        unitsBtn.hidden = false
+        addNoteBtn.isEnabled = true
+        noteStack.isHidden = true
+        rowToSelectTxt.isEnabled = false
+        calcStackView.isHidden = false
+        cancelBtn.isEnabled = false
+        exportBtn.isHidden = false
+        currencyBtn.isHidden = false
+        unitsBtn.isHidden = false
         
-        addNoteBtn.setTitle("Add Note", forState: .Normal)
+        addNoteBtn.setTitle("Add Note", for: UIControlState())
         
         rowToSelectTxt.attributedPlaceholder = NSAttributedString(string: "")
         
@@ -186,40 +210,40 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
     }
     
-    @IBAction func onCancelPressed(sender: AnyObject) {
+    @IBAction func onCancelPressed(_ sender: AnyObject) {
        
-        addNoteBtn.enabled = true
-        noteStack.hidden = true
+        addNoteBtn.isEnabled = true
+        noteStack.isHidden = true
         rowToSelectTxt.text = ""
-        rowToSelectTxt.enabled = false
+        rowToSelectTxt.isEnabled = false
         addNoteTxt.text = ""
-        calcStackView.hidden = false
-        cancelBtn.enabled = false
-        exportBtn.hidden = false
-        currencyBtn.hidden = false
-        unitsBtn.hidden = false
+        calcStackView.isHidden = false
+        cancelBtn.isEnabled = false
+        exportBtn.isHidden = false
+        currencyBtn.isHidden = false
+        unitsBtn.isHidden = false
             
             
             
         rowToSelectTxt.attributedPlaceholder = NSAttributedString(string: "")
         
-        addNoteBtn.setTitle("Add Note", forState: .Normal)
+        addNoteBtn.setTitle("Add Note", for: UIControlState())
         
         self.view.endEditing(true)
 
         
     }
     
-    @IBAction func numPressed(btn: CalcButton) {
+    @IBAction func numPressed(_ btn: CalcButton) {
         
-        equalsBtn.enabled = true
+        equalsBtn.isEnabled = true
         
-        if rowToSelectTxt.editing == true {
+        if rowToSelectTxt.isEditing == true {
             
             rowToSelectTxt.text! += btn.currentTitle!
         }else {
             
-            clearBtn.selected = false
+            clearBtn.isSelected = false
             
             runningNum += btn.currentTitle!
             
@@ -232,11 +256,11 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
     }
     
-    @IBAction func onAddPressed(sender: OpButton) {
+    @IBAction func onAddPressed(_ sender: OpButton) {
         
         sign = "+"
         
-        clearBtn.selected = false
+        clearBtn.isSelected = false
         
         outputTxt.text = runningNum + "  " + sign
         
@@ -244,16 +268,16 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         for i in calcBtns {
             
-            i.enabled = true
+            i.isEnabled = true
         }
         
     }
     
-    @IBAction func onSubtractPressed(sender: OpButton) {
+    @IBAction func onSubtractPressed(_ sender: OpButton) {
         
         sign = "-"
         
-        clearBtn.selected = false
+        clearBtn.isSelected = false
         
         outputTxt.text = runningNum + "  " + sign
         
@@ -261,17 +285,17 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         for i in calcBtns {
             
-            i.enabled = true
+            i.isEnabled = true
         }
 
         
     }
     
-    @IBAction func onMultiplyPressed(sender: OpButton) {
+    @IBAction func onMultiplyPressed(_ sender: OpButton) {
         
         sign = "x"
         
-        clearBtn.selected = false
+        clearBtn.isSelected = false
        
         outputTxt.text = runningNum + "  " + sign
         
@@ -279,17 +303,17 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         for i in calcBtns {
             
-            i.enabled = true
+            i.isEnabled = true
         }
 
         
     }
     
-    @IBAction func onDividePressed(sender: OpButton) {
+    @IBAction func onDividePressed(_ sender: OpButton) {
         
         sign = "/"
         
-        clearBtn.selected = false
+        clearBtn.isSelected = false
         
         outputTxt.text = runningNum + "  " + sign
         
@@ -297,13 +321,13 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         for i in calcBtns {
             
-            i.enabled = true
+            i.isEnabled = true
         }
 
         
     }
     
-    @IBAction func onEqualsPressed(sender: OpButton) {
+    @IBAction func onEqualsPressed(_ sender: OpButton) {
         
         scrollToBottom()
         
@@ -336,16 +360,16 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             
         }
         
-        clearBtn.selected = true
+        clearBtn.isSelected = true
         
         for i in calcBtns {
             
-            i.enabled = false
+            i.isEnabled = false
         }
         
     }
     
-    @IBAction func onDotPressed(sender: CalcButton) {
+    @IBAction func onDotPressed(_ sender: CalcButton) {
         
         runningNum += "."
         
@@ -356,9 +380,9 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
     }
     
-    @IBAction func onPercentPresssed(sender: TopRowButton) {
+    @IBAction func onPercentPresssed(_ sender: TopRowButton) {
         
-        clearBtn.selected = true
+        clearBtn.isSelected = true
         
         currentOperation = Operation.Percent
         
@@ -366,26 +390,26 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
     }
     
-    @IBAction func onClearPressed(sender: TopRowButton) {
+    @IBAction func onClearPressed(_ sender: TopRowButton) {
         
         
-        equalsBtn.enabled = false
+        equalsBtn.isEnabled = false
         
-        if sender.selected {
+        if sender.isSelected {
             
             if !result.isEmpty {
                 
                 for i in calcBtns {
                     
-                    i.enabled = true
+                    i.isEnabled = true
                 }
 
             
-            let alert = UIAlertController(title: "", message: "Are you sure you want to delete the whole calculation?", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "", message: "Are you sure you want to delete the whole calculation?", preferredStyle: UIAlertControllerStyle.alert)
             
             
             
-            alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction) -> Void in
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction) -> Void in
                 
             self.outputTxt.text = ""
             
@@ -409,18 +433,18 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                 
            }))
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction) -> Void in
+            alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction) -> Void in
                 
                 for i in self.calcBtns {
                     
-                    i.enabled = false
+                    i.isEnabled = false
                 }
                 
                 return
                 
             }))
                 alert.view.tintColor = ALERT_COLOR
-                presentViewController(alert, animated: true, completion: {
+                present(alert, animated: true, completion: {
                     
                     alert.view.tintColor = ALERT_COLOR
                 })
@@ -434,10 +458,10 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             
             for i in calcBtns {
                 
-                i.enabled = false
+                i.isEnabled = false
             }
             
-            clearBtn.selected = false
+            clearBtn.isSelected = false
             
             outputTxt.text = leftValString
             
@@ -449,7 +473,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
     }
     
-    @IBAction func onChangeSignPressed(sender: AnyObject) {
+    @IBAction func onChangeSignPressed(_ sender: AnyObject) {
         
         let op = currentOperation
         
@@ -469,27 +493,27 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                     
                     let num = result[i]
                     
-                    result.removeAtIndex(i)
+                    result.remove(at: i)
                     
-                    let addNoteTrim = addNoteTxt.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+                    let addNoteTrim = addNoteTxt.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
                     
                     if addNoteTrim != "" {
                         
                         //if there is already a note
                         if isEditingNote == true {
                             
-                            result.insert(addNoteTrim, atIndex: i)
+                            result.insert(addNoteTrim, at: i)
                             
                             //if there is not already a note
                         }else if isEditingNote == false {
                             
-                            result.insert(num + " " + "{" + addNoteTrim + "}", atIndex: i)
+                            result.insert(num + " " + "{" + addNoteTrim + "}", at: i)
                         }
 
                         
                     }else {
                         
-                        result.insert(num, atIndex: i)
+                        result.insert(num, at: i)
                     }
                 }
             }
@@ -502,7 +526,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             
             updateArray()
             
-            addNoteBtn.enabled = true
+            addNoteBtn.isEnabled = true
             
         
     }
@@ -537,7 +561,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
                         
                         let resultString = NSString(string: resultReturn)
                         
-                        addNoteTxt.text = resultString.substringFromIndex(x)
+                        addNoteTxt.text = resultString.substring(from: x)
                     }
                     
                 }else {
@@ -559,15 +583,15 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         if !result.isEmpty {
             
-            let app = UIApplication.sharedApplication().delegate as! AppDelegate
+            let app = UIApplication.shared.delegate as! AppDelegate
             
             let context = app.managedObjectContext
             
-            let entity = NSEntityDescription.entityForName("Calculation", inManagedObjectContext: context)
+            let entity = NSEntityDescription.entity(forEntityName: "Calculation", in: context)
             
-            let calc = Calculation(entity: entity!, insertIntoManagedObjectContext: context)
+            let calc = Calculation(entity: entity!, insertInto: context)
             
-            let tempArr = result.joinWithSeparator("\n")
+            let tempArr = result.joined(separator: "\n")
             
             calc.calcArray = tempArr
          
@@ -594,7 +618,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         result.removeAll()
         
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let app = UIApplication.shared.delegate as! AppDelegate
         
         let context = app.managedObjectContext
         
@@ -602,14 +626,14 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         do {
             
-            let resultData = try context.executeFetchRequest(fetchRequest)
+            let resultData = try context.fetch(fetchRequest)
             
             
             for res in resultData {
                 
-                let tempArr = res.valueForKey("calcArray")! as! String
+                let tempArr = res.value(forKey: "calcArray")! as! String
                 
-                let tempArrSeparated = tempArr.componentsSeparatedByString("\n")
+                let tempArrSeparated = tempArr.components(separatedBy: "\n")
                 
                 result = tempArrSeparated
                 
@@ -630,7 +654,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
     func clearSavedData() {
         
         
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let app = UIApplication.shared.delegate as! AppDelegate
         
         let context = app.managedObjectContext
         
@@ -642,7 +666,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         do {
             
-            try coord.executeRequest(deleteRequest, withContext: context)
+            try coord.execute(deleteRequest, with: context)
             
         }catch let err as NSError {
             
@@ -664,7 +688,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
     
     
     
-    func isNegative(op: Operation) {
+    func isNegative(_ op: Operation) {
             
                 if runningNum != "" {
                     
@@ -676,7 +700,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         }
     
     
-    func processOperation(op: Operation) {
+    func processOperation(_ op: Operation) {
         
         
         if currentOperation != Operation.Empty {
@@ -843,7 +867,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
             
         }
         
-        for (index,element) in mainResultArr.enumerate() {
+        for (index,element) in mainResultArr.enumerated() {
             
             arrOutput += String(index) + " | " + element + "\n"
         }
@@ -855,30 +879,30 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
     }
     
     
-    func updateSavedArray(arr: [String]) {
+    func updateSavedArray(_ arr: [String]) {
         
         for i in arr {
             
             mainResultArr.append(i)
         }
         
-        for (index, element) in mainResultArr.enumerate() {
+        for (index, element) in mainResultArr.enumerated() {
             
             arrOutput += String(index) + " | " + element + "\n"
         }
         
         let runTemp = mainResultArr.last!
         
-        let runTempTrim = runTemp.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        let runTempTrim = runTemp.trimmingCharacters(in: CharacterSet.whitespaces)
         
         if let x = runTempTrim.between("=", "{") {
             
-            let xTemp = x.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            let xTemp = x.trimmingCharacters(in: CharacterSet.whitespaces)
             
             runningNum = xTemp
         }else {
             
-            let xTemp = (runTempTrim as NSString).substringFromIndex(2)
+            let xTemp = (runTempTrim as NSString).substring(from: 2)
             runningNum = xTemp
             }
         
@@ -891,21 +915,21 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
 
 
     //MAIL FUNCTION
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
-        controller.dismissViewControllerAnimated(true, completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
     
     
     
     //KEYBOARD CONTROLS
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)
         
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         (rowToSelectTxt).resignFirstResponder()
         (addNoteTxt).resignFirstResponder()
@@ -914,55 +938,55 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         
-        let hasLaunched = defaults.valueForKey("hasLaunchedBefore") as? Bool
+        let hasLaunched = defaults.value(forKey: "hasLaunchedBefore") as? Bool
         
-        let launchDate = defaults.valueForKey("firstLaunchDate") as! NSDate
+        let launchDate = defaults.value(forKey: "firstLaunchDate") as! Date
         
-        let timeSinceLaunch = NSDate().timeIntervalSinceDate(launchDate)
+        let timeSinceLaunch = Date().timeIntervalSince(launchDate)
         
-        let rated = defaults.valueForKey("haveRated") as? Bool
+        let rated = defaults.value(forKey: "haveRated") as? Bool
         
         if  hasLaunched == true && timeSinceLaunch >= 1296000.0 && (rated == nil || rated == false) {
             
-            let alert = UIAlertController(title: "Finding +3 Useful?", message: "If you are finding +3 useful, we hope you won't mind taking a moment to give us a rating and review in the App Store. We love hearing from you! If you have any comments or suggestions please drop us a line using the Feedback button below. As always we appreciate your support.", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "Finding +3 Useful?", message: "If you are finding +3 useful, we hope you won't mind taking a moment to give us a rating and review in the App Store. We love hearing from you! If you have any comments or suggestions please drop us a line using the Feedback button below. As always we appreciate your support.", preferredStyle: .alert)
             
             
-            alert.addAction(UIAlertAction(title: "Rate Us", style: .Default, handler: { (action: UIAlertAction) -> Void in
+            alert.addAction(UIAlertAction(title: "Rate Us", style: .default, handler: { (action: UIAlertAction) -> Void in
                 
-                UIApplication.sharedApplication().openURL(NSURL(string: "https://itunes.apple.com/us/app/+3/id1095135903?mt=8")!)
-                alert.dismissViewControllerAnimated(true, completion: nil)
-                defaults.setObject(true, forKey: "haveRated")
-                
-            }))
-            
-            alert.addAction(UIAlertAction(title: "Maybe Later", style: .Default, handler: { (action: UIAlertAction) -> Void in
-                
-                alert.dismissViewControllerAnimated(true, completion: nil)
-                defaults.setObject(false, forKey: "haveRated")
-                defaults.setObject(NSDate(), forKey: "firstLaunchDate")
+                UIApplication.shared.openURL(Foundation.URL(string: "https://itunes.apple.com/us/app/+3/id1095135903?mt=8")!)
+                alert.dismiss(animated: true, completion: nil)
+                defaults.set(true, forKey: "haveRated")
                 
             }))
             
-            alert.addAction(UIAlertAction(title: "Feedback", style: .Default, handler: { (action: UIAlertAction) -> Void in
+            alert.addAction(UIAlertAction(title: "Maybe Later", style: .default, handler: { (action: UIAlertAction) -> Void in
+                
+                alert.dismiss(animated: true, completion: nil)
+                defaults.set(false, forKey: "haveRated")
+                defaults.set(Date(), forKey: "firstLaunchDate")
+                
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Feedback", style: .default, handler: { (action: UIAlertAction) -> Void in
                 
                 let email = "plus3app@incubo.ca"
-                let url = NSURL(string: "mailto:\(email)")!
-                UIApplication.sharedApplication().openURL(url)
+                let url = Foundation.URL(string: "mailto:\(email)")!
+                UIApplication.shared.openURL(url)
             }))
             
-            alert.addAction(UIAlertAction(title: "No Thanks", style: .Default, handler: { (action: UIAlertAction) -> Void in
+            alert.addAction(UIAlertAction(title: "No Thanks", style: .default, handler: { (action: UIAlertAction) -> Void in
                 
-                alert.dismissViewControllerAnimated(true, completion: nil)
-                defaults.setObject(true, forKey: "haveRated")
+                alert.dismiss(animated: true, completion: nil)
+                defaults.set(true, forKey: "haveRated")
                 
             }))
             
             
-            self.presentViewController(alert, animated: true, completion: {
+            self.present(alert, animated: true, completion: {
                 
                 alert.view.tintColor = ALERT_COLOR
             })
@@ -979,19 +1003,19 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
       override func viewDidLoad() {
         super.viewDidLoad()
         
-        clearBtn.selected = true
-        clearBtn.setTitle("CE", forState: .Normal)
-        clearBtn.setTitle("C", forState: .Selected)
-        clearBtn.setTitleColor(UIColor.whiteColor(), forState: .Selected)
-        cancelBtn.enabled = false
-        cancelBtn.setTitleColor(UIColor.darkGrayColor(), forState: .Disabled)
-        rowToSelectTxt.enabled = false
+        clearBtn.isSelected = true
+        clearBtn.setTitle("CE", for: UIControlState())
+        clearBtn.setTitle("C", for: .selected)
+        clearBtn.setTitleColor(UIColor.white, for: .selected)
+        cancelBtn.isEnabled = false
+        cancelBtn.setTitleColor(UIColor.darkGray, for: .disabled)
+        rowToSelectTxt.isEnabled = false
         
         self.addNoteTxt.delegate = self
         self.rowToSelectTxt.delegate = self
         self.outputTxt.delegate = self
         
-        let screenSize = UIScreen.mainScreen().bounds
+        let screenSize = UIScreen.main.bounds
         
         if screenSize.height == 480 {
             
@@ -1021,7 +1045,7 @@ class CalcVC: UIViewController, UITextFieldDelegate, UITextViewDelegate ,MFMailC
         
         fetchArr()
         
-        equalsBtn.enabled = false
+        equalsBtn.isEnabled = false
         
         }
     

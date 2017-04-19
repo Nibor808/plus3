@@ -10,7 +10,7 @@ import Foundation
 
 class Mass {
     
-    private var _mass:String
+    fileprivate var _mass:String
     
     var mass:String {
         
@@ -28,7 +28,7 @@ class Mass {
     
     
     //mg CONVERSIONS
-    func mgToGConvert(mass:String) -> String {
+    func mgToGConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.001
         
@@ -38,7 +38,7 @@ class Mass {
         
     }
     
-    func mgToKgConvert(mass:String) -> String {
+    func mgToKgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.000001
         
@@ -48,7 +48,7 @@ class Mass {
         
     }
 
-    func mgToTConvert(mass:String) -> String {
+    func mgToTConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.000000001
         
@@ -58,7 +58,7 @@ class Mass {
         
     }
 
-    func mgToOzConvert(mass:String) -> String {
+    func mgToOzConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.000035274
         
@@ -68,7 +68,7 @@ class Mass {
         
     }
 
-    func mgToLbsConvert(mass:String) -> String {
+    func mgToLbsConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.0000022046
         
@@ -78,7 +78,7 @@ class Mass {
         
     }
 
-    func mgToSConvert(mass:String) -> String {
+    func mgToSConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.00000015747
         
@@ -91,7 +91,7 @@ class Mass {
 
     
     //g CONVERSIONS
-    func gToMgConvert(mass:String) -> String {
+    func gToMgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 1000
         
@@ -101,7 +101,7 @@ class Mass {
         
     }
     
-    func gToKgConvert(mass:String) -> String {
+    func gToKgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.001
         
@@ -111,7 +111,7 @@ class Mass {
         
     }
     
-    func gToTConvert(mass:String) -> String {
+    func gToTConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.000001
         
@@ -121,7 +121,7 @@ class Mass {
         
     }
     
-    func gToOzConvert(mass:String) -> String {
+    func gToOzConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.035274
         
@@ -131,7 +131,7 @@ class Mass {
         
     }
     
-    func gToLbsConvert(mass:String) -> String {
+    func gToLbsConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.00220462
         
@@ -141,7 +141,7 @@ class Mass {
         
     }
     
-    func gToSConvert(mass:String) -> String {
+    func gToSConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.000157473
         
@@ -153,7 +153,7 @@ class Mass {
 
     
     //kg CONVERSIONS
-    func kgToGConvert(mass:String) -> String {
+    func kgToGConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 1000
         
@@ -163,7 +163,7 @@ class Mass {
         
     }
     
-    func kgToMgConvert(mass:String) -> String {
+    func kgToMgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 1000000
         
@@ -173,7 +173,7 @@ class Mass {
         
     }
     
-    func kgToTConvert(mass:String) -> String {
+    func kgToTConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.001
         
@@ -183,7 +183,7 @@ class Mass {
         
     }
     
-    func kgToOzConvert(mass:String) -> String {
+    func kgToOzConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 35.274
         
@@ -193,7 +193,7 @@ class Mass {
         
     }
     
-    func kgToLbsConvert(mass:String) -> String {
+    func kgToLbsConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 2.20462
         
@@ -203,7 +203,7 @@ class Mass {
         
     }
     
-    func kgToSConvert(mass:String) -> String {
+    func kgToSConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.157473
         
@@ -215,7 +215,7 @@ class Mass {
     
     
     //t CONVERSIONS
-    func tToGConvert(mass:String) -> String {
+    func tToGConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 1000000
         
@@ -225,7 +225,7 @@ class Mass {
         
     }
     
-    func tToKgConvert(mass:String) -> String {
+    func tToKgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 1000
         
@@ -235,7 +235,7 @@ class Mass {
         
     }
     
-    func tToMgConvert(mass:String) -> String {
+    func tToMgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 1000000000
         
@@ -245,7 +245,7 @@ class Mass {
         
     }
     
-    func tToOzConvert(mass:String) -> String {
+    func tToOzConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 35274
         
@@ -255,7 +255,7 @@ class Mass {
         
     }
     
-    func tToLbsConvert(mass:String) -> String {
+    func tToLbsConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 2204.62
         
@@ -265,7 +265,7 @@ class Mass {
         
     }
     
-    func tToSConvert(mass:String) -> String {
+    func tToSConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 157.473
         
@@ -277,7 +277,7 @@ class Mass {
     
     
     //oz CONVERSIONS
-    func ozToGConvert(mass:String) -> String {
+    func ozToGConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 28.3495
         
@@ -287,7 +287,7 @@ class Mass {
         
     }
     
-    func ozToKgConvert(mass:String) -> String {
+    func ozToKgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.0283495
         
@@ -297,7 +297,7 @@ class Mass {
         
     }
     
-    func ozToTConvert(mass:String) -> String {
+    func ozToTConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.00002835
         
@@ -307,7 +307,7 @@ class Mass {
         
     }
     
-    func ozToMgConvert(mass:String) -> String {
+    func ozToMgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 28349.5
         
@@ -317,7 +317,7 @@ class Mass {
         
     }
     
-    func ozToLbsConvert(mass:String) -> String {
+    func ozToLbsConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.0625
         
@@ -327,7 +327,7 @@ class Mass {
         
     }
     
-    func ozToSConvert(mass:String) -> String {
+    func ozToSConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.00446429
         
@@ -339,7 +339,7 @@ class Mass {
 
 
     //lbs CONVERSIONS
-    func lbsToGConvert(mass:String) -> String {
+    func lbsToGConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 453.592
         
@@ -349,7 +349,7 @@ class Mass {
         
     }
     
-    func lbsToKgConvert(mass:String) -> String {
+    func lbsToKgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.453592
         
@@ -359,7 +359,7 @@ class Mass {
         
     }
     
-    func lbsToTConvert(mass:String) -> String {
+    func lbsToTConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.000453592
         
@@ -369,7 +369,7 @@ class Mass {
         
     }
     
-    func lbsToOzConvert(mass:String) -> String {
+    func lbsToOzConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 16
         
@@ -379,7 +379,7 @@ class Mass {
         
     }
     
-    func lbsToMgConvert(mass:String) -> String {
+    func lbsToMgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 453592
         
@@ -389,7 +389,7 @@ class Mass {
         
     }
     
-    func lbsToSConvert(mass:String) -> String {
+    func lbsToSConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.0714286
         
@@ -401,7 +401,7 @@ class Mass {
 
 
     //s CONVERSIONS
-    func sToGConvert(mass:String) -> String {
+    func sToGConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 6350.29
         
@@ -411,7 +411,7 @@ class Mass {
         
     }
     
-    func sToKgConvert(mass:String) -> String {
+    func sToKgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 6.35029
         
@@ -421,7 +421,7 @@ class Mass {
         
     }
     
-    func sToTConvert(mass:String) -> String {
+    func sToTConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 0.00635029
         
@@ -431,7 +431,7 @@ class Mass {
         
     }
     
-    func sToOzConvert(mass:String) -> String {
+    func sToOzConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 224
         
@@ -441,7 +441,7 @@ class Mass {
         
     }
     
-    func sToLbsConvert(mass:String) -> String {
+    func sToLbsConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 14
         
@@ -451,7 +451,7 @@ class Mass {
         
     }
     
-    func sToMgConvert(mass:String) -> String {
+    func sToMgConvert(_ mass:String) -> String {
         
         let conversionTemp = Double(mass)! * 6350000
         
